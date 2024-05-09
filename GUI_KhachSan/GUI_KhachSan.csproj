@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C08EAE3-AE9A-4F54-A98F-2E4D529ACFD9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI_KhachSan</RootNamespace>
+    <AssemblyName>GUI_KhachSan</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="check.cs" />
+    <Compile Include="GUI_CaiDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_CaiDat.Designer.cs">
+      <DependentUpon>GUI_CaiDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DangKy.Designer.cs">
+      <DependentUpon>GUI_DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DangNhap.Designer.cs">
+      <DependentUpon>GUI_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DatDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DatDichVu.Designer.cs">
+      <DependentUpon>GUI_DatDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DatPhong.Designer.cs">
+      <DependentUpon>GUI_DatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_DichVu.Designer.cs">
+      <DependentUpon>GUI_DichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_KhachHang.Designer.cs">
+      <DependentUpon>GUI_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_KhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_KhuyenMai.Designer.cs">
+      <DependentUpon>GUI_KhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_NhanVien.Designer.cs">
+      <DependentUpon>GUI_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_Phong.Designer.cs">
+      <DependentUpon>GUI_Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLTaiKhoan.Designer.cs">
+      <DependentUpon>GUI_QLTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ThongKe.Designer.cs">
+      <DependentUpon>GUI_ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_TrangChuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_TrangChuAdmin.Designer.cs">
+      <DependentUpon>GUI_TrangChuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_TrangChuNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_TrangChuNhanVien.Designer.cs">
+      <DependentUpon>GUI_TrangChuNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GUI_QuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QuenMatKhau.Designer.cs">
+      <DependentUpon>GUI_QuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChuNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrangChuNhanVien.Designer.cs">
+      <DependentUpon>TrangChuNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TroGiup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TroGiup.Designer.cs">
+      <DependentUpon>TroGiup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI_CaiDat.resx">
+      <DependentUpon>GUI_CaiDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DangKy.resx">
+      <DependentUpon>GUI_DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DangNhap.resx">
+      <DependentUpon>GUI_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DatDichVu.resx">
+      <DependentUpon>GUI_DatDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DatPhong.resx">
+      <DependentUpon>GUI_DatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_DichVu.resx">
+      <DependentUpon>GUI_DichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_KhachHang.resx">
+      <DependentUpon>GUI_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_KhuyenMai.resx">
+      <DependentUpon>GUI_KhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_NhanVien.resx">
+      <DependentUpon>GUI_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_Phong.resx">
+      <DependentUpon>GUI_Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLTaiKhoan.resx">
+      <DependentUpon>GUI_QLTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_ThongKe.resx">
+      <DependentUpon>GUI_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_TrangChuAdmin.resx">
+      <DependentUpon>GUI_TrangChuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_TrangChuNhanVien.resx">
+      <DependentUpon>GUI_TrangChuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="GUI_QuenMatKhau.resx">
+      <DependentUpon>GUI_QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChuNhanVien.resx">
+      <DependentUpon>TrangChuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TroGiup.resx">
+      <DependentUpon>TroGiup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL_KhachSan\BLL_KhachSan.csproj">
+      <Project>{08b5b771-b062-41ca-ad55-7cdc44d51b1a}</Project>
+      <Name>BLL_KhachSan</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO_KhachSan\DTO_KhachSan.csproj">
+      <Project>{ef5c3836-8914-4017-a6cc-8f247a57efd8}</Project>
+      <Name>DTO_KhachSan</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_8960-2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Premier-Deluxe-Twin1-2000-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grand-Deluxe-Double-2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bedroom1-2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bedroom-2-2000 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DSC_3362-2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spa-3-2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gym-2-2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restaurant-Details-1-2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Infinity-Pool-4-2000.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
