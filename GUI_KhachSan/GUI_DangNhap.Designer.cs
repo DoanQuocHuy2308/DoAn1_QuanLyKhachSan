@@ -67,7 +67,7 @@
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(699, 388);
-            this.label5.TabIndex = 0;
+            this.label5.TabIndex = 1;
             this.label5.Text = "Log In";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -237,7 +237,7 @@
             this.panel1.Location = new System.Drawing.Point(93, 243);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 444);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 0;
             // 
             // linkquenmk
             // 
@@ -332,7 +332,7 @@
             this.btnminimize.Location = new System.Drawing.Point(611, 0);
             this.btnminimize.Name = "btnminimize";
             this.btnminimize.Size = new System.Drawing.Size(41, 36);
-            this.btnminimize.TabIndex = 1;
+            this.btnminimize.TabIndex = 2;
             this.btnminimize.Click += new System.EventHandler(this.btnminimize_Click);
             // 
             // btnclose
@@ -354,7 +354,7 @@
             this.btnclose.Location = new System.Drawing.Point(658, 0);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(41, 36);
-            this.btnclose.TabIndex = 2;
+            this.btnclose.TabIndex = 3;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // pictureBox2

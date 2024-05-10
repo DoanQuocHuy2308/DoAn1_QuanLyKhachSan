@@ -39,7 +39,7 @@ CREATE TABLE KhachHang
 
 CREATE TABLE KhuyenMai
 (
-    ID_KhuyenMai INT IDENTITY(0,1) PRIMARY KEY,
+    ID_KhuyenMai VARCHAR(100) PRIMARY KEY,
     Ten_KhuyenMai NVARCHAR(255) NOT NULL,
     GiaTri DECIMAL(18,2) NOT NULL,
     MoTa NVARCHAR(MAX),
@@ -67,7 +67,7 @@ CREATE TABLE DatPhong
 	ID_NhanVien INT NOT NULL FOREIGN KEY REFERENCES NhanVien(ID_NhanVien),
     ID_KhachHang INT NOT NULL FOREIGN KEY REFERENCES KhachHang(ID_KhachHang),
     ID_Phong INT NOT NULL FOREIGN KEY REFERENCES Phong(ID_Phong),
-	ID_KhuyenMai INT FOREIGN KEY REFERENCES KhuyenMai(ID_KhuyenMai),
+	ID_KhuyenMai VARCHAR(100) FOREIGN KEY REFERENCES KhuyenMai(ID_KhuyenMai),
     Check_In DATETIME NOT NULL, 
     Check_Out DATETIME NOT NULL,
     TienCoc DECIMAL(18,2) NOT NULL,
@@ -97,7 +97,7 @@ CREATE TABLE DatDichVu
 	ID_NhanVien INT NOT NULL FOREIGN KEY REFERENCES NhanVien(ID_NhanVien),
 	ID_KhachHang INT NOT NULL FOREIGN KEY REFERENCES KhachHang(ID_KhachHang),
 	ID_DichVu INT NOT NULL FOREIGN KEY REFERENCES DichVu(ID_DichVu),
-	ID_KhuyenMai INT FOREIGN KEY REFERENCES KhuyenMai(ID_KhuyenMai),
+	ID_KhuyenMai VARCHAR(100) FOREIGN KEY REFERENCES KhuyenMai(ID_KhuyenMai),
 	SoLuong INT NOT NULL,
 	NgayDat DATETIME NOT NULL,
 	TongTien DECIMAL(18,2) NOT NULL,
@@ -165,17 +165,17 @@ VALUES
 -- Chèn dữ liệu vào bảng DatDichVu
 INSERT INTO DatDichVu (ID_NhanVien, ID_KhachHang, ID_DichVu, ID_KhuyenMai, SoLuong, NgayDat, TongTien, TrangThai, HinhThucThanhToan, KetQua)
 VALUES 
-    (1, 1, 1, NULL, 2, '2024-05-11', 20000, N'Đã thanh toán', N'Tiền mặt', N'Đặt dịch vụ thành công'),
-    (2, 2, 2, 1, 3, '2024-06-16', 135000, N'Đã thanh toán', N'Thẻ tín dụng', N'Đặt dịch vụ thành công'),
-    (3, 3, 3, NULL, 1, '2024-07-21', 20000, N'Chưa thanh toán', N'Chuyển khoản', N'Đặt dịch vụ thành công');
+    (1, 1, 1, NULL, 2, '2024-05-11', 20000, N'Đã Thanh Toán', N'Tiền Mặt', N'Thành Công'),
+    (2, 2, 2, 1, 3, '2024-06-16', 135000, N'Đã Thanh Toán', N'Quẹt Thẻ', N'Thành Công'),
+    (3, 3, 3, NULL, 1, '2024-07-21', 20000, N'Chưa Thanh Toán', N'Chuyển Khoản', N'Thành Công');
 
 -- Chèn dữ liệu vào bảng KhuyenMai
-INSERT INTO KhuyenMai (Ten_KhuyenMai, GiaTri, MoTa, NgayBatDau, NgayKetThuc)
+INSERT INTO KhuyenMai (ID_KhuyenMai,Ten_KhuyenMai, GiaTri, MoTa, NgayBatDau, NgayKetThuc)
 VALUES 
-	(N'Không Giảm Giá',0, N'Áp dụng cho tất cả các chương trình','2024-05-01', '2024-05-31'),
-    (N'Giảm giá 10%', 0.1, N'Áp dụng cho tất cả dịch vụ', '2024-05-01', '2024-05-31'),
-    (N'Giảm giá 20%', 0.2, N'Áp dụng cho các phòng loại Phòng Gia Đình', '2024-06-01', '2024-06-30'),
-    (N'Giảm giá 30%', 0.3, N'Áp dụng cho các đơn đặt phòng trên 3 ngày', '2024-07-01', '2024-07-31');
+	(0,N'Không Giảm Giá',0, N'Áp dụng cho tất cả các chương trình','2024-05-01', '2024-05-31'),
+    (1,N'Giảm giá 10%', 0.1, N'Áp dụng cho tất cả dịch vụ', '2024-05-01', '2024-05-31'),
+    (2,N'Giảm giá 20%', 0.2, N'Áp dụng cho các phòng loại Phòng Gia Đình', '2024-06-01', '2024-06-30'),
+    (3,N'Giảm giá 30%', 0.3, N'Áp dụng cho các đơn đặt phòng trên 3 ngày', '2024-07-01', '2024-07-31');
 
 
 

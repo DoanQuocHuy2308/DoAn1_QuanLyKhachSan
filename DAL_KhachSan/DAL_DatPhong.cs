@@ -137,28 +137,29 @@ namespace DAL_KhachSan
         }
         public void Check_In(DTO_DatPhong dp)
         {
-            try { 
-            kn.moketnoi();
-            string thucthi = "INSERT INTO DatPhong (ID_NhanVien, ID_KhachHang, ID_Phong, ID_KhuyenMai, Check_In, Check_Out, TienCoc, TongTien, TrangThai, HinhThucThanhToan, KetQua) VALUES (@ID_NhanVien, @ID_KhachHang, @ID_Phong, @ID_KhuyenMai, @Check_In, @Check_Out, @TienCoc, @TongTien, @TrangThai, @HinhThucThanhToan, @KetQua)";
-            using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
+            try
             {
-                cmd.Parameters.AddWithValue("@ID_NhanVien", dp.ID_NhanVien);
-                cmd.Parameters.AddWithValue("@ID_KhachHang", dp.ID_KhachHang);
-                cmd.Parameters.AddWithValue("@ID_Phong", dp.ID_Phong);
-                cmd.Parameters.AddWithValue("@ID_KhuyenMai", dp.ID_KhuyenMai);
-                cmd.Parameters.AddWithValue("@Check_In", dp.Check_In);
-                cmd.Parameters.AddWithValue("@Check_Out", dp.Check_Out);
-                cmd.Parameters.AddWithValue("@TienCoc", dp.TienCoc);
-                cmd.Parameters.AddWithValue("@TongTien", dp.TongTien);
-                cmd.Parameters.AddWithValue("@TrangThai", dp.TrangThai);
-                cmd.Parameters.AddWithValue("@HinhThucThanhToan", dp.HinhThucThanhToan);
-                cmd.Parameters.AddWithValue("@KetQua", dp.KetQua);
-                cmd.ExecuteNonQuery();
-            }
+                kn.moketnoi();
+                string thucthi = "INSERT INTO DatPhong (ID_NhanVien, ID_KhachHang, ID_Phong, ID_KhuyenMai, Check_In, Check_Out, TienCoc, TongTien, TrangThai, HinhThucThanhToan, KetQua) VALUES (@ID_NhanVien, @ID_KhachHang, @ID_Phong, @ID_KhuyenMai, @Check_In, @Check_Out, @TienCoc, @TongTien, @TrangThai, @HinhThucThanhToan, @KetQua)";
+                using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
+                {
+                    cmd.Parameters.AddWithValue("@ID_NhanVien", dp.ID_NhanVien);
+                    cmd.Parameters.AddWithValue("@ID_KhachHang", dp.ID_KhachHang);
+                    cmd.Parameters.AddWithValue("@ID_Phong", dp.ID_Phong);
+                    cmd.Parameters.AddWithValue("@ID_KhuyenMai", dp.ID_KhuyenMai);
+                    cmd.Parameters.AddWithValue("@Check_In", dp.Check_In);
+                    cmd.Parameters.AddWithValue("@Check_Out", dp.Check_Out);
+                    cmd.Parameters.AddWithValue("@TienCoc", dp.TienCoc);
+                    cmd.Parameters.AddWithValue("@TongTien", dp.TongTien);
+                    cmd.Parameters.AddWithValue("@TrangThai", dp.TrangThai);
+                    cmd.Parameters.AddWithValue("@HinhThucThanhToan", dp.HinhThucThanhToan);
+                    cmd.Parameters.AddWithValue("@KetQua", dp.KetQua);
+                    cmd.ExecuteNonQuery();
+                }
             }
             catch (Exception ex)
             {
-                    throw new Exception("Lỗi khi đặt phòng: " + ex.Message);
+                throw new Exception("Lỗi khi đặt phòng: " + ex.Message);
             }
             finally { kn.dongketnoi(); }
         }
@@ -209,25 +210,55 @@ namespace DAL_KhachSan
             }
             finally { kn.dongketnoi(); }
         }
-        //public DataTable TimKiem(string search, DTO_DatPhong dp)
-        //{
-        //    dt = new DataTable();
-        //    kn.moketnoi();
-        //    string thucthi = "SELECT * FROM DatPhong WHERE 1=1";
-        //    if (!string.IsNullOrEmpty(search))
-        //        thucthi += " AND ID_DatPhong = ID_DatPhong";
-        //    if dp != null)
-        //    {
-        //        if (dp.ID_DatPhong > 0)
-        //            thucthi += " AND ID_DatPhong = @ID_DatPhong";
-        //        if (dp.ID_NhanVien > 0)
-        //            thucthi += "AND ID_NhanVien = @ID_NhanVien";
-        //        if (dp.ID_KhachHang > 0)
-        //            thucthi += "AND ID_NhanVien = @ID_NhanVien";
-        //        if (dp.ID_DatPhong > 0)
-        //            thucthi += "AND ID_DatPhong = @ID_DatPhong";
-        //        if()
-        //    }
-        //}
+        public DataTable TimKiem(string search, DTO_DatPhong dp)
+        {
+            dt = new DataTable();
+            kn.moketnoi();
+            string thucthi = "SELECT * FROM DatPhong WHERE 1=1";
+            if (!string.IsNullOrEmpty(search))
+                thucthi += " AND ID_DatPhong = ID_DatPhong";
+            if (dp != null)
+            {
+                if (dp.ID_DatPhong > 0)
+                    thucthi += " AND ID_DatPhong = @ID_DatPhong";
+                if (dp.ID_NhanVien > 0)
+                    thucthi += " AND ID_NhanVien = @ID_NhanVien";
+                if (dp.ID_KhachHang > 0)
+                    thucthi += " AND ID_KhachHang = @ID_KhachHang";
+                if (dp.ID_Phong > 0)
+                    thucthi += " AND ID_Phong = @ID_Phong";
+                if (!string.IsNullOrEmpty(dp.ID_KhuyenMai))
+                    thucthi += " AND ID_KhuyenMai = @ID_KhuyenMai";
+                if (dp.Check_In != DateTime.MinValue || dp.Check_Out != DateTime.MinValue)
+                    thucthi += " AND Check_In >= @Check_In AND Check_Out <= @Check_Out";
+                if (dp.TienCoc > 0)
+                    thucthi += " AND TienCoc =@TienCoc";
+                if (!string.IsNullOrEmpty(dp.TrangThai))
+                    thucthi += " AND TrangThai = @TrangThai";
+                if (!string.IsNullOrEmpty(dp.HinhThucThanhToan))
+                    thucthi += " AND HinhThucThanhToan =@HinhThucThanhToan";
+                if (!string.IsNullOrEmpty(dp.KetQua))
+                    thucthi += " AND KetQua = @KetQua";
+                cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon);
+                cmd.Parameters.AddWithValue("@Search", search);
+            }
+            if (dp != null)
+            {
+                cmd.Parameters.AddWithValue("@ID_DatPhong", dp.ID_DatPhong);
+                cmd.Parameters.AddWithValue("@ID_NhanVien", dp.ID_NhanVien);
+                cmd.Parameters.AddWithValue("@ID_KhachHang", dp.ID_KhachHang);
+                cmd.Parameters.AddWithValue("@ID_Phong", dp.ID_Phong);
+                cmd.Parameters.AddWithValue("@ID_KhuyenMai", dp.ID_KhuyenMai);
+                cmd.Parameters.AddWithValue("@Check_In", dp.Check_In);
+                cmd.Parameters.AddWithValue("@Check_Out", dp.Check_Out);
+                cmd.Parameters.AddWithValue("@TienCoc", dp.TienCoc);
+                cmd.Parameters.AddWithValue("@TrangThai", dp.TrangThai);
+                cmd.Parameters.AddWithValue("@HinhThucThanhToan", dp.HinhThucThanhToan);
+                cmd.Parameters.AddWithValue("@KetQua", dp.KetQua);
+            }
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

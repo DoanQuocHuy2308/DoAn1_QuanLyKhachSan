@@ -21,6 +21,8 @@ namespace GUI_KhachSan
             InitializeComponent();
             HienThiPhong();
             HienThiDatPhong();
+            dtgvdatphong.DefaultCellStyle.ForeColor = Color.Black;
+            dtgvphong.DefaultCellStyle.ForeColor = Color.Black;
         }
         BLL_DatPhong blldp = new BLL_DatPhong();
         BLL_Phong bllp = new BLL_Phong();
@@ -85,11 +87,10 @@ namespace GUI_KhachSan
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            dp.ID_DatPhong = int.Parse(txtiddatphong.Text);
             dp.ID_NhanVien = int.Parse(txtidnhanvien.Text); ;
             dp.ID_KhachHang = int.Parse(txtidkhachhang.Text);
             dp.ID_Phong = int.Parse(txtidphong.Text);
-            dp.ID_KhuyenMai = int.Parse(txtidkhuyenmai.Text); 
+            dp.ID_KhuyenMai = txtidkhuyenmai.Text; 
             dp.Check_In = dtpkcheckin.Value;
             dp.Check_Out = dtpkcheckout.Value;
             dp.TienCoc = decimal.Parse(txttiencoc.Text);
@@ -120,8 +121,6 @@ namespace GUI_KhachSan
                 MessageBox.Show($"Check In thất bại. Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
         private void btncheckdp_Click(object sender, EventArgs e)
         {
             dp.Check_In = dtpkcheckin.Value;
@@ -175,7 +174,10 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2ComboBox).SelectedIndex = -1;
                 }
+                dtpkcheckin.Value = DateTime.Now;
+                dtpkcheckout.Value = DateTime.Now;
                 HienThiDatPhong();
+                HienThiPhong();
             }
         }
 
@@ -198,7 +200,7 @@ namespace GUI_KhachSan
             dp.ID_NhanVien = int.Parse(txtidnhanvien.Text); ;
             dp.ID_KhachHang = int.Parse(txtidkhachhang.Text); 
             dp.ID_Phong = int.Parse(txtidphong.Text);
-            dp.ID_KhuyenMai = int.Parse(txtidkhuyenmai.Text);
+            dp.ID_KhuyenMai = txtidkhuyenmai.Text;
             dp.Check_In = dtpkcheckin.Value;
             dp.Check_Out = dtpkcheckout.Value;
             dp.TienCoc = decimal.Parse(txttiencoc.Text);
@@ -230,14 +232,52 @@ namespace GUI_KhachSan
             }
             try
             {
-                blldp.CheckOut(dp);
-                MessageBox.Show("Check Out thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HienThiDatPhong();
+                DialogResult kt = MessageBox.Show("Bạn chắc chắn muốn xóa", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (kt == DialogResult.OK)
+                {
+                    blldp.CheckOut(dp);
+                    MessageBox.Show("Check Out thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HienThiDatPhong();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Check Out thất bại. Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btntimkiemdp_Click(object sender, EventArgs e)
+        {
+            int.TryParse(txtiddatphong.Text, out int iddp);
+            dp.ID_DatPhong = iddp;
+            int.TryParse(txtidnhanvien.Text, out int idnv);
+            dp.ID_NhanVien = idnv;
+            int.TryParse(txtidkhachhang.Text, out int idkh);
+            dp.ID_KhachHang = idkh;
+            int.TryParse(txtidphong.Text, out int idp);
+            dp.ID_Phong = idp;
+            dp.ID_KhuyenMai = txtidkhuyenmai.Text;
+            dp.Check_In = dtpkcheckin.Value;
+            dp.Check_Out = dtpkcheckout.Value;
+            decimal.TryParse(txttiencoc.Text, out decimal tiencoc);
+            dp.TienCoc = tiencoc;
+            dp.TrangThai = cbotrangthai.Text;
+            dp.HinhThucThanhToan = cbohinhthucthanhtoan.Text;
+            dp.KetQua = cboketqua.Text;
+            DataTable dt = blldp.TimKiem(txttimkiem.Text, dp);
+            dtgvdatphong.Columns[0].DataPropertyName = "ID_DatPhong";
+            dtgvdatphong.Columns[1].DataPropertyName = "ID_NhanVien";
+            dtgvdatphong.Columns[2].DataPropertyName = "ID_KhachHang";
+            dtgvdatphong.Columns[3].DataPropertyName = "ID_Phong";
+            dtgvdatphong.Columns[4].DataPropertyName = "ID_KhuyenMai";
+            dtgvdatphong.Columns[5].DataPropertyName = "Check_In";
+            dtgvdatphong.Columns[6].DataPropertyName = "Check_Out";
+            dtgvdatphong.Columns[7].DataPropertyName = "TienCoc";
+            dtgvdatphong.Columns[8].DataPropertyName = "TongTien";
+            dtgvdatphong.Columns[9].DataPropertyName = "TrangThai";
+            dtgvdatphong.Columns[10].DataPropertyName = "HinhThucThanhToan";
+            dtgvdatphong.Columns[11].DataPropertyName = "KetQua";
+            dtgvdatphong.DataSource = dt;
         }
     }
 }

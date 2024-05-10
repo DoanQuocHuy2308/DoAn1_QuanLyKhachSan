@@ -149,9 +149,13 @@ namespace GUI_KhachSan
             {
                 if (tk != null)
                 {
-                    blltk.Delete(tk);
-                    MessageBox.Show("Xóa tài khoản và nhân viên thành công!");
-                    HienThiTaiKhoan();
+                    DialogResult kt = MessageBox.Show("Bạn chắc chắn muốn xóa", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (kt == DialogResult.OK)
+                    {
+                        blltk.Delete(tk);
+                        MessageBox.Show("Xóa tài khoản và nhân viên thành công!");
+                        HienThiTaiKhoan();
+                    }
                 }
                 else
                 {

@@ -270,6 +270,5 @@ namespace GUI_KhachSan
         private System.Windows.Forms.PictureBox pckPhong;
         private Guna.UI2.WinForms.Guna2Panel panelvideo;
         private AxWMPLib.AxWindowsMediaPlayer videotrangchu;
-
     }
 }

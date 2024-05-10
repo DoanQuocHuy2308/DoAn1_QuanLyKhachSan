@@ -165,9 +165,13 @@ namespace GUI_KhachSan
             }
             else
             {
-                bllnv.XoaNhanVien(nv);
-                MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HienThiNhanVien();
+                DialogResult kt = MessageBox.Show("Bạn chắc chắn muốn xóa", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (kt == DialogResult.OK)
+                {
+                    bllnv.XoaNhanVien(nv);
+                    MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HienThiNhanVien();
+                }
             }
         }
 

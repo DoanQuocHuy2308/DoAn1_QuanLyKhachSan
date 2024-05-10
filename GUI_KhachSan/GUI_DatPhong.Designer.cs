@@ -106,6 +106,7 @@
             this.panelchinh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.panelchinh.BorderRadius = 20;
             this.panelchinh.BorderThickness = 4;
+            this.panelchinh.Controls.Add(this.btnindp);
             this.panelchinh.Controls.Add(this.btntimkiemdp);
             this.panelchinh.Controls.Add(this.txttimkiem);
             this.panelchinh.Controls.Add(this.label19);
@@ -140,6 +141,7 @@
             this.btntimkiemdp.Name = "btntimkiemdp";
             this.btntimkiemdp.Size = new System.Drawing.Size(48, 33);
             this.btntimkiemdp.TabIndex = 3;
+            this.btntimkiemdp.Click += new System.EventHandler(this.btntimkiemdp_Click);
             // 
             // txttimkiem
             // 
@@ -185,9 +187,9 @@
             this.paneldulieu.BorderThickness = 2;
             this.paneldulieu.Controls.Add(this.grbdulieudp);
             this.paneldulieu.Controls.Add(this.grbdulieup);
-            this.paneldulieu.Location = new System.Drawing.Point(12, 99);
+            this.paneldulieu.Location = new System.Drawing.Point(12, 142);
             this.paneldulieu.Name = "paneldulieu";
-            this.paneldulieu.Size = new System.Drawing.Size(1027, 700);
+            this.paneldulieu.Size = new System.Drawing.Size(1027, 657);
             this.paneldulieu.TabIndex = 15;
             // 
             // grbdulieudp
@@ -199,7 +201,7 @@
             this.grbdulieudp.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.grbdulieudp.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbdulieudp.ForeColor = System.Drawing.Color.Gold;
-            this.grbdulieudp.Location = new System.Drawing.Point(16, 332);
+            this.grbdulieudp.Location = new System.Drawing.Point(15, 296);
             this.grbdulieudp.Name = "grbdulieudp";
             this.grbdulieudp.Size = new System.Drawing.Size(995, 348);
             this.grbdulieudp.TabIndex = 0;
@@ -337,9 +339,9 @@
             this.grbdulieup.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.grbdulieup.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbdulieup.ForeColor = System.Drawing.Color.Gold;
-            this.grbdulieup.Location = new System.Drawing.Point(16, 11);
+            this.grbdulieup.Location = new System.Drawing.Point(15, 15);
             this.grbdulieup.Name = "grbdulieup";
-            this.grbdulieup.Size = new System.Drawing.Size(995, 315);
+            this.grbdulieup.Size = new System.Drawing.Size(995, 275);
             this.grbdulieup.TabIndex = 0;
             this.grbdulieup.Text = "Phòng";
             // 
@@ -363,7 +365,7 @@
             this.dtgvphong.RowHeadersWidth = 30;
             this.dtgvphong.RowTemplate.Height = 24;
             this.dtgvphong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvphong.Size = new System.Drawing.Size(995, 275);
+            this.dtgvphong.Size = new System.Drawing.Size(995, 235);
             this.dtgvphong.TabIndex = 0;
             // 
             // ID_Phong1
@@ -413,7 +415,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 40.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label1.Location = new System.Drawing.Point(231, 12);
+            this.label1.Location = new System.Drawing.Point(279, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(420, 75);
             this.label1.TabIndex = 14;
@@ -486,7 +488,6 @@
             this.panelchucnang.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.panelchucnang.BorderRadius = 20;
             this.panelchucnang.BorderThickness = 2;
-            this.panelchucnang.Controls.Add(this.btnindp);
             this.panelchucnang.Controls.Add(this.cbotrangthai);
             this.panelchucnang.Controls.Add(this.cbohinhthucthanhtoan);
             this.panelchucnang.Controls.Add(this.cboketqua);
@@ -535,9 +536,9 @@
             this.btnindp.ForeColor = System.Drawing.Color.White;
             this.btnindp.Image = ((System.Drawing.Image)(resources.GetObject("btnindp.Image")));
             this.btnindp.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnindp.Location = new System.Drawing.Point(329, 635);
+            this.btnindp.Location = new System.Drawing.Point(732, 95);
             this.btnindp.Name = "btnindp";
-            this.btnindp.Size = new System.Drawing.Size(90, 45);
+            this.btnindp.Size = new System.Drawing.Size(90, 41);
             this.btnindp.TabIndex = 17;
             // 
             // cbotrangthai
@@ -695,7 +696,7 @@
             this.btnresetdp.ImageSize = new System.Drawing.Size(40, 40);
             this.btnresetdp.Location = new System.Drawing.Point(219, 635);
             this.btnresetdp.Name = "btnresetdp";
-            this.btnresetdp.Size = new System.Drawing.Size(90, 45);
+            this.btnresetdp.Size = new System.Drawing.Size(200, 45);
             this.btnresetdp.TabIndex = 16;
             this.btnresetdp.Click += new System.EventHandler(this.btnresetdp_Click);
             // 
@@ -1060,9 +1061,9 @@
             this.btncheckdp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btncheckdp.Image = ((System.Drawing.Image)(resources.GetObject("btncheckdp.Image")));
             this.btncheckdp.ImageSize = new System.Drawing.Size(30, 30);
-            this.btncheckdp.Location = new System.Drawing.Point(799, 59);
+            this.btncheckdp.Location = new System.Drawing.Point(828, 95);
             this.btncheckdp.Name = "btncheckdp";
-            this.btncheckdp.Size = new System.Drawing.Size(211, 34);
+            this.btncheckdp.Size = new System.Drawing.Size(211, 41);
             this.btncheckdp.TabIndex = 1;
             this.btncheckdp.Text = "&CHECK ROOM";
             this.btncheckdp.Click += new System.EventHandler(this.btncheckdp_Click);

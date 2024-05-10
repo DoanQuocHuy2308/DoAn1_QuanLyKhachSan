@@ -29,9 +29,10 @@ namespace DAL_KhachSan
             try
             {
                 kn.moketnoi();
-                string thucthi = "INSERT INTO KhuyenMai(Ten_KhuyenMai,GiaTri,MoTa,NgayBatDau,NgayKetThuc) Values (@Ten_KhuyenMai,@GiaTri,@MoTa,@NgayBatDau,@NgayKetThuc)";
+                string thucthi = "INSERT INTO KhuyenMai(ID_KhuyenMai,Ten_KhuyenMai,GiaTri,MoTa,NgayBatDau,NgayKetThuc) Values (@Ten_KhuyenMai,@GiaTri,@MoTa,@NgayBatDau,@NgayKetThuc)";
                 using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
                 {
+                    cmd.Parameters.AddWithValue("@ID_KhuyenMai", km.ID_KhuyenMai);
                     cmd.Parameters.AddWithValue("@Ten_KhuyenMai", km.Ten_KhuyenMai);
                     cmd.Parameters.AddWithValue("@GiaTri", km.GiaTri);
                     cmd.Parameters.AddWithValue("@MoTa", km.MoTa);
@@ -155,7 +156,7 @@ namespace DAL_KhachSan
 
             if (km != null)
             {
-                if (km.ID_KhuyenMai > 0)
+                if (!string.IsNullOrEmpty(km.ID_KhuyenMai))
                     thucthi += " AND ID_KhuyenMai = @ID_KhuyenMai";
 
                 if (!string.IsNullOrEmpty(km.Ten_KhuyenMai))

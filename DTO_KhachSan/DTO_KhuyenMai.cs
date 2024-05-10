@@ -8,7 +8,7 @@ namespace DTO_KhachSan
 {
     public class DTO_KhuyenMai
     {
-        public int ID_KhuyenMai { get; set; }
+        public string ID_KhuyenMai { get; set; }
         public string Ten_KhuyenMai { get; set; }
         public decimal GiaTri { get; set; }
         public string MoTa { get; set; }

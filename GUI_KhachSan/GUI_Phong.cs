@@ -167,9 +167,13 @@ namespace GUI_KhachSan
             }
             else
             {
-                p.Delete(DTO_P);
-                MessageBox.Show("Xóa phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HienThiPhong();
+                DialogResult kt = MessageBox.Show("Bạn chắc chắn muốn xóa", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (kt == DialogResult.OK)
+                {
+                    p.Delete(DTO_P);
+                    MessageBox.Show("Xóa phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HienThiPhong();
+                }
             }
         }
 

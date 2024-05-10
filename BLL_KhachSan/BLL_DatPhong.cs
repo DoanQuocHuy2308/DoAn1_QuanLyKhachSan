@@ -44,7 +44,7 @@ namespace BLL_KhachSan
             decimal giaPhong = LayGiaTienPhong(dp);
             int soNgay = (int)(dp.Check_Out - dp.Check_In).TotalDays;
             decimal giamGia = 0;
-            if (dp.ID_KhuyenMai >= 0)
+            if (!string.IsNullOrEmpty(dp.ID_KhuyenMai))
             {
                 giamGia = LayGiaTriKhuyenMai(dp);
             }
@@ -84,6 +84,10 @@ namespace BLL_KhachSan
             {
                 throw new Exception("Lỗi khi xóa thông tin đặt phòng: " + ex.Message);
             }
+        }
+        public DataTable TimKiem(string search, DTO_DatPhong dp)
+        {
+            return daldp.TimKiem(search, dp);
         }
     }
 }

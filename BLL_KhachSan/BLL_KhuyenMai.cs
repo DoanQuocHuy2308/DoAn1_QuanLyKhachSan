@@ -73,7 +73,6 @@ namespace BLL_KhachSan
                 throw new Exception("Lỗi khi xóa thông tin khuyến mại: " + ex.Message);
             }
         }
-
         public DataTable TimKiem(string search, DTO_KhuyenMai km)
         {
             return dalkm.TimKiemKhuyenMai(search, km);

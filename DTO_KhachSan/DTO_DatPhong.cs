@@ -12,7 +12,7 @@ namespace DTO_KhachSan
         public int ID_NhanVien { get; set; }
         public int ID_KhachHang { get; set; }
         public int ID_Phong { get; set; }
-        public int ID_KhuyenMai { get; set; }
+        public string ID_KhuyenMai { get; set; }
         public DateTime Check_In { get; set; }
         public DateTime Check_Out { get; set; }
         public decimal TienCoc { get; set; }

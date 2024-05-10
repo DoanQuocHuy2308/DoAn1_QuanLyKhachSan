@@ -137,9 +137,13 @@ namespace GUI_KhachSan
             }
             else
             {
-                blldv.Delete(dto_dv);
-                MessageBox.Show("Xóa dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HienThiDichVu();
+                DialogResult kt = MessageBox.Show("Bạn chắc chắn muốn xóa", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (kt == DialogResult.OK)
+                {
+                    blldv.Delete(dto_dv);
+                    MessageBox.Show("Xóa dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HienThiDichVu();
+                }
             }
         }
 
@@ -250,9 +254,13 @@ namespace GUI_KhachSan
             }
             else
             {
-                bllldv.Delete(dto_ldv);
-                MessageBox.Show("Xóa loại dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HienThiLoaiDichVu();
+                DialogResult kt = MessageBox.Show("Bạn chắc chắn muốn xóa", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (kt == DialogResult.OK)
+                {
+                    bllldv.Delete(dto_ldv);
+                    MessageBox.Show("Xóa loại dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HienThiLoaiDichVu();
+                }
             }
         }
 

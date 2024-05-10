@@ -54,6 +54,7 @@ namespace GUI_KhachSan
         }
         private void btnthemkm_Click(object sender, EventArgs e)
         {
+            km.ID_KhuyenMai = txtidkhuyenmai.Text;
             km.Ten_KhuyenMai = txttenkhuyenmai.Text;
             km.GiaTri = decimal.Parse(txtgiatri.Text);
             km.MoTa = txtmota.Text;
@@ -119,7 +120,7 @@ namespace GUI_KhachSan
                 MessageBox.Show("Vui lòng chọn một khuyến mại để sửa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            km.ID_KhuyenMai = int.Parse(txtidkhuyenmai.Text);
+            km.ID_KhuyenMai = txtidkhuyenmai.Text;
             km.Ten_KhuyenMai = txttenkhuyenmai.Text;
             km.GiaTri = decimal.Parse(txtgiatri.Text);
             km.MoTa = txtmota.Text;
@@ -147,13 +148,12 @@ namespace GUI_KhachSan
 
         private void btnxoakm_Click(object sender, EventArgs e)
         {
+            km.ID_KhuyenMai = txtidkhuyenmai.Text;
             if (string.IsNullOrEmpty(txtidkhuyenmai.Text))
             {
                 MessageBox.Show("Vui lòng chọn một khuyến mại để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            int.TryParse(txtidkhuyenmai.Text, out int id);
-            km.ID_KhuyenMai = id;
 
             try
             {
@@ -169,9 +169,13 @@ namespace GUI_KhachSan
                 }
                 else
                 {
-                    bllkm.Delete(km);
-                    MessageBox.Show("Xóa thông tin khuyến mại thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThiKhuyenMai();
+                    DialogResult kt = MessageBox.Show("Bạn chắc chắn muốn xóa","Thông Báo",MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (kt == DialogResult.OK)
+                    {
+                        bllkm.Delete(km);
+                        MessageBox.Show("Xóa thông tin khuyến mại thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HienThiKhuyenMai();
+                    }
                 }
             }
             catch (Exception ex)
@@ -182,8 +186,8 @@ namespace GUI_KhachSan
 
         private void btntimkiemkm_Click(object sender, EventArgs e)
         {
-            int.TryParse(txtidkhuyenmai.Text, out int id);
-            km.ID_KhuyenMai = id;
+
+            km.ID_KhuyenMai = txtidkhuyenmai.Text;
             km.Ten_KhuyenMai = txttenkhuyenmai.Text;
             decimal.TryParse(txtgiatri.Text, out decimal giatri);
             km.GiaTri = giatri;
