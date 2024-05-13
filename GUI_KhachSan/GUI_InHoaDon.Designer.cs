@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_InHoaDon));
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.frmInHoaDon = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
-            // crystalReportViewer1
+            // frmInHoaDon
             // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1223, 749);
-            this.crystalReportViewer1.TabIndex = 0;
+            this.frmInHoaDon.ActiveViewIndex = -1;
+            this.frmInHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.frmInHoaDon.Cursor = System.Windows.Forms.Cursors.Default;
+            this.frmInHoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.frmInHoaDon.Location = new System.Drawing.Point(0, 0);
+            this.frmInHoaDon.Name = "frmInHoaDon";
+            this.frmInHoaDon.Size = new System.Drawing.Size(1223, 749);
+            this.frmInHoaDon.TabIndex = 0;
             // 
             // GUI_InHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1223, 749);
-            this.Controls.Add(this.crystalReportViewer1);
+            this.Controls.Add(this.frmInHoaDon);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -63,6 +63,6 @@
 
         #endregion
 
-        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer frmInHoaDon;
     }
 }

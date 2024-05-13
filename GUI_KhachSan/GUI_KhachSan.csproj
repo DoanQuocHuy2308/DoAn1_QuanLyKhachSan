@@ -148,6 +148,24 @@
     <Compile Include="GUI_TrangChuNhanVien.Designer.cs">
       <DependentUpon>GUI_TrangChuNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="InHoaDonDatPhong.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InHoaDonDatPhong.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InHoaDonDichVu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InHoaDonDichVu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InPhongDat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InPhongDat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI_QuenMatKhau.cs">
@@ -218,6 +236,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_TrangChuNhanVien.resx">
       <DependentUpon>GUI_TrangChuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InHoaDonDatPhong.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InHoaDonDatPhong.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InHoaDonDichVu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InHoaDonDichVu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InPhongDat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InPhongDat.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

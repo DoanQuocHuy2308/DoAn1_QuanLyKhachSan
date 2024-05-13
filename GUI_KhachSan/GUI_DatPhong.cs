@@ -26,6 +26,7 @@ namespace GUI_KhachSan
         }
         BLL_DatPhong blldp = new BLL_DatPhong();
         BLL_Phong bllp = new BLL_Phong();
+        BLL_In bllin = new BLL_In();
         DTO_DatPhong dp = new DTO_DatPhong();
         private void btnthoat_Click(object sender, EventArgs e)
         {
@@ -77,8 +78,8 @@ namespace GUI_KhachSan
         {
             if (string.IsNullOrEmpty(txtidnhanvien.Text) ||
                 string.IsNullOrEmpty(txtidkhachhang.Text) ||
-                string.IsNullOrEmpty(txtidphong.Text) ||
                 string.IsNullOrEmpty(txtidkhuyenmai.Text) ||
+                string.IsNullOrEmpty(txtidphong.Text) ||
                 string.IsNullOrEmpty(txttiencoc.Text) ||
                 string.IsNullOrEmpty(cbotrangthai.Text) ||
                 string.IsNullOrEmpty(cbohinhthucthanhtoan.Text) ||
@@ -225,19 +226,27 @@ namespace GUI_KhachSan
         private void btnxoadp_Click(object sender, EventArgs e)
         {
             dp.ID_DatPhong = int.Parse(txtiddatphong.Text);
-            if(string.IsNullOrEmpty(dp.ID_DatPhong.ToString()))
+            DataTable dt = bllin.InDonDatPhong(dp);
+            if (string.IsNullOrEmpty(dp.ID_DatPhong.ToString()))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
             {
-                DialogResult kt = MessageBox.Show("Bạn chắc chắn muốn xóa", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult kt = MessageBox.Show("Bạn chắc chắn muốn check out", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (kt == DialogResult.OK)
                 {
                     blldp.CheckOut(dp);
                     MessageBox.Show("Check Out thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     HienThiDatPhong();
+                    InHoaDonDatPhong incheckout = new InHoaDonDatPhong();
+                    incheckout.SetDataSource(dt);
+                    GUI_InHoaDon inhd = new GUI_InHoaDon();
+                    inhd.frmInHoaDon.ReportSource = incheckout;
+                    this.Hide();
+                    inhd.ShowDialog();
+                    this.Show();
                 }
             }
             catch (Exception ex)
@@ -278,6 +287,24 @@ namespace GUI_KhachSan
             dtgvdatphong.Columns[10].DataPropertyName = "HinhThucThanhToan";
             dtgvdatphong.Columns[11].DataPropertyName = "KetQua";
             dtgvdatphong.DataSource = dt;
+        }
+
+        private void btnindp_Click(object sender, EventArgs e)
+        {
+            dp.ID_DatPhong = int.Parse(txtiddatphong.Text);
+            if (string.IsNullOrEmpty(txtiddatphong.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã đặt phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            DataTable dt = bllin.InPhongDat(dp);
+            InPhongDat i = new InPhongDat();
+            i.SetDataSource(dt);
+            GUI_InHoaDon inhd = new GUI_InHoaDon();
+            inhd.frmInHoaDon.ReportSource = i;
+            this.Hide();
+            inhd.ShowDialog();
+            this.Show();
         }
     }
 }

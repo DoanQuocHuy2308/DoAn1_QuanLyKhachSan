@@ -17,6 +17,10 @@ namespace BLL_KhachSan
         {
             return p.LayDuLieuPhong();
         }
+        public bool KTTrungTen(DTO_Phong dto_p)
+        {
+            return p.KTTrungTen(dto_p);
+        }
         public void ThemPhong(DTO_Phong dto_p)
         {
             p.ThemPhong(dto_p);

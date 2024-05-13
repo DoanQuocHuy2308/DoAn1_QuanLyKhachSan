@@ -99,7 +99,7 @@ CREATE PROCEDURE InPhongDat
 	@IDDatPhong INT
 AS
 BEGIN
-	SELECT dp.ID_DatPhong, kh.Ten_KhachHang, p.Ten_Phong , lp.Ten_LoaiPhong, lp.SucChua  FROM DatPhong AS dp 
+	SELECT dp.ID_DatPhong, kh.ID_KhachHang, kh.Ten_KhachHang, p.Ten_Phong , lp.Ten_LoaiPhong, lp.SucChua  FROM DatPhong AS dp 
 	INNER JOIN KhachHang kh ON dp.ID_KhachHang = kh.ID_KhachHang
     INNER JOIN Phong p ON dp.ID_Phong = p.ID_Phong
     INNER JOIN LoaiPhong lp ON p.ID_LoaiPhong = lp.ID_LoaiPhong
@@ -111,8 +111,8 @@ CREATE PROCEDURE InDonDatPhong
     @IDDatPhong INT
 AS
 BEGIN
-    SELECT dp.ID_DatPhong,dp.ID_NhanVien,nv.Ten_NhanVien,kh.Ten_KhachHang,p.Ten_Phong,lp.Ten_LoaiPhong,lp.SucChua,
-	lp.Gia_Phong,km.Ten_KhuyenMai,dp.Check_In,dp.Check_Out,dp.TienCoc,dp.TongTien,dp.TrangThai
+    SELECT dp.ID_DatPhong,dp.ID_NhanVien,nv.Ten_NhanVien,kh.Ten_KhachHang, kh.GioiTinh_KhachHang ,kh.SDT_KhachHang , kh.DiaChi_KhachHang 
+	,p.Ten_Phong,lp.Ten_LoaiPhong,lp.SucChua,lp.Gia_Phong,km.Ten_KhuyenMai,dp.Check_In,dp.Check_Out,dp.TienCoc,dp.TongTien,dp.TrangThai
     FROM DatPhong dp
     INNER JOIN NhanVien nv ON dp.ID_NhanVien = nv.ID_NhanVien
     INNER JOIN KhachHang kh ON dp.ID_KhachHang = kh.ID_KhachHang
@@ -122,6 +122,21 @@ BEGIN
     WHERE dp.ID_DatPhong = @IDDatPhong;
 END
 
+--In Hóa Đơn Đặt Dịch Vụ
+CREATE PROCEDURE InDonDatDichVu
+	@IDKhachHang INT
+AS
+BEGIN
+	SELECT ddv.ID_DatDichVu, ddv.ID_NhanVien,nv.Ten_NhanVien, kh.Ten_KhachHang, kh.SDT_KhachHang, dv.Ten_DichVu, ldv.Ten_LoaiDichVu , ddv.SoLuong, 
+	dv.Gia_DichVu, km.Ten_KhuyenMai, ddv.NgayDat ,ddv.TongTien,ddv.TrangThai
+	FROM DatDichVu ddv
+	INNER JOIN NhanVien nv on ddv.ID_NhanVien = nv.ID_NhanVien
+	INNER JOIN KhachHang kh on ddv.ID_KhachHang = kh.ID_KhachHang
+	INNER JOIN DichVu dv on ddv.ID_DichVu = dv.ID_DichVu
+	INNER JOIN LoaiDichVu ldv on ldv.ID_LoaiDichVu = dv.ID_LoaiDichVu
+	LEFT JOIN KhuyenMai km on km.ID_KhuyenMai = ddv.ID_KhuyenMai
+	WHERE ddv.ID_KhachHang = @IDKhachHang
+END
 
 
 

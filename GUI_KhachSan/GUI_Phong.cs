@@ -77,9 +77,17 @@ namespace GUI_KhachSan
             }
             try
             {
-                p.ThemPhong(DTO_P);
-                MessageBox.Show("Thêm phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HienThiPhong();
+                if (p.KTTrungTen(DTO_P))
+                {
+                    MessageBox.Show("Phòng này đã tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    p.ThemPhong(DTO_P);
+                    MessageBox.Show("Thêm phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HienThiPhong();
+                }
             }
             catch (Exception ex)
             {

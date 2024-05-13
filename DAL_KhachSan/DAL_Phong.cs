@@ -42,6 +42,31 @@ namespace DAL_KhachSan
             }
             return dt;
         }
+        public bool KTTrungTen(DTO_Phong p)
+        {
+            bool kt = false;
+            try
+            {
+                kn.moketnoi();
+                string thucthi = "SELECT COUNT(*) FROM Phong WHERE Ten_Phong = @Ten_Phong";
+                int count;
+                using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
+                {
+                    cmd.Parameters.AddWithValue("@Ten_Phong", p.Ten_Phong);
+                    count = (int)cmd.ExecuteScalar();
+                }
+                kt = count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi kiểm tra thông tin Phòng: " + ex.Message);
+            }
+            finally
+            {
+                kn.dongketnoi();
+            }
+            return kt;
+        }
         public void ThemPhong(DTO_Phong p)
         {
             try

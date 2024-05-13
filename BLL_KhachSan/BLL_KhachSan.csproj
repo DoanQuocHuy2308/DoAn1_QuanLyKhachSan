@@ -46,6 +46,7 @@
     <Compile Include="BLL_DatDichVu.cs" />
     <Compile Include="BLL_DatPhong.cs" />
     <Compile Include="BLL_DichVu.cs" />
+    <Compile Include="BLL_In.cs" />
     <Compile Include="BLL_KhachHang.cs" />
     <Compile Include="BLL_KhuyenMai.cs" />
     <Compile Include="BLL_LoaiDichVu.cs" />

@@ -17,6 +17,7 @@ namespace GUI_KhachSan
     {
         BLL_DichVu blldv = new BLL_DichVu();
         BLL_DatDichVu bllddv = new BLL_DatDichVu();
+        BLL_In bllin = new BLL_In();
         DTO_DatDichVu ddv = new DTO_DatDichVu();
         public GUI_DatDichVu()
         {
@@ -240,6 +241,24 @@ namespace GUI_KhachSan
             dtgvdatdichvu.Columns[9].DataPropertyName = "HinhThucThanhToan";
             dtgvdatdichvu.Columns[10].DataPropertyName = "KetQua";
             dtgvdatdichvu.DataSource = dt;
+        }
+
+        private void btninddv_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtidkhachhang.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã khách hàng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            ddv.ID_KhachHang = int.Parse(txtidkhachhang.Text);
+            DataTable dt = bllin.InHoaDonDichVu(ddv);
+            InHoaDonDichVu i = new InHoaDonDichVu();
+            i.SetDataSource(dt);
+            GUI_InHoaDon inhd = new GUI_InHoaDon();
+            inhd.frmInHoaDon.ReportSource = i;
+            this.Hide();
+            inhd.ShowDialog();
+            this.Show();
         }
     }
 }
