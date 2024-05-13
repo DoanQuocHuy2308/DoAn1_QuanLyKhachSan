@@ -79,15 +79,23 @@ namespace GUI_KhachSan
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            try
+            if (blldv.KTTrungTen(dto_dv))
             {
-                blldv.ADD(dto_dv);
-                MessageBox.Show("Thêm dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HienThiDichVu();
+                MessageBox.Show("Tên dịch vụ này đã có , vui lòng nhập lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Thêm dịch vụ thất bại. Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    blldv.ADD(dto_dv);
+                    MessageBox.Show("Thêm dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HienThiDichVu();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Thêm dịch vụ thất bại. Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -149,25 +157,14 @@ namespace GUI_KhachSan
 
         private void btntimkiemdichvu_Click(object sender, EventArgs e)
         {
-            string search = txttimkiem.Text;
-            int? idDichVu = null;
-            int? idLoaiDichVu = null;
-            decimal? GiaDichVu = null;
-            if (!int.TryParse(txtiddichvu.Text, out int iddv))
-            {
-                idDichVu = iddv;
-            }
-
-            string tenDichVu = txttendichvu.Text;
-            if (!int.TryParse(cboidloaidichvu.Text, out int idldv))
-            {
-                idLoaiDichVu = idldv;
-            }
-            if (!decimal.TryParse(txtgiadichvu.Text, out decimal gia))
-            {
-                GiaDichVu = gia;
-            }
-            DataTable dt = blldv.TimKiemDichVu(search, idDichVu, tenDichVu, idLoaiDichVu, GiaDichVu);
+            int.TryParse(txtiddichvu.Text, out int iddichvu);
+            dto_dv.ID_DichVu= iddichvu;
+            dto_dv.Ten_DichVu = txttendichvu.Text;
+            decimal.TryParse(txtgiadichvu.Text, out decimal giadichvu);
+            dto_dv.Gia_DichVu = giadichvu;
+            int.TryParse(cboidloaidichvu.Text, out int idloaidichvu);
+            dto_dv.ID_LoaiDichVu = idloaidichvu;
+            DataTable dt = blldv.TimKiemDichVu(txttimkiem.Text, dto_dv);
             dtgvdichvu.Columns[0].DataPropertyName = "ID_DichVu";
             dtgvdichvu.Columns[1].DataPropertyName = "Ten_DichVu";
             dtgvdichvu.Columns[2].DataPropertyName = "ID_LoaiDichVu";
@@ -184,10 +181,10 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                cboidloaidichvu.SelectedIndex=-1;
                 txttimkiem.Text = "";
                 HienThiIDLoaiDichVu();
                 HienThiDichVu();
+                cboidloaidichvu.SelectedIndex = -1;
             }
         }
 
@@ -209,15 +206,23 @@ namespace GUI_KhachSan
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            try
+            if (bllldv.KTTrungTen(dto_ldv))
             {
-                bllldv.ADD(dto_ldv);
-                MessageBox.Show("Thêm loại dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HienThiLoaiDichVu();
+                MessageBox.Show("Tên loại dịch vụ này đã có , vui lòng nhập lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Thêm loại dịch vụ thất bại. Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    bllldv.ADD(dto_ldv);
+                    MessageBox.Show("Thêm loại dịch vụ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HienThiLoaiDichVu();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Thêm loại dịch vụ thất bại. Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

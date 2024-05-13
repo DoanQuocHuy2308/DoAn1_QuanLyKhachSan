@@ -55,9 +55,16 @@ namespace BLL_KhachSan
                 throw new Exception("Lỗi khi xóa thông tin phòng: " + ex.Message);
             }
         }
-        public DataTable TimKiemPhong(string search, int? idPhong, string tenPhong, int? idLoaiPhong)
+        public DataTable TimKiemPhong(string search, DTO_Phong dto_P)
         {
-            return p.TimKiemPhong(search, idPhong, tenPhong, idLoaiPhong);
+            try
+            {
+                return p.TimKiem(search, dto_P);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi tìm kiếm thông tin phòng: " + ex.Message);
+            }
         }
     }
 }

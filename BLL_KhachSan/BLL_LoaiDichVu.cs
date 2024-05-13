@@ -16,6 +16,10 @@ namespace BLL_KhachSan
         {
             return ldv.Dulieuloaidichvu();
         }
+        public bool KTTrungTen(DTO_LoaiDichVu dto_ldv)
+        {
+            return ldv.KTTrungTen(dto_ldv);
+        }
         public void ADD(DTO_LoaiDichVu dto_ldv)
         {
             ldv.ThemLoaiDichVu(dto_ldv);

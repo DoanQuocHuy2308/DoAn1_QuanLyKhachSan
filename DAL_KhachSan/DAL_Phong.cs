@@ -20,26 +20,11 @@ namespace DAL_KhachSan
         public DataTable LayDuLieuPhong()
         {
             dt = new DataTable();
-            try
-            {
-                kn.moketnoi();
-                using (cmd = new SqlCommand("HienThiDuLieuPhong", DAL_KetNoi.sqlcon))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    using (da = new SqlDataAdapter(cmd))
-                    {
-                        da.Fill(dt);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi: " + ex.Message);
-            }
-            finally
-            {
-                kn.dongketnoi();
-            }
+            kn.moketnoi();
+            string thucthi = "select ID_Phong,Ten_Phong,lp.ID_LoaiPhong,Ten_LoaiPhong,SucChua,Gia_Phong from Phong as p " +
+                "inner join LoaiPhong as lp on lp.ID_LoaiPhong= p.ID_LoaiPhong";
+            da = new SqlDataAdapter(thucthi, DAL_KetNoi.sqlcon);
+            da.Fill(dt);
             return dt;
         }
         public bool KTTrungTen(DTO_Phong p)
@@ -150,16 +135,30 @@ namespace DAL_KhachSan
             }
             finally { kn.dongketnoi(); }
         }
-        public DataTable TimKiemPhong(string search, int? idPhong, string tenPhong, int? idLoaiPhong)
+        public DataTable TimKiem(string search, DTO_Phong p)
         {
             dt = new DataTable();
             kn.moketnoi();
-            cmd = new SqlCommand("TimKiemPhong", DAL_KetNoi.sqlcon);
-            cmd.CommandType = CommandType.StoredProcedure;
+            string thucthi = "SELECT * FROM Phong WHERE 1=1";
+            if (!string.IsNullOrEmpty(search))
+                thucthi += " AND Ten_Phong LIKE '%' + @Search + '%'";
+            if (p != null)
+            {
+                if (p.ID_Phong > 0)
+                    thucthi += " AND ID_Phong = @ID_Phong";
+                if (!string.IsNullOrEmpty(p.Ten_Phong))
+                    thucthi += " AND Ten_Phong LIKE '%' + @Ten_Phong + '%'";
+                if (p.ID_LoaiPhong > 0)
+                    thucthi += " AND ID_LoaiPhong = @ID_LoaiPhong ";
+            }
+            cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon);
             cmd.Parameters.AddWithValue("@Search", search);
-            cmd.Parameters.AddWithValue("@IDPhong", idPhong);
-            cmd.Parameters.AddWithValue("@TenPhong", tenPhong);
-            cmd.Parameters.AddWithValue("@IDLoaiPhong", idLoaiPhong);
+            if (p != null)
+            {
+                cmd.Parameters.AddWithValue("@ID_Phong", p.ID_Phong);
+                cmd.Parameters.AddWithValue("@Ten_Phong", p.Ten_Phong);
+                cmd.Parameters.AddWithValue("@ID_LoaiPhong", p.ID_LoaiPhong);
+            }
             da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             return dt;

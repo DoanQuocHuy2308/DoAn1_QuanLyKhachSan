@@ -24,6 +24,31 @@ namespace DAL_KhachSan
             da.Fill(dt);
             return dt;
         }
+        public bool KTTrungTen(DTO_LoaiDichVu ldv)
+        {
+            bool kt = false;
+            try
+            {
+                kn.moketnoi();
+                string thucthi = "SELECT COUNT(*) FROM LoaiDichVu WHERE Ten_LoaiDichVu = @Ten_LoaiDichVu";
+                int count;
+                using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
+                {
+                    cmd.Parameters.AddWithValue("@Ten_LoaiDichVu", ldv.Ten_LoaiDichVu);
+                    count = (int)cmd.ExecuteScalar();
+                }
+                kt = count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi kiểm tra thông tin loại dịch vụ: " + ex.Message);
+            }
+            finally
+            {
+                kn.dongketnoi();
+            }
+            return kt;
+        }
         public void ThemLoaiDichVu(DTO_LoaiDichVu ldv)
         {
             try

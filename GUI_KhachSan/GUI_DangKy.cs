@@ -99,7 +99,7 @@ namespace GUI_KhachSan
             }
             try
             {
-                Check.nguoidung = txtemailtaikhoan.Text;
+                Check.nguoidung = txttennhanvien.Text;
                 Check.check = cbovaitro.Text;
                 dk.DangKyTaiKhoan(tk);
                 bllnv.ThemNhanVien(nv);

@@ -20,6 +20,10 @@ namespace BLL_KhachSan
         {
             return dv.dulieuidloaidichvu();
         }
+        public bool KTTrungTen(DTO_DichVu dto_dv)
+        {
+            return dv.KTTrungTen(dto_dv);
+        }
         public void ADD(DTO_DichVu dto_dv)
         {
             dv.ThemDichVu(dto_dv);
@@ -54,9 +58,9 @@ namespace BLL_KhachSan
                 throw new Exception("Lỗi khi xóa thông tin dịch vụ: " + ex.Message);
             }
         }
-        public DataTable TimKiemDichVu(string search, int? idDichVu, string tenDichVu, int? idLoaiDichVu, decimal? GiaDichVu)
+        public DataTable TimKiemDichVu(string search, DTO_DichVu dto_dv)
         {
-            return dv.TimKiemDichVu(search, idDichVu,tenDichVu, idLoaiDichVu,GiaDichVu);
+            return dv.TimKiemDichVu(search, dto_dv);
         }
     }
 }

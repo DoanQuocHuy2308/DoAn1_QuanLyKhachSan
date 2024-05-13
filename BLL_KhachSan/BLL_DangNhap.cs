@@ -2,6 +2,7 @@
 using DTO_KhachSan;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,10 @@ namespace BLL_KhachSan
     public class BLL_DangNhap
     {
         private DAL_DangNhap dn = new DAL_DangNhap();
-        public DTO_TaiKhoan DangNhap(string Email_TaiKhoan, string Pass_TaiKhoan, string Role_TaiKhoan)
+        public DTO_TaiKhoan DangNhap(DTO_TaiKhoan tk)
         {
-            DTO_TaiKhoan tk = dn.DangNhapTaiKhoan(Email_TaiKhoan, Pass_TaiKhoan, Role_TaiKhoan);
-            if(tk != null )
+            tk = dn.DangNhapTaiKhoan(tk);
+            if (tk != null)
             {
                 if (tk.Ban_TaiKhoan == 1)
                 {
@@ -23,6 +24,11 @@ namespace BLL_KhachSan
                 return tk;
             }
             return null;
+        }
+
+        public string LayTenNhanVien(string email)
+        {
+            return dn.LayTenNhanVien(email);
         }
     }
 }

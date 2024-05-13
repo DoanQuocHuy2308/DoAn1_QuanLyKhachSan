@@ -20,6 +20,10 @@ namespace BLL_KhachSan
         {
             return lp.Dulieuloaiphong();
         }
+        public bool KTTrungTen(DTO_LoaiPhong dto_lp)
+        {
+            return lp.KTTrungTen(dto_lp);
+        }
         public void ThemLoaiPhong(DTO_LoaiPhong dto_lp)
         {
             lp.ThemLoaiPhong(dto_lp);

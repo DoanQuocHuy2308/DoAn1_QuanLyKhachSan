@@ -136,10 +136,10 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                cboidloaiphong.SelectedIndex = -1;
                 txttimkiem.Text = "";
                 HienThiIDLoaiPhong();
                 HienThiPhong();
+                cboidloaiphong.SelectedIndex = -1;
             }
         }
 
@@ -187,19 +187,12 @@ namespace GUI_KhachSan
 
         private void btntimkiemphong_Click(object sender, EventArgs e)
         {
-            string search = txttimkiem.Text;
-            int? idPhong = null;
-            string tenPhong = txttenphong.Text;
-            int? idLoaiPhong = null;
-            if(int.TryParse(txtidphong.Text, out int idp))
-            {
-                idPhong = idp;
-            }
-            if (int.TryParse(cboidloaiphong.Text, out int idlp))
-            {
-                idLoaiPhong = idlp;
-            }
-            DataTable dt = p.TimKiemPhong(search, idPhong, tenPhong, idLoaiPhong);
+            int.TryParse(txtidphong.Text, out int idPhong);
+            DTO_P.ID_Phong=idPhong;
+            DTO_P.Ten_Phong=txttenphong.Text;
+            int.TryParse(cboidloaiphong.Text, out int idloaiphong);
+            DTO_P.ID_LoaiPhong=idloaiphong;
+            DataTable dt = p.TimKiemPhong(txttimkiem.Text,DTO_P);
             dtgvphong.Columns["ID_Phong"].DataPropertyName = "ID_Phong";
             dtgvphong.Columns["Ten_Phong"].DataPropertyName = "Ten_Phong";
             dtgvphong.Columns["ID_LP"].DataPropertyName = "ID_LoaiPhong";
@@ -221,6 +214,11 @@ namespace GUI_KhachSan
                 if (string.IsNullOrEmpty(DTO_LP.Ten_LoaiPhong) || DTO_LP.SucChua == 0 || DTO_LP.Gia_Phong == 0)
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (lp.KTTrungTen(DTO_LP))
+                {
+                    MessageBox.Show("Loại Phòng này đã tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 else

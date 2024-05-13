@@ -39,24 +39,24 @@ namespace GUI_KhachSan
         }
         private void btndangnhap_Click(object sender, EventArgs e)
         {
-            string Email_TaiKhoan = txtemail.Text;
-            string Pass_TaiKhoan = txtmatkhau.Text;
-            string Role_TaiKhoan = cbovaitro.Text;
-            DTO_TaiKhoan tk = dn.DangNhap(Email_TaiKhoan, Pass_TaiKhoan, Role_TaiKhoan);
-            if (string.IsNullOrEmpty(Email_TaiKhoan) || string.IsNullOrEmpty(Pass_TaiKhoan) || string.IsNullOrEmpty(Role_TaiKhoan))
+            DTO_TaiKhoan tk = new DTO_TaiKhoan
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (tk != null)
+                Email_TaiKhoan = txtemail.Text,
+                Pass_TaiKhoan = txtmatkhau.Text,
+                Role_TaiKhoan = cbovaitro.Text
+            };
+
+            DTO_TaiKhoan taiKhoan = dn.DangNhap(tk);
+            if (taiKhoan != null)
             {
-                if (tk.Ban_TaiKhoan == 1)
+                if (taiKhoan.Ban_TaiKhoan == 1)
                 {
                     MessageBox.Show("Tài khoản của bạn đã bị khóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (tk.Ban_TaiKhoan == 0)
+                else if (taiKhoan.Ban_TaiKhoan == 0)
                 {
-                    Check.nguoidung = txtemail.Text;
+                    string ten = dn.LayTenNhanVien(txtemail.Text);
+                    Check.nguoidung = ten;
                     DangNhap(tk.Role_TaiKhoan);
                 }
             }

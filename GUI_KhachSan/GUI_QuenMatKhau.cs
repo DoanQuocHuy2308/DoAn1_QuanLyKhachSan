@@ -83,6 +83,7 @@ namespace GUI_KhachSan
             }
         }
         BLL_QuenMatKhau qmk = new BLL_QuenMatKhau();
+        BLL_DangNhap dn = new BLL_DangNhap();
         DTO_TaiKhoan tk = new DTO_TaiKhoan();
         private void btnxacthucemail_Click(object sender, EventArgs e)
         {
@@ -143,7 +144,8 @@ namespace GUI_KhachSan
                 {
                     if (tk.Pass_TaiKhoan.Equals(txtmatkhaumoi.Text))
                     {
-                        Check.nguoidung = txtemail.Text;
+                        string ten = dn.LayTenNhanVien(txtemail.Text);
+                        Check.nguoidung = ten;
 
                         if (role == "Admin")
                         {
