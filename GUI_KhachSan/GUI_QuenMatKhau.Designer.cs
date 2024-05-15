@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_QuenMatKhau));
             this.btnminimize = new Guna.UI2.WinForms.Guna2Button();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
@@ -55,6 +56,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnthoat = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.grbmatkhaumoi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -493,6 +495,11 @@
             this.btnthoat.TabIndex = 22;
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // GUI_QuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -551,5 +558,6 @@
         private Guna.UI2.WinForms.Guna2ImageCheckBox chklammoiotp;
         private Guna.UI2.WinForms.Guna2ImageCheckBox chklammoiemail;
         private Guna.UI2.WinForms.Guna2ImageCheckBox chklammoimk;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

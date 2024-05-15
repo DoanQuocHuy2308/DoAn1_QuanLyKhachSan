@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_TrangChuAdmin));
             this.panelchinh = new Guna.UI2.WinForms.Guna2Panel();
             this.txtTenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,6 +46,7 @@
             this.btnnhanvien = new Guna.UI2.WinForms.Guna2Button();
             this.btndichvu = new Guna.UI2.WinForms.Guna2Button();
             this.btnPhong = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelchinh.SuspendLayout();
             this.paneldulieu.SuspendLayout();
             this.panelchucnang.SuspendLayout();
@@ -366,6 +368,11 @@
             this.btnPhong.Text = "Phòng";
             this.btnPhong.Click += new System.EventHandler(this.btnPhong_Click);
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // GUI_TrangChuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -405,5 +412,6 @@
         private Guna.UI2.WinForms.Guna2Button btnchuyen;
         private Guna.UI2.WinForms.Guna2Button btnthongke;
         private Guna.UI2.WinForms.Guna2TextBox txtTenDangNhap;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

@@ -17,6 +17,7 @@ namespace GUI_KhachSan
         public GUI_TrangChuNhanVien()
         {
             InitializeComponent();
+            tc.Visible = true;
             txtTenDangNhap.Text = $"Wellcome : {Check.nguoidung}";
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_NhanVien));
             this.panelchinh = new Guna.UI2.WinForms.Guna2Panel();
             this.btntimkiemnv = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +58,6 @@
             this.btnxoanv = new Guna.UI2.WinForms.Guna2Button();
             this.btnsuanv = new Guna.UI2.WinForms.Guna2Button();
             this.btnthemnv = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneldulieu = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgvnhanvien = new System.Windows.Forms.DataGridView();
             this.ID_NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,9 +69,9 @@
             this.DiaChi_NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role_NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelchinh.SuspendLayout();
             this.panelchucnang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneldulieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvnhanvien)).BeginInit();
             this.SuspendLayout();
@@ -82,13 +82,13 @@
             this.panelchinh.BorderRadius = 20;
             this.panelchinh.BorderThickness = 2;
             this.panelchinh.Controls.Add(this.btntimkiemnv);
+            this.panelchinh.Controls.Add(this.label1);
             this.panelchinh.Controls.Add(this.txttimkiem);
             this.panelchinh.Controls.Add(this.label10);
             this.panelchinh.Controls.Add(this.btnminimize);
             this.panelchinh.Controls.Add(this.btnthoat);
             this.panelchinh.Controls.Add(this.btnclose);
             this.panelchinh.Controls.Add(this.panelchucnang);
-            this.panelchinh.Controls.Add(this.pictureBox1);
             this.panelchinh.Controls.Add(this.paneldulieu);
             this.panelchinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelchinh.Location = new System.Drawing.Point(0, 0);
@@ -110,43 +110,44 @@
             this.btntimkiemnv.FillColor = System.Drawing.Color.Transparent;
             this.btntimkiemnv.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btntimkiemnv.ForeColor = System.Drawing.Color.White;
-            this.btntimkiemnv.Location = new System.Drawing.Point(1294, 101);
+            this.btntimkiemnv.Location = new System.Drawing.Point(1281, 98);
             this.btntimkiemnv.Name = "btntimkiemnv";
-            this.btntimkiemnv.Size = new System.Drawing.Size(42, 39);
+            this.btntimkiemnv.Size = new System.Drawing.Size(55, 39);
             this.btntimkiemnv.TabIndex = 12;
             this.btntimkiemnv.Click += new System.EventHandler(this.btntimkiemnv_Click);
             // 
             // txttimkiem
             // 
-            this.txttimkiem.BorderColor = System.Drawing.Color.Black;
+            this.txttimkiem.BorderColor = System.Drawing.Color.White;
             this.txttimkiem.BorderRadius = 10;
-            this.txttimkiem.BorderThickness = 3;
             this.txttimkiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttimkiem.DefaultText = "";
+            this.txttimkiem.DefaultText = "Tìm Kiếm Nhân Viên";
             this.txttimkiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txttimkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txttimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttimkiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttimkiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttimkiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttimkiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttimkiem.ForeColor = System.Drawing.Color.Black;
+            this.txttimkiem.ForeColor = System.Drawing.Color.White;
             this.txttimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttimkiem.Location = new System.Drawing.Point(985, 101);
+            this.txttimkiem.Location = new System.Drawing.Point(985, 98);
             this.txttimkiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttimkiem.Name = "txttimkiem";
             this.txttimkiem.PasswordChar = '\0';
             this.txttimkiem.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txttimkiem.PlaceholderText = "";
             this.txttimkiem.SelectedText = "";
-            this.txttimkiem.Size = new System.Drawing.Size(302, 39);
+            this.txttimkiem.Size = new System.Drawing.Size(289, 39);
             this.txttimkiem.TabIndex = 11;
+            this.txttimkiem.Enter += new System.EventHandler(this.txttimkiem_Enter);
+            this.txttimkiem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttimkiem_KeyPress);
             // 
             // label10
             // 
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Gold;
-            this.label10.Location = new System.Drawing.Point(894, 101);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(894, 98);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(84, 39);
             this.label10.TabIndex = 10;
@@ -246,15 +247,15 @@
             // cbogioitinh
             // 
             this.cbogioitinh.BackColor = System.Drawing.Color.Transparent;
-            this.cbogioitinh.BorderColor = System.Drawing.Color.Black;
+            this.cbogioitinh.BorderColor = System.Drawing.Color.White;
             this.cbogioitinh.BorderRadius = 15;
-            this.cbogioitinh.BorderThickness = 2;
             this.cbogioitinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbogioitinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbogioitinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.cbogioitinh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbogioitinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbogioitinh.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.cbogioitinh.ForeColor = System.Drawing.Color.Black;
+            this.cbogioitinh.ForeColor = System.Drawing.Color.White;
             this.cbogioitinh.ItemHeight = 30;
             this.cbogioitinh.Items.AddRange(new object[] {
             "Nam",
@@ -267,18 +268,18 @@
             // 
             // txtchucvu
             // 
-            this.txtchucvu.BorderColor = System.Drawing.Color.Black;
+            this.txtchucvu.BorderColor = System.Drawing.Color.White;
             this.txtchucvu.BorderRadius = 15;
-            this.txtchucvu.BorderThickness = 2;
             this.txtchucvu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtchucvu.DefaultText = "";
             this.txtchucvu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtchucvu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtchucvu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtchucvu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtchucvu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtchucvu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtchucvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtchucvu.ForeColor = System.Drawing.Color.Black;
+            this.txtchucvu.ForeColor = System.Drawing.Color.White;
             this.txtchucvu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtchucvu.Location = new System.Drawing.Point(165, 442);
             this.txtchucvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -291,18 +292,18 @@
             // 
             // txtdiachi
             // 
-            this.txtdiachi.BorderColor = System.Drawing.Color.Black;
+            this.txtdiachi.BorderColor = System.Drawing.Color.White;
             this.txtdiachi.BorderRadius = 15;
-            this.txtdiachi.BorderThickness = 2;
             this.txtdiachi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtdiachi.DefaultText = "";
             this.txtdiachi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtdiachi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtdiachi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtdiachi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtdiachi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtdiachi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiachi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiachi.ForeColor = System.Drawing.Color.Black;
+            this.txtdiachi.ForeColor = System.Drawing.Color.White;
             this.txtdiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiachi.Location = new System.Drawing.Point(165, 376);
             this.txtdiachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -315,18 +316,18 @@
             // 
             // txtemail
             // 
-            this.txtemail.BorderColor = System.Drawing.Color.Black;
+            this.txtemail.BorderColor = System.Drawing.Color.White;
             this.txtemail.BorderRadius = 15;
-            this.txtemail.BorderThickness = 2;
             this.txtemail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtemail.DefaultText = "";
             this.txtemail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtemail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtemail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtemail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtemail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtemail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtemail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemail.ForeColor = System.Drawing.Color.Black;
+            this.txtemail.ForeColor = System.Drawing.Color.White;
             this.txtemail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtemail.Location = new System.Drawing.Point(165, 314);
             this.txtemail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -339,18 +340,18 @@
             // 
             // txtsodienthoai
             // 
-            this.txtsodienthoai.BorderColor = System.Drawing.Color.Black;
+            this.txtsodienthoai.BorderColor = System.Drawing.Color.White;
             this.txtsodienthoai.BorderRadius = 15;
-            this.txtsodienthoai.BorderThickness = 2;
             this.txtsodienthoai.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsodienthoai.DefaultText = "";
             this.txtsodienthoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtsodienthoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtsodienthoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtsodienthoai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsodienthoai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtsodienthoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsodienthoai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsodienthoai.ForeColor = System.Drawing.Color.Black;
+            this.txtsodienthoai.ForeColor = System.Drawing.Color.White;
             this.txtsodienthoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsodienthoai.Location = new System.Drawing.Point(165, 252);
             this.txtsodienthoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -364,18 +365,18 @@
             // 
             // txtcmnd
             // 
-            this.txtcmnd.BorderColor = System.Drawing.Color.Black;
+            this.txtcmnd.BorderColor = System.Drawing.Color.White;
             this.txtcmnd.BorderRadius = 15;
-            this.txtcmnd.BorderThickness = 2;
             this.txtcmnd.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtcmnd.DefaultText = "";
             this.txtcmnd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtcmnd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtcmnd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtcmnd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcmnd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtcmnd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcmnd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcmnd.ForeColor = System.Drawing.Color.Black;
+            this.txtcmnd.ForeColor = System.Drawing.Color.White;
             this.txtcmnd.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcmnd.Location = new System.Drawing.Point(161, 134);
             this.txtcmnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -389,18 +390,18 @@
             // 
             // txttennhanvien
             // 
-            this.txttennhanvien.BorderColor = System.Drawing.Color.Black;
+            this.txttennhanvien.BorderColor = System.Drawing.Color.White;
             this.txttennhanvien.BorderRadius = 15;
-            this.txttennhanvien.BorderThickness = 2;
             this.txttennhanvien.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txttennhanvien.DefaultText = "";
             this.txttennhanvien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txttennhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txttennhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttennhanvien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttennhanvien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttennhanvien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttennhanvien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttennhanvien.ForeColor = System.Drawing.Color.Black;
+            this.txttennhanvien.ForeColor = System.Drawing.Color.White;
             this.txttennhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttennhanvien.Location = new System.Drawing.Point(161, 76);
             this.txttennhanvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -413,18 +414,18 @@
             // 
             // txtidnhanvien
             // 
-            this.txtidnhanvien.BorderColor = System.Drawing.Color.Black;
+            this.txtidnhanvien.BorderColor = System.Drawing.Color.White;
             this.txtidnhanvien.BorderRadius = 15;
-            this.txtidnhanvien.BorderThickness = 2;
             this.txtidnhanvien.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtidnhanvien.DefaultText = "";
             this.txtidnhanvien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtidnhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtidnhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtidnhanvien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtidnhanvien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtidnhanvien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidnhanvien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidnhanvien.ForeColor = System.Drawing.Color.Black;
+            this.txtidnhanvien.ForeColor = System.Drawing.Color.White;
             this.txtidnhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidnhanvien.Location = new System.Drawing.Point(161, 19);
             this.txtidnhanvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -607,26 +608,15 @@
             this.btnthemnv.Text = "&Thêm";
             this.btnthemnv.Click += new System.EventHandler(this.btnthemnv_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(593, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 92);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // paneldulieu
             // 
             this.paneldulieu.BorderColor = System.Drawing.Color.Gold;
             this.paneldulieu.BorderRadius = 20;
-            this.paneldulieu.BorderThickness = 3;
+            this.paneldulieu.BorderThickness = 2;
             this.paneldulieu.Controls.Add(this.dtgvnhanvien);
-            this.paneldulieu.Controls.Add(this.label1);
-            this.paneldulieu.Location = new System.Drawing.Point(12, 101);
+            this.paneldulieu.Location = new System.Drawing.Point(12, 140);
             this.paneldulieu.Name = "paneldulieu";
-            this.paneldulieu.Size = new System.Drawing.Size(873, 657);
+            this.paneldulieu.Size = new System.Drawing.Size(873, 618);
             this.paneldulieu.TabIndex = 1;
             // 
             // dtgvnhanvien
@@ -644,12 +634,12 @@
             this.DiaChi_NhanVien,
             this.Role_NhanVien});
             this.dtgvnhanvien.GridColor = System.Drawing.Color.Black;
-            this.dtgvnhanvien.Location = new System.Drawing.Point(12, 81);
+            this.dtgvnhanvien.Location = new System.Drawing.Point(12, 12);
             this.dtgvnhanvien.Name = "dtgvnhanvien";
             this.dtgvnhanvien.RowHeadersWidth = 51;
             this.dtgvnhanvien.RowTemplate.Height = 24;
             this.dtgvnhanvien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvnhanvien.Size = new System.Drawing.Size(848, 555);
+            this.dtgvnhanvien.Size = new System.Drawing.Size(848, 583);
             this.dtgvnhanvien.TabIndex = 1;
             this.dtgvnhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvnhanvien_CellClick);
             // 
@@ -713,12 +703,17 @@
             // 
             this.label1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(199, 9);
+            this.label1.Location = new System.Drawing.Point(204, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(423, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhân Viên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // GUI_NhanVien
             // 
@@ -736,7 +731,6 @@
             this.Text = "GUI_NhanVien";
             this.panelchinh.ResumeLayout(false);
             this.panelchucnang.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.paneldulieu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvnhanvien)).EndInit();
             this.ResumeLayout(false);
@@ -748,7 +742,6 @@
         private Guna.UI2.WinForms.Guna2Panel panelchinh;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel paneldulieu;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Panel panelchucnang;
         private System.Windows.Forms.DataGridView dtgvnhanvien;
         private Guna.UI2.WinForms.Guna2Button btnminimize;
@@ -785,5 +778,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email_NhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi_NhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn Role_NhanVien;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

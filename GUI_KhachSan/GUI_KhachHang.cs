@@ -212,9 +212,25 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                txttimkiem.Text = "";
+                txttimkiem.Text = "Tìm Kiếm Khách Hàng";
                 cbogioitinh.SelectedIndex = -1;
                 HienThiKhachHang();
+            }
+        }
+
+        private void txttimkiem_Enter(object sender, EventArgs e)
+        {
+            if(txttimkiem.Text=="Tìm Kiếm Khách Hàng")
+            {
+                txttimkiem.Text = "";
+            }
+        }
+
+        private void txttimkiem_Leave(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Khách Hàng";
             }
         }
     }

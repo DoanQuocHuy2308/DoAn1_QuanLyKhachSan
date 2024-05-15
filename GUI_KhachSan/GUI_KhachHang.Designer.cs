@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_KhachHang));
             this.panelchinh = new Guna.UI2.WinForms.Guna2Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.btntimkiemtk = new Guna.UI2.WinForms.Guna2Button();
             this.txttimkiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,10 +58,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnminimize = new Guna.UI2.WinForms.Guna2Button();
             this.btnthoat = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.panelduieu = new Guna.UI2.WinForms.Guna2Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.dtgvkhachhang = new System.Windows.Forms.DataGridView();
             this.ID_KhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten_KhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,9 +69,9 @@
             this.Email_KhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT_KhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi_Khachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelchinh.SuspendLayout();
             this.panelchucnang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelduieu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvkhachhang)).BeginInit();
             this.SuspendLayout();
@@ -82,13 +82,13 @@
             this.panelchinh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.panelchinh.BorderRadius = 20;
             this.panelchinh.BorderThickness = 3;
+            this.panelchinh.Controls.Add(this.label8);
             this.panelchinh.Controls.Add(this.btntimkiemtk);
             this.panelchinh.Controls.Add(this.txttimkiem);
             this.panelchinh.Controls.Add(this.label2);
             this.panelchinh.Controls.Add(this.panelchucnang);
             this.panelchinh.Controls.Add(this.btnminimize);
             this.panelchinh.Controls.Add(this.btnthoat);
-            this.panelchinh.Controls.Add(this.pictureBox1);
             this.panelchinh.Controls.Add(this.btnclose);
             this.panelchinh.Controls.Add(this.panelduieu);
             this.panelchinh.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -96,6 +96,17 @@
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1348, 770);
             this.panelchinh.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
+            this.label8.Location = new System.Drawing.Point(188, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(502, 67);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Khách Hàng";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btntimkiemtk
             // 
@@ -111,45 +122,47 @@
             this.btntimkiemtk.FillColor = System.Drawing.Color.Transparent;
             this.btntimkiemtk.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btntimkiemtk.ForeColor = System.Drawing.Color.White;
-            this.btntimkiemtk.Location = new System.Drawing.Point(1288, 74);
+            this.btntimkiemtk.Location = new System.Drawing.Point(1271, 85);
             this.btntimkiemtk.Name = "btntimkiemtk";
-            this.btntimkiemtk.Size = new System.Drawing.Size(48, 33);
+            this.btntimkiemtk.Size = new System.Drawing.Size(58, 42);
             this.btntimkiemtk.TabIndex = 14;
             this.btntimkiemtk.Click += new System.EventHandler(this.btntimkiemtk_Click);
             // 
             // txttimkiem
             // 
-            this.txttimkiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
+            this.txttimkiem.BackColor = System.Drawing.Color.Transparent;
+            this.txttimkiem.BorderColor = System.Drawing.Color.Black;
             this.txttimkiem.BorderRadius = 10;
-            this.txttimkiem.BorderThickness = 2;
             this.txttimkiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttimkiem.DefaultText = "";
+            this.txttimkiem.DefaultText = "Tìm Kiếm Khách Hàng";
             this.txttimkiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txttimkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txttimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttimkiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttimkiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.txttimkiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttimkiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttimkiem.ForeColor = System.Drawing.Color.Black;
+            this.txttimkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttimkiem.Location = new System.Drawing.Point(907, 74);
+            this.txttimkiem.Location = new System.Drawing.Point(994, 85);
             this.txttimkiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttimkiem.Name = "txttimkiem";
             this.txttimkiem.PasswordChar = '\0';
             this.txttimkiem.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txttimkiem.PlaceholderText = "";
             this.txttimkiem.SelectedText = "";
-            this.txttimkiem.Size = new System.Drawing.Size(374, 33);
+            this.txttimkiem.Size = new System.Drawing.Size(270, 42);
             this.txttimkiem.TabIndex = 13;
+            this.txttimkiem.Enter += new System.EventHandler(this.txttimkiem_Enter);
+            this.txttimkiem.Leave += new System.EventHandler(this.txttimkiem_Leave);
             // 
             // label2
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(817, 74);
+            this.label2.Location = new System.Drawing.Point(907, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 33);
+            this.label2.Size = new System.Drawing.Size(84, 42);
             this.label2.TabIndex = 12;
             this.label2.Text = "Search :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,9 +192,9 @@
             this.panelchucnang.Controls.Add(this.label4);
             this.panelchucnang.Controls.Add(this.label3);
             this.panelchucnang.Controls.Add(this.label1);
-            this.panelchucnang.Location = new System.Drawing.Point(907, 113);
+            this.panelchucnang.Location = new System.Drawing.Point(907, 134);
             this.panelchucnang.Name = "panelchucnang";
-            this.panelchucnang.Size = new System.Drawing.Size(430, 645);
+            this.panelchucnang.Size = new System.Drawing.Size(430, 624);
             this.panelchucnang.TabIndex = 0;
             // 
             // btnresetkh
@@ -199,7 +212,7 @@
             this.btnresetkh.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnresetkh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnresetkh.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnresetkh.Location = new System.Drawing.Point(222, 581);
+            this.btnresetkh.Location = new System.Drawing.Point(238, 560);
             this.btnresetkh.Name = "btnresetkh";
             this.btnresetkh.Size = new System.Drawing.Size(145, 45);
             this.btnresetkh.TabIndex = 12;
@@ -219,7 +232,7 @@
             this.btnxoakh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnxoakh.Image = ((System.Drawing.Image)(resources.GetObject("btnxoakh.Image")));
             this.btnxoakh.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnxoakh.Location = new System.Drawing.Point(50, 581);
+            this.btnxoakh.Location = new System.Drawing.Point(66, 560);
             this.btnxoakh.Name = "btnxoakh";
             this.btnxoakh.Size = new System.Drawing.Size(145, 45);
             this.btnxoakh.TabIndex = 11;
@@ -240,7 +253,7 @@
             this.btnsuakh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnsuakh.Image = ((System.Drawing.Image)(resources.GetObject("btnsuakh.Image")));
             this.btnsuakh.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnsuakh.Location = new System.Drawing.Point(222, 518);
+            this.btnsuakh.Location = new System.Drawing.Point(238, 497);
             this.btnsuakh.Name = "btnsuakh";
             this.btnsuakh.Size = new System.Drawing.Size(145, 45);
             this.btnsuakh.TabIndex = 10;
@@ -260,7 +273,7 @@
             this.btnthemkh.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthemkh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnthemkh.Image = ((System.Drawing.Image)(resources.GetObject("btnthemkh.Image")));
-            this.btnthemkh.Location = new System.Drawing.Point(50, 518);
+            this.btnthemkh.Location = new System.Drawing.Point(66, 497);
             this.btnthemkh.Name = "btnthemkh";
             this.btnthemkh.Size = new System.Drawing.Size(145, 45);
             this.btnthemkh.TabIndex = 9;
@@ -272,63 +285,65 @@
             this.cbogioitinh.BackColor = System.Drawing.Color.Transparent;
             this.cbogioitinh.BorderColor = System.Drawing.Color.Black;
             this.cbogioitinh.BorderRadius = 15;
-            this.cbogioitinh.BorderThickness = 2;
             this.cbogioitinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbogioitinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbogioitinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.cbogioitinh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbogioitinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbogioitinh.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.cbogioitinh.ForeColor = System.Drawing.Color.Black;
+            this.cbogioitinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.cbogioitinh.ItemHeight = 30;
             this.cbogioitinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
             "Khác"});
-            this.cbogioitinh.Location = new System.Drawing.Point(159, 201);
+            this.cbogioitinh.Location = new System.Drawing.Point(164, 212);
             this.cbogioitinh.Name = "cbogioitinh";
             this.cbogioitinh.Size = new System.Drawing.Size(179, 36);
             this.cbogioitinh.TabIndex = 4;
             // 
             // txtdiachi
             // 
+            this.txtdiachi.BackColor = System.Drawing.Color.Transparent;
             this.txtdiachi.BorderColor = System.Drawing.Color.Black;
             this.txtdiachi.BorderRadius = 15;
-            this.txtdiachi.BorderThickness = 2;
             this.txtdiachi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtdiachi.DefaultText = "";
             this.txtdiachi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtdiachi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtdiachi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtdiachi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtdiachi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.txtdiachi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdiachi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdiachi.ForeColor = System.Drawing.Color.Black;
+            this.txtdiachi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtdiachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdiachi.Location = new System.Drawing.Point(159, 431);
+            this.txtdiachi.Location = new System.Drawing.Point(164, 443);
             this.txtdiachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtdiachi.Name = "txtdiachi";
             this.txtdiachi.PasswordChar = '\0';
             this.txtdiachi.PlaceholderText = "";
             this.txtdiachi.SelectedText = "";
-            this.txtdiachi.Size = new System.Drawing.Size(254, 67);
+            this.txtdiachi.Size = new System.Drawing.Size(256, 38);
             this.txtdiachi.TabIndex = 8;
             // 
             // txtsodienthoai
             // 
+            this.txtsodienthoai.BackColor = System.Drawing.Color.Transparent;
             this.txtsodienthoai.BorderColor = System.Drawing.Color.Black;
             this.txtsodienthoai.BorderRadius = 15;
-            this.txtsodienthoai.BorderThickness = 2;
             this.txtsodienthoai.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsodienthoai.DefaultText = "";
             this.txtsodienthoai.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtsodienthoai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtsodienthoai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtsodienthoai.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtsodienthoai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.txtsodienthoai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsodienthoai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsodienthoai.ForeColor = System.Drawing.Color.Black;
+            this.txtsodienthoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtsodienthoai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtsodienthoai.Location = new System.Drawing.Point(159, 375);
+            this.txtsodienthoai.Location = new System.Drawing.Point(164, 386);
             this.txtsodienthoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtsodienthoai.Name = "txtsodienthoai";
             this.txtsodienthoai.PasswordChar = '\0';
@@ -340,20 +355,21 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
             this.txtEmail.BorderColor = System.Drawing.Color.Black;
             this.txtEmail.BorderRadius = 15;
-            this.txtEmail.BorderThickness = 2;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.DefaultText = "";
             this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(159, 319);
+            this.txtEmail.Location = new System.Drawing.Point(164, 330);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -364,20 +380,21 @@
             // 
             // txtCMND
             // 
+            this.txtCMND.BackColor = System.Drawing.Color.Transparent;
             this.txtCMND.BorderColor = System.Drawing.Color.Black;
             this.txtCMND.BorderRadius = 15;
-            this.txtCMND.BorderThickness = 2;
             this.txtCMND.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCMND.DefaultText = "";
             this.txtCMND.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCMND.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCMND.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCMND.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCMND.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.txtCMND.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCMND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.ForeColor = System.Drawing.Color.Black;
+            this.txtCMND.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtCMND.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCMND.Location = new System.Drawing.Point(159, 259);
+            this.txtCMND.Location = new System.Drawing.Point(164, 270);
             this.txtCMND.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.PasswordChar = '\0';
@@ -389,20 +406,21 @@
             // 
             // txttuoikhachhang
             // 
+            this.txttuoikhachhang.BackColor = System.Drawing.Color.Transparent;
             this.txttuoikhachhang.BorderColor = System.Drawing.Color.Black;
             this.txttuoikhachhang.BorderRadius = 15;
-            this.txttuoikhachhang.BorderThickness = 2;
             this.txttuoikhachhang.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txttuoikhachhang.DefaultText = "";
             this.txttuoikhachhang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txttuoikhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txttuoikhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttuoikhachhang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttuoikhachhang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.txttuoikhachhang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttuoikhachhang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttuoikhachhang.ForeColor = System.Drawing.Color.Black;
+            this.txttuoikhachhang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttuoikhachhang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttuoikhachhang.Location = new System.Drawing.Point(159, 142);
+            this.txttuoikhachhang.Location = new System.Drawing.Point(164, 153);
             this.txttuoikhachhang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttuoikhachhang.Name = "txttuoikhachhang";
             this.txttuoikhachhang.PasswordChar = '\0';
@@ -414,20 +432,21 @@
             // 
             // txttenkhachhang
             // 
+            this.txttenkhachhang.BackColor = System.Drawing.Color.Transparent;
             this.txttenkhachhang.BorderColor = System.Drawing.Color.Black;
             this.txttenkhachhang.BorderRadius = 15;
-            this.txttenkhachhang.BorderThickness = 2;
             this.txttenkhachhang.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txttenkhachhang.DefaultText = "";
             this.txttenkhachhang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txttenkhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txttenkhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttenkhachhang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttenkhachhang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.txttenkhachhang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttenkhachhang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttenkhachhang.ForeColor = System.Drawing.Color.Black;
+            this.txttenkhachhang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttenkhachhang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttenkhachhang.Location = new System.Drawing.Point(159, 84);
+            this.txttenkhachhang.Location = new System.Drawing.Point(164, 95);
             this.txttenkhachhang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttenkhachhang.Name = "txttenkhachhang";
             this.txttenkhachhang.PasswordChar = '\0';
@@ -438,20 +457,21 @@
             // 
             // txtidkhachhang
             // 
+            this.txtidkhachhang.BackColor = System.Drawing.Color.Transparent;
             this.txtidkhachhang.BorderColor = System.Drawing.Color.Black;
             this.txtidkhachhang.BorderRadius = 15;
-            this.txtidkhachhang.BorderThickness = 2;
             this.txtidkhachhang.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtidkhachhang.DefaultText = "";
             this.txtidkhachhang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtidkhachhang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtidkhachhang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtidkhachhang.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtidkhachhang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.txtidkhachhang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidkhachhang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidkhachhang.ForeColor = System.Drawing.Color.Black;
+            this.txtidkhachhang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtidkhachhang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidkhachhang.Location = new System.Drawing.Point(159, 30);
+            this.txtidkhachhang.Location = new System.Drawing.Point(164, 41);
             this.txtidkhachhang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtidkhachhang.Name = "txtidkhachhang";
             this.txtidkhachhang.PasswordChar = '\0';
@@ -463,96 +483,88 @@
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label10.Location = new System.Drawing.Point(76, 447);
+            this.label10.Location = new System.Drawing.Point(81, 443);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 23);
+            this.label10.Size = new System.Drawing.Size(80, 38);
             this.label10.TabIndex = 0;
             this.label10.Text = "Địa Chỉ:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label9.Location = new System.Drawing.Point(21, 391);
+            this.label9.Location = new System.Drawing.Point(26, 387);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 23);
+            this.label9.Size = new System.Drawing.Size(135, 38);
             this.label9.TabIndex = 0;
             this.label9.Text = "Số Điện Thoại:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label7.Location = new System.Drawing.Point(91, 335);
+            this.label7.Location = new System.Drawing.Point(96, 331);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 23);
+            this.label7.Size = new System.Drawing.Size(65, 38);
             this.label7.TabIndex = 0;
             this.label7.Text = "Email:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label6.Location = new System.Drawing.Point(58, 215);
+            this.label6.Location = new System.Drawing.Point(63, 211);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 23);
+            this.label6.Size = new System.Drawing.Size(98, 38);
             this.label6.TabIndex = 0;
             this.label6.Text = "Giới Tính:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label5.Location = new System.Drawing.Point(79, 275);
+            this.label5.Location = new System.Drawing.Point(84, 271);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 23);
+            this.label5.Size = new System.Drawing.Size(77, 38);
             this.label5.TabIndex = 0;
             this.label5.Text = "CMND:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label4.Location = new System.Drawing.Point(103, 158);
+            this.label4.Location = new System.Drawing.Point(108, 154);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 23);
+            this.label4.Size = new System.Drawing.Size(53, 38);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tuổi:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label3.Location = new System.Drawing.Point(72, 99);
+            this.label3.Location = new System.Drawing.Point(77, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 23);
+            this.label3.Size = new System.Drawing.Size(84, 38);
             this.label3.TabIndex = 0;
             this.label3.Text = "Họ Tên :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label1.Location = new System.Drawing.Point(10, 45);
+            this.label1.Location = new System.Drawing.Point(8, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 23);
+            this.label1.Size = new System.Drawing.Size(153, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Khách Hàng:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -599,17 +611,6 @@
             this.btnthoat.TabIndex = 9;
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(587, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnclose
             // 
             this.btnclose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnclose.BackgroundImage")));
@@ -635,23 +636,11 @@
             this.panelduieu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.panelduieu.BorderRadius = 20;
             this.panelduieu.BorderThickness = 2;
-            this.panelduieu.Controls.Add(this.label8);
             this.panelduieu.Controls.Add(this.dtgvkhachhang);
-            this.panelduieu.Location = new System.Drawing.Point(12, 113);
+            this.panelduieu.Location = new System.Drawing.Point(12, 134);
             this.panelduieu.Name = "panelduieu";
-            this.panelduieu.Size = new System.Drawing.Size(889, 645);
+            this.panelduieu.Size = new System.Drawing.Size(889, 624);
             this.panelduieu.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label8.Location = new System.Drawing.Point(156, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(502, 67);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Khách Hàng";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dtgvkhachhang
             // 
@@ -668,12 +657,12 @@
             this.SDT_KhachHang,
             this.DiaChi_Khachhang});
             this.dtgvkhachhang.GridColor = System.Drawing.Color.Black;
-            this.dtgvkhachhang.Location = new System.Drawing.Point(13, 82);
+            this.dtgvkhachhang.Location = new System.Drawing.Point(13, 19);
             this.dtgvkhachhang.Name = "dtgvkhachhang";
             this.dtgvkhachhang.RowHeadersWidth = 51;
             this.dtgvkhachhang.RowTemplate.Height = 24;
             this.dtgvkhachhang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvkhachhang.Size = new System.Drawing.Size(863, 544);
+            this.dtgvkhachhang.Size = new System.Drawing.Size(863, 586);
             this.dtgvkhachhang.TabIndex = 0;
             this.dtgvkhachhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvkhachhang_CellClick);
             // 
@@ -733,6 +722,11 @@
             this.DiaChi_Khachhang.Name = "DiaChi_Khachhang";
             this.DiaChi_Khachhang.ReadOnly = true;
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 35;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // GUI_KhachHang
             // 
             this.AcceptButton = this.btnthemkh;
@@ -750,8 +744,6 @@
             this.Text = "GUI_KhachHang";
             this.panelchinh.ResumeLayout(false);
             this.panelchucnang.ResumeLayout(false);
-            this.panelchucnang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelduieu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvkhachhang)).EndInit();
             this.ResumeLayout(false);
@@ -782,7 +774,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnminimize;
         private Guna.UI2.WinForms.Guna2Button btnthoat;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnclose;
         private Guna.UI2.WinForms.Guna2Panel panelduieu;
         private System.Windows.Forms.Label label8;
@@ -800,5 +791,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email_KhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT_KhachHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi_Khachhang;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

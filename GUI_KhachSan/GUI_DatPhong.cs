@@ -175,6 +175,7 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2ComboBox).SelectedIndex = -1;
                 }
+                txttimkiem.Text = "Tìm Kiếm Mã Đặt Phòng";
                 dtpkcheckin.Value = DateTime.Now;
                 dtpkcheckout.Value = DateTime.Now;
                 HienThiDatPhong();
@@ -305,6 +306,70 @@ namespace GUI_KhachSan
             this.Hide();
             inhd.ShowDialog();
             this.Show();
+        }
+
+        private void txttimkiem_Leave(object sender, EventArgs e)
+        {
+            if(txttimkiem.Text == "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Mã Đặt Phòng";
+            }
+        }
+
+        private void txttimkiem_Enter(object sender, EventArgs e)
+        {
+            if(txttimkiem.Text == "Tìm Kiếm Mã Đặt Phòng")
+            {
+                txttimkiem.Text = "";
+            }
+        }
+
+        private void txtiddatphong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txttiencoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtidphong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txttongtien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtidnhanvien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtidkhachhang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

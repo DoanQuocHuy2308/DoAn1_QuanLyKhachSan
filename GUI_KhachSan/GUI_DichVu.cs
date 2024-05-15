@@ -181,7 +181,7 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                txttimkiem.Text = "";
+                txttimkiem.Text = "Tìm Kiếm Dịch Vụ";
                 HienThiIDLoaiDichVu();
                 HienThiDichVu();
                 cboidloaidichvu.SelectedIndex = -1;
@@ -277,7 +277,7 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                txttimkiem.Text = "";
+                txttimkiem.Text = "Tìm Kiếm Loại Dịch Vụ";
                 HienThiLoaiDichVu();
             }
         }
@@ -291,6 +291,62 @@ namespace GUI_KhachSan
             dtgvloaidichvu.Columns[0].DataPropertyName = "ID_LoaiDichVu";
             dtgvloaidichvu.Columns[1].DataPropertyName = "Ten_LoaiDichVu";
             dtgvloaidichvu.DataSource = dt;
+        }
+
+        private void txttimkiem_Leave(object sender, EventArgs e)
+        {
+            if(txttimkiem.Text== "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Dịch Vụ";
+            }
+        }
+
+        private void txttimkiem_Enter(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "Tìm Kiếm Dịch Vụ")
+            {
+                txttimkiem.Text = "";
+            }
+        }
+
+        private void txtgiadichvu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtiddichvu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtidloaidichvu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txttimkiemldv_Leave(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Loại Dịch Vụ";
+            }
+        }
+
+        private void txttimkiemldv_Enter(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "Tìm Kiếm Loại Dịch Vụ")
+            {
+                txttimkiem.Text = "";
+            }
         }
     }
 }

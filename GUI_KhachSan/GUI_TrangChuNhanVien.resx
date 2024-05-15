@@ -626,7 +626,7 @@
   <data name="btnkhuyenmai.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFT5SURBVHhe7Z0H
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFT5SURBVHhe7Z0H
         mB3Veb9FsXHHduw4dmInsZPYcYmT8HfiJHYiJw62gvdOByGEkA1IdNE7eOkC04SpxjTRiyxAYJsm00UR
         ohgsQAgh1LXambn3br9l/ueb/YRXs2d3b5l67+99nvcRSPfOOXPuzPmmnPOdSQCA1sQ21OmOoc73Jk/e
         kf8KAAAAAK2MbSgdIviXhJ64ELjNmzXrffxPAAAAAGhFHFOdLC4A+in4j3DRqpkzP8AfAQAAAEAr4Wja
@@ -3192,6 +3192,9 @@
         7hxx5wohhJQwUfT/AILH4j3I/bkdAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAOQAAAEAIACorAMAFgAAACgAAAAAAQAAyAEAAAEAIAAAAAAAAJADAAAAAAAAAAAAAAAAAAAA

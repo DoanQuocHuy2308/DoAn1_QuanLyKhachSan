@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_ThongKe));
             this.tabBCTK = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabDonDatPhong = new System.Windows.Forms.TabPage();
@@ -90,6 +91,7 @@
             this.btnthoat = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.tabBCTK.SuspendLayout();
             this.tabDonDatPhong.SuspendLayout();
             this.panelDonDatPhong.SuspendLayout();
@@ -955,6 +957,11 @@
             this.btnclose.TabIndex = 7;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // GUI_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1053,5 +1060,6 @@
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Button btnresetdp;
         private Guna.UI2.WinForms.Guna2Button btnresetddv;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_DangNhap));
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anh3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anh2)).BeginInit();
@@ -329,7 +331,7 @@
             this.btnminimize.FillColor = System.Drawing.Color.Transparent;
             this.btnminimize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnminimize.ForeColor = System.Drawing.Color.White;
-            this.btnminimize.Location = new System.Drawing.Point(611, 0);
+            this.btnminimize.Location = new System.Drawing.Point(602, 12);
             this.btnminimize.Name = "btnminimize";
             this.btnminimize.Size = new System.Drawing.Size(41, 36);
             this.btnminimize.TabIndex = 2;
@@ -351,7 +353,7 @@
             this.btnclose.FillColor = System.Drawing.Color.Transparent;
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(658, 0);
+            this.btnclose.Location = new System.Drawing.Point(649, 12);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(41, 36);
             this.btnclose.TabIndex = 3;
@@ -377,6 +379,11 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // GUI_DangNhap
             // 
@@ -432,5 +439,6 @@
         private Guna.UI2.WinForms.Guna2Button btnclose;
         private Guna.UI2.WinForms.Guna2Button btnminimize;
         private System.Windows.Forms.LinkLabel linkquenmk;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

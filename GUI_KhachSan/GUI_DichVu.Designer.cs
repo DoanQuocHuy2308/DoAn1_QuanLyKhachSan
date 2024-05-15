@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_DichVu));
             this.panelchinh = new Guna.UI2.WinForms.Guna2Panel();
             this.btnminimize = new Guna.UI2.WinForms.Guna2Button();
@@ -83,6 +84,7 @@
             this.dtgvloaidichvu = new System.Windows.Forms.DataGridView();
             this.ID_LoaiDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten_LoaiDichVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelchinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabGiaoDienDichVu.SuspendLayout();
@@ -161,7 +163,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(586, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(179, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -192,10 +194,10 @@
             this.tabGiaoDienDichVu.Controls.Add(this.tabDichVu);
             this.tabGiaoDienDichVu.Controls.Add(this.tabLoaiDichVu);
             this.tabGiaoDienDichVu.ItemSize = new System.Drawing.Size(140, 70);
-            this.tabGiaoDienDichVu.Location = new System.Drawing.Point(12, 96);
+            this.tabGiaoDienDichVu.Location = new System.Drawing.Point(12, 137);
             this.tabGiaoDienDichVu.Name = "tabGiaoDienDichVu";
             this.tabGiaoDienDichVu.SelectedIndex = 0;
-            this.tabGiaoDienDichVu.Size = new System.Drawing.Size(1324, 662);
+            this.tabGiaoDienDichVu.Size = new System.Drawing.Size(1324, 621);
             this.tabGiaoDienDichVu.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabGiaoDienDichVu.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.tabGiaoDienDichVu.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -222,7 +224,7 @@
             this.tabDichVu.Location = new System.Drawing.Point(144, 4);
             this.tabDichVu.Name = "tabDichVu";
             this.tabDichVu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDichVu.Size = new System.Drawing.Size(1176, 654);
+            this.tabDichVu.Size = new System.Drawing.Size(1176, 613);
             this.tabDichVu.TabIndex = 0;
             this.tabDichVu.Text = "Dịch Vụ";
             this.tabDichVu.UseVisualStyleBackColor = true;
@@ -243,13 +245,14 @@
             this.panelDichVu.ForeColor = System.Drawing.Color.Black;
             this.panelDichVu.Location = new System.Drawing.Point(3, 3);
             this.panelDichVu.Name = "panelDichVu";
-            this.panelDichVu.Size = new System.Drawing.Size(1170, 648);
+            this.panelDichVu.Size = new System.Drawing.Size(1170, 607);
             this.panelDichVu.TabIndex = 0;
             // 
             // btntimkiemdichvu
             // 
             this.btntimkiemdichvu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btntimkiemdichvu.BackgroundImage")));
             this.btntimkiemdichvu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btntimkiemdichvu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btntimkiemdichvu.BorderRadius = 10;
             this.btntimkiemdichvu.BorderThickness = 2;
             this.btntimkiemdichvu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -259,9 +262,9 @@
             this.btntimkiemdichvu.FillColor = System.Drawing.Color.Transparent;
             this.btntimkiemdichvu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btntimkiemdichvu.ForeColor = System.Drawing.Color.White;
-            this.btntimkiemdichvu.Location = new System.Drawing.Point(1109, 32);
+            this.btntimkiemdichvu.Location = new System.Drawing.Point(1076, 29);
             this.btntimkiemdichvu.Name = "btntimkiemdichvu";
-            this.btntimkiemdichvu.Size = new System.Drawing.Size(48, 33);
+            this.btntimkiemdichvu.Size = new System.Drawing.Size(82, 38);
             this.btntimkiemdichvu.TabIndex = 5;
             this.btntimkiemdichvu.Click += new System.EventHandler(this.btntimkiemdichvu_Click);
             // 
@@ -269,33 +272,33 @@
             // 
             this.txttimkiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttimkiem.BorderRadius = 10;
-            this.txttimkiem.BorderThickness = 2;
             this.txttimkiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttimkiem.DefaultText = "";
+            this.txttimkiem.DefaultText = "Tìm Kiếm Dịch Vụ";
             this.txttimkiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txttimkiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txttimkiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttimkiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttimkiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttimkiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttimkiem.ForeColor = System.Drawing.Color.Black;
+            this.txttimkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttimkiem.Location = new System.Drawing.Point(786, 32);
+            this.txttimkiem.Location = new System.Drawing.Point(786, 29);
             this.txttimkiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttimkiem.Name = "txttimkiem";
             this.txttimkiem.PasswordChar = '\0';
             this.txttimkiem.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txttimkiem.PlaceholderText = "";
             this.txttimkiem.SelectedText = "";
-            this.txttimkiem.Size = new System.Drawing.Size(323, 33);
+            this.txttimkiem.Size = new System.Drawing.Size(283, 38);
             this.txttimkiem.TabIndex = 4;
+            this.txttimkiem.Enter += new System.EventHandler(this.txttimkiem_Enter);
+            this.txttimkiem.Leave += new System.EventHandler(this.txttimkiem_Leave);
             // 
             // label2
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(695, 32);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
+            this.label2.Location = new System.Drawing.Point(696, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 33);
             this.label2.TabIndex = 3;
@@ -305,11 +308,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label1.Location = new System.Drawing.Point(267, 8);
+            this.label1.Location = new System.Drawing.Point(253, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 57);
+            this.label1.Size = new System.Drawing.Size(236, 67);
             this.label1.TabIndex = 2;
             this.label1.Text = "Dịch Vụ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -333,15 +336,16 @@
             this.panelcndichvu.Controls.Add(this.txtloaidichvu);
             this.panelcndichvu.Controls.Add(this.txttendichvu);
             this.panelcndichvu.Controls.Add(this.txtiddichvu);
-            this.panelcndichvu.Location = new System.Drawing.Point(785, 68);
+            this.panelcndichvu.Location = new System.Drawing.Point(786, 69);
             this.panelcndichvu.Name = "panelcndichvu";
-            this.panelcndichvu.Size = new System.Drawing.Size(372, 565);
+            this.panelcndichvu.Size = new System.Drawing.Size(372, 526);
             this.panelcndichvu.TabIndex = 1;
             // 
             // btnresetdv
             // 
             this.btnresetdv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnresetdv.BackgroundImage")));
             this.btnresetdv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnresetdv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnresetdv.BorderRadius = 15;
             this.btnresetdv.BorderThickness = 2;
             this.btnresetdv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -352,7 +356,7 @@
             this.btnresetdv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnresetdv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnresetdv.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnresetdv.Location = new System.Drawing.Point(199, 511);
+            this.btnresetdv.Location = new System.Drawing.Point(206, 456);
             this.btnresetdv.Name = "btnresetdv";
             this.btnresetdv.Size = new System.Drawing.Size(145, 45);
             this.btnresetdv.TabIndex = 3;
@@ -360,6 +364,7 @@
             // 
             // btnxoadv
             // 
+            this.btnxoadv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnxoadv.BorderRadius = 15;
             this.btnxoadv.BorderThickness = 2;
             this.btnxoadv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -371,7 +376,7 @@
             this.btnxoadv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnxoadv.Image = ((System.Drawing.Image)(resources.GetObject("btnxoadv.Image")));
             this.btnxoadv.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnxoadv.Location = new System.Drawing.Point(27, 511);
+            this.btnxoadv.Location = new System.Drawing.Point(34, 456);
             this.btnxoadv.Name = "btnxoadv";
             this.btnxoadv.Size = new System.Drawing.Size(145, 45);
             this.btnxoadv.TabIndex = 3;
@@ -380,6 +385,7 @@
             // 
             // btnsuadv
             // 
+            this.btnsuadv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnsuadv.BorderRadius = 15;
             this.btnsuadv.BorderThickness = 2;
             this.btnsuadv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -391,7 +397,7 @@
             this.btnsuadv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnsuadv.Image = ((System.Drawing.Image)(resources.GetObject("btnsuadv.Image")));
             this.btnsuadv.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnsuadv.Location = new System.Drawing.Point(199, 448);
+            this.btnsuadv.Location = new System.Drawing.Point(206, 393);
             this.btnsuadv.Name = "btnsuadv";
             this.btnsuadv.Size = new System.Drawing.Size(145, 45);
             this.btnsuadv.TabIndex = 3;
@@ -400,6 +406,7 @@
             // 
             // btnthemdv
             // 
+            this.btnthemdv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnthemdv.BorderRadius = 15;
             this.btnthemdv.BorderThickness = 2;
             this.btnthemdv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -410,7 +417,7 @@
             this.btnthemdv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthemdv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnthemdv.Image = ((System.Drawing.Image)(resources.GetObject("btnthemdv.Image")));
-            this.btnthemdv.Location = new System.Drawing.Point(27, 448);
+            this.btnthemdv.Location = new System.Drawing.Point(34, 393);
             this.btnthemdv.Name = "btnthemdv";
             this.btnthemdv.Size = new System.Drawing.Size(145, 45);
             this.btnthemdv.TabIndex = 3;
@@ -420,16 +427,16 @@
             // cboidloaidichvu
             // 
             this.cboidloaidichvu.BackColor = System.Drawing.Color.Transparent;
-            this.cboidloaidichvu.BorderColor = System.Drawing.Color.Black;
+            this.cboidloaidichvu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.cboidloaidichvu.BorderRadius = 15;
             this.cboidloaidichvu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cboidloaidichvu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboidloaidichvu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboidloaidichvu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboidloaidichvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboidloaidichvu.ForeColor = System.Drawing.Color.Black;
+            this.cboidloaidichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.cboidloaidichvu.ItemHeight = 30;
-            this.cboidloaidichvu.Location = new System.Drawing.Point(27, 214);
+            this.cboidloaidichvu.Location = new System.Drawing.Point(35, 186);
             this.cboidloaidichvu.Name = "cboidloaidichvu";
             this.cboidloaidichvu.Size = new System.Drawing.Size(152, 36);
             this.cboidloaidichvu.TabIndex = 2;
@@ -437,7 +444,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 367);
+            this.label7.Location = new System.Drawing.Point(38, 312);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 19);
             this.label7.TabIndex = 1;
@@ -447,7 +454,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(31, 192);
+            this.label8.Location = new System.Drawing.Point(39, 164);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(135, 19);
             this.label8.TabIndex = 1;
@@ -457,7 +464,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 277);
+            this.label5.Location = new System.Drawing.Point(38, 236);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 19);
             this.label5.TabIndex = 1;
@@ -467,7 +474,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 104);
+            this.label4.Location = new System.Drawing.Point(39, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 19);
             this.label4.TabIndex = 1;
@@ -477,7 +484,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 14);
+            this.label3.Location = new System.Drawing.Point(38, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 19);
             this.label3.TabIndex = 1;
@@ -486,7 +493,7 @@
             // 
             // txtgiadichvu
             // 
-            this.txtgiadichvu.BorderColor = System.Drawing.Color.Black;
+            this.txtgiadichvu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtgiadichvu.BorderRadius = 15;
             this.txtgiadichvu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtgiadichvu.DefaultText = "";
@@ -496,9 +503,9 @@
             this.txtgiadichvu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtgiadichvu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtgiadichvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtgiadichvu.ForeColor = System.Drawing.Color.Black;
+            this.txtgiadichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtgiadichvu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtgiadichvu.Location = new System.Drawing.Point(27, 390);
+            this.txtgiadichvu.Location = new System.Drawing.Point(34, 335);
             this.txtgiadichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtgiadichvu.Name = "txtgiadichvu";
             this.txtgiadichvu.PasswordChar = '\0';
@@ -506,10 +513,11 @@
             this.txtgiadichvu.SelectedText = "";
             this.txtgiadichvu.Size = new System.Drawing.Size(294, 38);
             this.txtgiadichvu.TabIndex = 0;
+            this.txtgiadichvu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgiadichvu_KeyPress);
             // 
             // txtloaidichvu
             // 
-            this.txtloaidichvu.BorderColor = System.Drawing.Color.Black;
+            this.txtloaidichvu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtloaidichvu.BorderRadius = 15;
             this.txtloaidichvu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtloaidichvu.DefaultText = "";
@@ -519,9 +527,9 @@
             this.txtloaidichvu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtloaidichvu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtloaidichvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtloaidichvu.ForeColor = System.Drawing.Color.Black;
+            this.txtloaidichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtloaidichvu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtloaidichvu.Location = new System.Drawing.Point(27, 300);
+            this.txtloaidichvu.Location = new System.Drawing.Point(34, 259);
             this.txtloaidichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtloaidichvu.Name = "txtloaidichvu";
             this.txtloaidichvu.PasswordChar = '\0';
@@ -533,7 +541,7 @@
             // 
             // txttendichvu
             // 
-            this.txttendichvu.BorderColor = System.Drawing.Color.Black;
+            this.txttendichvu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttendichvu.BorderRadius = 15;
             this.txttendichvu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txttendichvu.DefaultText = "";
@@ -543,9 +551,9 @@
             this.txttendichvu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttendichvu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttendichvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttendichvu.ForeColor = System.Drawing.Color.Black;
+            this.txttendichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttendichvu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttendichvu.Location = new System.Drawing.Point(28, 127);
+            this.txttendichvu.Location = new System.Drawing.Point(35, 111);
             this.txttendichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttendichvu.Name = "txttendichvu";
             this.txttendichvu.PasswordChar = '\0';
@@ -556,7 +564,7 @@
             // 
             // txtiddichvu
             // 
-            this.txtiddichvu.BorderColor = System.Drawing.Color.Black;
+            this.txtiddichvu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtiddichvu.BorderRadius = 15;
             this.txtiddichvu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtiddichvu.DefaultText = "";
@@ -566,9 +574,9 @@
             this.txtiddichvu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtiddichvu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtiddichvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtiddichvu.ForeColor = System.Drawing.Color.Black;
+            this.txtiddichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtiddichvu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtiddichvu.Location = new System.Drawing.Point(27, 37);
+            this.txtiddichvu.Location = new System.Drawing.Point(34, 33);
             this.txtiddichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtiddichvu.Name = "txtiddichvu";
             this.txtiddichvu.PasswordChar = '\0';
@@ -576,6 +584,7 @@
             this.txtiddichvu.SelectedText = "";
             this.txtiddichvu.Size = new System.Drawing.Size(153, 38);
             this.txtiddichvu.TabIndex = 0;
+            this.txtiddichvu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtiddichvu_KeyPress);
             // 
             // paneldlphong
             // 
@@ -584,9 +593,9 @@
             this.paneldlphong.BorderRadius = 20;
             this.paneldlphong.BorderThickness = 2;
             this.paneldlphong.Controls.Add(this.dtgvdichvu);
-            this.paneldlphong.Location = new System.Drawing.Point(12, 68);
+            this.paneldlphong.Location = new System.Drawing.Point(13, 69);
             this.paneldlphong.Name = "paneldlphong";
-            this.paneldlphong.Size = new System.Drawing.Size(767, 565);
+            this.paneldlphong.Size = new System.Drawing.Size(767, 526);
             this.paneldlphong.TabIndex = 0;
             // 
             // dtgvdichvu
@@ -607,7 +616,7 @@
             this.dtgvdichvu.RowHeadersWidth = 51;
             this.dtgvdichvu.RowTemplate.Height = 24;
             this.dtgvdichvu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvdichvu.Size = new System.Drawing.Size(738, 542);
+            this.dtgvdichvu.Size = new System.Drawing.Size(738, 495);
             this.dtgvdichvu.TabIndex = 0;
             this.dtgvdichvu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvdichvu_CellClick);
             // 
@@ -652,7 +661,7 @@
             this.tabLoaiDichVu.Location = new System.Drawing.Point(144, 4);
             this.tabLoaiDichVu.Name = "tabLoaiDichVu";
             this.tabLoaiDichVu.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLoaiDichVu.Size = new System.Drawing.Size(1176, 654);
+            this.tabLoaiDichVu.Size = new System.Drawing.Size(1176, 613);
             this.tabLoaiDichVu.TabIndex = 1;
             this.tabLoaiDichVu.Text = "Loại Dịch Vụ";
             this.tabLoaiDichVu.UseVisualStyleBackColor = true;
@@ -674,16 +683,16 @@
             this.panelloaiphong.ForeColor = System.Drawing.Color.Black;
             this.panelloaiphong.Location = new System.Drawing.Point(3, 3);
             this.panelloaiphong.Name = "panelloaiphong";
-            this.panelloaiphong.Size = new System.Drawing.Size(1170, 648);
+            this.panelloaiphong.Size = new System.Drawing.Size(1170, 607);
             this.panelloaiphong.TabIndex = 1;
             // 
             // pckanhnen
             // 
             this.pckanhnen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pckanhnen.Image = ((System.Drawing.Image)(resources.GetObject("pckanhnen.Image")));
-            this.pckanhnen.Location = new System.Drawing.Point(785, 473);
+            this.pckanhnen.Location = new System.Drawing.Point(784, 477);
             this.pckanhnen.Name = "pckanhnen";
-            this.pckanhnen.Size = new System.Drawing.Size(372, 160);
+            this.pckanhnen.Size = new System.Drawing.Size(372, 114);
             this.pckanhnen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pckanhnen.TabIndex = 6;
             this.pckanhnen.TabStop = false;
@@ -692,6 +701,7 @@
             // 
             this.btntimkiemldv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btntimkiemldv.BackgroundImage")));
             this.btntimkiemldv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btntimkiemldv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btntimkiemldv.BorderRadius = 10;
             this.btntimkiemldv.BorderThickness = 2;
             this.btntimkiemldv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -700,10 +710,10 @@
             this.btntimkiemldv.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btntimkiemldv.FillColor = System.Drawing.Color.Transparent;
             this.btntimkiemldv.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btntimkiemldv.ForeColor = System.Drawing.Color.White;
-            this.btntimkiemldv.Location = new System.Drawing.Point(1115, 48);
+            this.btntimkiemldv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
+            this.btntimkiemldv.Location = new System.Drawing.Point(1079, 72);
             this.btntimkiemldv.Name = "btntimkiemldv";
-            this.btntimkiemldv.Size = new System.Drawing.Size(48, 33);
+            this.btntimkiemldv.Size = new System.Drawing.Size(77, 39);
             this.btntimkiemldv.TabIndex = 5;
             this.btntimkiemldv.Click += new System.EventHandler(this.btntimkiemldv_Click);
             // 
@@ -711,35 +721,36 @@
             // 
             this.txttimkiemldv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttimkiemldv.BorderRadius = 10;
-            this.txttimkiemldv.BorderThickness = 2;
             this.txttimkiemldv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttimkiemldv.DefaultText = "";
+            this.txttimkiemldv.DefaultText = "Tìm Kiếm Loại Dịch Vụ";
             this.txttimkiemldv.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txttimkiemldv.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txttimkiemldv.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttimkiemldv.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttimkiemldv.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttimkiemldv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttimkiemldv.ForeColor = System.Drawing.Color.Black;
+            this.txttimkiemldv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttimkiemldv.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttimkiemldv.Location = new System.Drawing.Point(785, 48);
+            this.txttimkiemldv.Location = new System.Drawing.Point(785, 71);
             this.txttimkiemldv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttimkiemldv.Name = "txttimkiemldv";
             this.txttimkiemldv.PasswordChar = '\0';
             this.txttimkiemldv.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txttimkiemldv.PlaceholderText = "";
             this.txttimkiemldv.SelectedText = "";
-            this.txttimkiemldv.Size = new System.Drawing.Size(323, 33);
+            this.txttimkiemldv.Size = new System.Drawing.Size(287, 39);
             this.txttimkiemldv.TabIndex = 4;
+            this.txttimkiemldv.Enter += new System.EventHandler(this.txttimkiemldv_Enter);
+            this.txttimkiemldv.Leave += new System.EventHandler(this.txttimkiemldv_Leave);
             // 
             // label9
             // 
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(695, 48);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
+            this.label9.Location = new System.Drawing.Point(791, 44);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 33);
+            this.label9.Size = new System.Drawing.Size(80, 23);
             this.label9.TabIndex = 3;
             this.label9.Text = "Search :";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -747,11 +758,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label10.Location = new System.Drawing.Point(170, 12);
+            this.label10.Location = new System.Drawing.Point(168, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(457, 69);
+            this.label10.Size = new System.Drawing.Size(437, 67);
             this.label10.TabIndex = 2;
             this.label10.Text = "LOẠI DỊCH VỤ";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -769,15 +780,16 @@
             this.panelcnloaidichvu.Controls.Add(this.label16);
             this.panelcnloaidichvu.Controls.Add(this.txttenloaidichvu);
             this.panelcnloaidichvu.Controls.Add(this.txtidloaidichvu);
-            this.panelcnloaidichvu.Location = new System.Drawing.Point(785, 88);
+            this.panelcnloaidichvu.Location = new System.Drawing.Point(784, 117);
             this.panelcnloaidichvu.Name = "panelcnloaidichvu";
-            this.panelcnloaidichvu.Size = new System.Drawing.Size(372, 379);
+            this.panelcnloaidichvu.Size = new System.Drawing.Size(372, 354);
             this.panelcnloaidichvu.TabIndex = 1;
             // 
             // btnresetldv
             // 
             this.btnresetldv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnresetldv.BackgroundImage")));
             this.btnresetldv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnresetldv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnresetldv.BorderRadius = 15;
             this.btnresetldv.BorderThickness = 2;
             this.btnresetldv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -788,7 +800,7 @@
             this.btnresetldv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnresetldv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnresetldv.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnresetldv.Location = new System.Drawing.Point(201, 304);
+            this.btnresetldv.Location = new System.Drawing.Point(200, 291);
             this.btnresetldv.Name = "btnresetldv";
             this.btnresetldv.Size = new System.Drawing.Size(145, 45);
             this.btnresetldv.TabIndex = 3;
@@ -796,6 +808,7 @@
             // 
             // btnxoaldv
             // 
+            this.btnxoaldv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnxoaldv.BorderRadius = 15;
             this.btnxoaldv.BorderThickness = 2;
             this.btnxoaldv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -807,7 +820,7 @@
             this.btnxoaldv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnxoaldv.Image = ((System.Drawing.Image)(resources.GetObject("btnxoaldv.Image")));
             this.btnxoaldv.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnxoaldv.Location = new System.Drawing.Point(29, 304);
+            this.btnxoaldv.Location = new System.Drawing.Point(28, 291);
             this.btnxoaldv.Name = "btnxoaldv";
             this.btnxoaldv.Size = new System.Drawing.Size(145, 45);
             this.btnxoaldv.TabIndex = 3;
@@ -816,6 +829,7 @@
             // 
             // btnsualdv
             // 
+            this.btnsualdv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnsualdv.BorderRadius = 15;
             this.btnsualdv.BorderThickness = 2;
             this.btnsualdv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -827,7 +841,7 @@
             this.btnsualdv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnsualdv.Image = ((System.Drawing.Image)(resources.GetObject("btnsualdv.Image")));
             this.btnsualdv.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnsualdv.Location = new System.Drawing.Point(201, 242);
+            this.btnsualdv.Location = new System.Drawing.Point(200, 229);
             this.btnsualdv.Name = "btnsualdv";
             this.btnsualdv.Size = new System.Drawing.Size(145, 45);
             this.btnsualdv.TabIndex = 3;
@@ -836,6 +850,7 @@
             // 
             // btnthemldv
             // 
+            this.btnthemldv.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnthemldv.BorderRadius = 15;
             this.btnthemldv.BorderThickness = 2;
             this.btnthemldv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -846,7 +861,7 @@
             this.btnthemldv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthemldv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnthemldv.Image = ((System.Drawing.Image)(resources.GetObject("btnthemldv.Image")));
-            this.btnthemldv.Location = new System.Drawing.Point(29, 242);
+            this.btnthemldv.Location = new System.Drawing.Point(28, 229);
             this.btnthemldv.Name = "btnthemldv";
             this.btnthemldv.Size = new System.Drawing.Size(145, 45);
             this.btnthemldv.TabIndex = 3;
@@ -856,6 +871,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.label14.Location = new System.Drawing.Point(25, 128);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(138, 19);
@@ -866,6 +882,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.label16.Location = new System.Drawing.Point(25, 25);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(135, 19);
@@ -875,7 +892,7 @@
             // 
             // txttenloaidichvu
             // 
-            this.txttenloaidichvu.BorderColor = System.Drawing.Color.Black;
+            this.txttenloaidichvu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttenloaidichvu.BorderRadius = 15;
             this.txttenloaidichvu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txttenloaidichvu.DefaultText = "";
@@ -885,7 +902,7 @@
             this.txttenloaidichvu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttenloaidichvu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttenloaidichvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttenloaidichvu.ForeColor = System.Drawing.Color.Black;
+            this.txttenloaidichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttenloaidichvu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttenloaidichvu.Location = new System.Drawing.Point(29, 151);
             this.txttenloaidichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -898,7 +915,7 @@
             // 
             // txtidloaidichvu
             // 
-            this.txtidloaidichvu.BorderColor = System.Drawing.Color.Black;
+            this.txtidloaidichvu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtidloaidichvu.BorderRadius = 15;
             this.txtidloaidichvu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtidloaidichvu.DefaultText = "";
@@ -908,7 +925,7 @@
             this.txtidloaidichvu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtidloaidichvu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidloaidichvu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidloaidichvu.ForeColor = System.Drawing.Color.Black;
+            this.txtidloaidichvu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txtidloaidichvu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidloaidichvu.Location = new System.Drawing.Point(29, 48);
             this.txtidloaidichvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -918,6 +935,7 @@
             this.txtidloaidichvu.SelectedText = "";
             this.txtidloaidichvu.Size = new System.Drawing.Size(179, 38);
             this.txtidloaidichvu.TabIndex = 0;
+            this.txtidloaidichvu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtidloaidichvu_KeyPress);
             // 
             // panneldlloaidichvu
             // 
@@ -926,9 +944,9 @@
             this.panneldlloaidichvu.BorderRadius = 20;
             this.panneldlloaidichvu.BorderThickness = 2;
             this.panneldlloaidichvu.Controls.Add(this.dtgvloaidichvu);
-            this.panneldlloaidichvu.Location = new System.Drawing.Point(12, 84);
+            this.panneldlloaidichvu.Location = new System.Drawing.Point(11, 71);
             this.panneldlloaidichvu.Name = "panneldlloaidichvu";
-            this.panneldlloaidichvu.Size = new System.Drawing.Size(767, 549);
+            this.panneldlloaidichvu.Size = new System.Drawing.Size(767, 526);
             this.panneldlloaidichvu.TabIndex = 0;
             // 
             // dtgvloaidichvu
@@ -940,13 +958,13 @@
             this.ID_LoaiDichVu,
             this.Ten_LoaiDichVu});
             this.dtgvloaidichvu.GridColor = System.Drawing.Color.Black;
-            this.dtgvloaidichvu.Location = new System.Drawing.Point(13, 14);
+            this.dtgvloaidichvu.Location = new System.Drawing.Point(15, 14);
             this.dtgvloaidichvu.Name = "dtgvloaidichvu";
             this.dtgvloaidichvu.ReadOnly = true;
             this.dtgvloaidichvu.RowHeadersWidth = 51;
             this.dtgvloaidichvu.RowTemplate.Height = 24;
             this.dtgvloaidichvu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvloaidichvu.Size = new System.Drawing.Size(738, 522);
+            this.dtgvloaidichvu.Size = new System.Drawing.Size(738, 498);
             this.dtgvloaidichvu.TabIndex = 0;
             this.dtgvloaidichvu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvloaidichvu_CellClick);
             // 
@@ -963,6 +981,11 @@
             this.Ten_LoaiDichVu.MinimumWidth = 6;
             this.Ten_LoaiDichVu.Name = "Ten_LoaiDichVu";
             this.Ten_LoaiDichVu.ReadOnly = true;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // GUI_DichVu
             // 
@@ -1056,5 +1079,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_LDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten_LDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia_DichVu;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

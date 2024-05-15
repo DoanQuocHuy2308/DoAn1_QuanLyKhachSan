@@ -108,7 +108,7 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2DateTimePicker).Value= DateTime.Now;
                 }
-                txttimkiem.Text = "";
+                txttimkiem.Text = "Tìm Kiếm Khuyến Mại";
                 HienThiKhuyenMai();
             }
         }
@@ -186,7 +186,11 @@ namespace GUI_KhachSan
 
         private void btntimkiemkm_Click(object sender, EventArgs e)
         {
-
+            if(txttimkiem.Text=="Tìm Kiếm Khuyến Mại")
+            {
+                MessageBox.Show("Vui lòng nhập khuyến mại cần tìm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             km.ID_KhuyenMai = txtidkhuyenmai.Text;
             km.Ten_KhuyenMai = txttenkhuyenmai.Text;
             decimal.TryParse(txtgiatri.Text, out decimal giatri);
@@ -194,7 +198,6 @@ namespace GUI_KhachSan
             km.MoTa = txtmota.Text;
             km.NgayBatDau = dtpkngaybatdau.Value;
             km.NgayKetThuc = dtpkngayketthuc.Value;
-
             DataTable dt = bllkm.TimKiem(txttimkiem.Text, km);
             dtgvkhuyenmai.Columns[0].DataPropertyName = "ID_KhuyenMai";
             dtgvkhuyenmai.Columns[1].DataPropertyName = "Ten_KhuyenMai";
@@ -203,6 +206,30 @@ namespace GUI_KhachSan
             dtgvkhuyenmai.Columns[4].DataPropertyName = "NgayBatDau";
             dtgvkhuyenmai.Columns[5].DataPropertyName = "NgayKetThuc";
             dtgvkhuyenmai.DataSource = dt;
+        }
+
+        private void txttimkiem_Enter(object sender, EventArgs e)
+        {
+            if(txttimkiem.Text == "Tìm Kiếm Khuyến Mại")
+            {
+                txttimkiem.Text = "";
+            }
+        }
+
+        private void txttimkiem_Leave(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Khuyến Mại";
+            }
+        }
+
+        private void txtgiatri_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

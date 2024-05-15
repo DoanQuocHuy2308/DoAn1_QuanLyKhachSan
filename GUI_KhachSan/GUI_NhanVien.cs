@@ -183,7 +183,7 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                txttimkiem.Text = "";
+                txttimkiem.Text = "Tìm Kiếm Nhân Viên";
                 cbogioitinh.SelectedIndex = -1;
                 HienThiNhanVien();
             }
@@ -210,6 +210,22 @@ namespace GUI_KhachSan
             dtgvnhanvien.Columns[6].DataPropertyName = "DiaChi_NhanVien";
             dtgvnhanvien.Columns[7].DataPropertyName = "Role_NhanVien";
             dtgvnhanvien.DataSource = dt;
+        }
+
+        private void txttimkiem_Enter(object sender, EventArgs e)
+        {
+            if(txttimkiem.Text== "Tìm Kiếm Nhân Viên")
+            {
+                txttimkiem.Text = "";
+            }
+        }
+
+        private void txttimkiem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txttimkiem.Text == "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Nhân Viên";
+            }
         }
     }
 }

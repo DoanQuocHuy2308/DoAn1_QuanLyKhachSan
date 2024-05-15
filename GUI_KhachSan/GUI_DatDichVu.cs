@@ -142,6 +142,7 @@ namespace GUI_KhachSan
                     (c as Guna2ComboBox).SelectedIndex = -1;
                 }
                 dtpkngaydat.Value = DateTime.Now;
+                txttimkiem.Text = "Tìm Kiếm Mã Đặt Dịch Vụ";
                 HienThiDatDichVu();
                 HienThiDichVu();
             }
@@ -259,6 +260,22 @@ namespace GUI_KhachSan
             this.Hide();
             inhd.ShowDialog();
             this.Show();
+        }
+
+        private void txttimkiem_Enter(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "Tìm Kiếm Mã Đặt Dịch Vụ")
+            {
+                txttimkiem.Text = "";
+            }
+        }
+
+        private void txttimkiem_Leave(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Mã Đặt Dịch Vụ";
+            }
         }
     }
 }

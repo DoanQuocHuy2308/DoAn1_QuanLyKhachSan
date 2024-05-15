@@ -130,7 +130,7 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                txttimkiem.Text = "";
+                txttimkiem.Text = "Tìm Kiếm Tài Khoản";
                 cboban.SelectedIndex = -1;
                 cborole.SelectedIndex = -1;
                 HienThiTaiKhoan();
@@ -183,6 +183,22 @@ namespace GUI_KhachSan
             dtgvtaikhoan.Columns[3].DataPropertyName = "Role_TaiKhoan";
             dtgvtaikhoan.Columns[4].DataPropertyName = "Ban_TaiKhoan";
             dtgvtaikhoan.DataSource = dt;
+        }
+
+        private void txttimkiem_Enter(object sender, EventArgs e)
+        {
+            if(txttimkiem.Text== "Tìm Kiếm Tài Khoản")
+            {
+                txttimkiem.Text = "";
+            }
+        }
+
+        private void txttimkiem_Leave(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Tài Khoản";
+            }
         }
     }
 }

@@ -123,7 +123,7 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                txttimkiemlp.Text = "";
+                txttimkiemlp.Text = "Tìm Kiếm Loại Phòng";
                 HienThiLoaiPhong();
             }
         }
@@ -136,7 +136,7 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                txttimkiem.Text = "";
+                txttimkiem.Text = "Tìm Kiếm Phòng";
                 HienThiIDLoaiPhong();
                 HienThiPhong();
                 cboidloaiphong.SelectedIndex = -1;
@@ -336,6 +336,38 @@ namespace GUI_KhachSan
             dtgvloaiphong.Columns[2].DataPropertyName = "SucChua";
             dtgvloaiphong.Columns[3].DataPropertyName = "Gia_Phong";
             dtgvloaiphong.DataSource = dt;
+        }
+
+        private void txttimkiem_Leave(object sender, EventArgs e)
+        {
+            if(txttimkiem.Text == "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Phòng";
+            }
+        }
+
+        private void txttimkiem_Enter(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "Tìm Kiếm Phòng")
+            {
+                txttimkiem.Text = "";
+            }
+        }
+
+        private void txttimkiemlp_Leave(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "")
+            {
+                txttimkiem.Text = "Tìm Kiếm Loại Phòng";
+            }
+        }
+
+        private void txttimkiemlp_Enter(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "Tìm Kiếm Loại Phòng")
+            {
+                txttimkiem.Text = "";
+            }
         }
     }
 }
