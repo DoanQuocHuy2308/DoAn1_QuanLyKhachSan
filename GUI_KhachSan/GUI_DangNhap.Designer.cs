@@ -68,7 +68,7 @@
             this.label5.ForeColor = System.Drawing.Color.Gold;
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(699, 388);
+            this.label5.Size = new System.Drawing.Size(699, 406);
             this.label5.TabIndex = 1;
             this.label5.Text = "Log In";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -363,7 +363,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(239, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(224, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(249, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

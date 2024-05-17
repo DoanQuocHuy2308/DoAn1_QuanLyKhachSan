@@ -86,6 +86,49 @@ BEGIN
 	WHERE ddv.ID_KhachHang = @IDKhachHang
 END
 
+--Thống Kê Đơn Đặt Phòng
+CREATE PROCEDURE ThongKeDonDatPhong
+    @Check_In DATETIME = NULL,
+    @Check_Out DATETIME = NULL,
+    @Ten_Phong NVARCHAR(100) = NULL,
+    @Ten_LoaiPhong NVARCHAR(255) = NULL
+AS
+BEGIN
+    SELECT dp.ID_DatPhong, p.Ten_Phong, lp.Ten_LoaiPhong, kh.Ten_KhachHang,
+           kh.SDT_KhachHang, dp.Check_In, dp.Check_Out, dp.TienCoc, km.Ten_KhuyenMai, dp.TongTien
+    FROM DatPhong dp
+    JOIN Phong p ON dp.ID_Phong = p.ID_Phong
+    JOIN LoaiPhong lp ON p.ID_LoaiPhong = lp.ID_LoaiPhong
+    JOIN KhachHang kh ON dp.ID_KhachHang = kh.ID_KhachHang
+    LEFT JOIN KhuyenMai km ON dp.ID_KhuyenMai = km.ID_KhuyenMai
+    WHERE (@Check_In IS NULL OR (dp.Check_In <= @Check_Out AND dp.Check_Out >= @Check_In))
+      AND (@Ten_Phong IS NULL OR p.Ten_Phong LIKE '%' + @Ten_Phong + '%')
+      AND (@Ten_LoaiPhong IS NULL OR lp.Ten_LoaiPhong LIKE '%' + @Ten_LoaiPhong + '%');
+END
+
+--Thống kê đơn đặt dịch vụ
+CREATE PROCEDURE ThongKeDonDatDichVu
+    @NgayBatDau DATETIME = NULL,
+    @NgayKetThuc DATETIME = NULL,
+    @Ten_DichVu NVARCHAR(255) = NULL,
+    @Ten_LoaiDichVu NVARCHAR(255) = NULL
+AS
+BEGIN
+    SELECT ddv.ID_DatDichVu, kh.Ten_KhachHang, kh.SDT_KhachHang, ddv.NgayDat, dv.Ten_DichVu, ldv.Ten_LoaiDichVu,
+           ddv.SoLuong, km.Ten_KhuyenMai, ddv.TongTien
+    FROM DatDichVu ddv
+    JOIN DichVu dv ON ddv.ID_DichVu = dv.ID_DichVu
+    JOIN LoaiDichVu ldv ON dv.ID_LoaiDichVu = ldv.ID_LoaiDichVu
+    JOIN KhachHang kh ON ddv.ID_KhachHang = kh.ID_KhachHang
+    LEFT JOIN KhuyenMai km ON ddv.ID_KhuyenMai = km.ID_KhuyenMai
+    WHERE (@NgayBatDau IS NULL OR ddv.NgayDat >= @NgayBatDau)
+      AND (@NgayKetThuc IS NULL OR ddv.NgayDat <= @NgayKetThuc)
+      AND (@Ten_DichVu IS NULL OR dv.Ten_DichVu LIKE '%' + @Ten_DichVu + '%')
+      AND (@Ten_LoaiDichVu IS NULL OR ldv.Ten_LoaiDichVu LIKE '%' + @Ten_LoaiDichVu + '%');
+END
+
+
+
 
 
 

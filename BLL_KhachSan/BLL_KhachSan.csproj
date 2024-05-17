@@ -56,6 +56,7 @@
     <Compile Include="BLL_QuenMatKhau.cs" />
     <Compile Include="BLL_TaiKhoan.cs" />
     <Compile Include="BLL_CaiDat.cs" />
+    <Compile Include="BLL_ThongKe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
