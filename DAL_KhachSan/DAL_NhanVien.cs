@@ -49,6 +49,7 @@ namespace DAL_KhachSan
             }
             return kt;
         }
+
         public void ADD(DTO_NhanVien nv)
         {
             try
@@ -128,17 +129,18 @@ namespace DAL_KhachSan
             try
             {
                 kn.moketnoi();
-                using (cmd = new SqlCommand("DeleteNhanVien", DAL_KetNoi.sqlcon))
+                string thucthi = "Delete NhanVien where ID_NhanVien=@ID_NhanVien";
+                using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ID_NhanVien", nv.ID_NhanVien);
                     cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi xóa tài khoản và nhân viên: " + ex.Message);
+                throw new Exception("Lỗi khi xóa thông tin nhân viên: " + ex.Message);
             }
+            finally { kn.dongketnoi(); }
         }
         public DataTable TimKiem(string search, DTO_NhanVien nv)
         {

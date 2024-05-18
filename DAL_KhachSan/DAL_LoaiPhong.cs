@@ -130,7 +130,6 @@ namespace DAL_KhachSan
         {
             try
             {
-                KTIDTonTai(lp);
                 kn.moketnoi();
                 string thucthi = "Delete LoaiPhong where ID_LoaiPhong=@ID_LoaiPhong";
                 using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))

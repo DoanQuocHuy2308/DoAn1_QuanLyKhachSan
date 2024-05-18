@@ -97,17 +97,18 @@ namespace DAL_KhachSan
             try
             {
                 kn.moketnoi();
-                using (cmd = new SqlCommand("DeleteTaiKhoan", DAL_KetNoi.sqlcon))
+                string thucthi = "Delete TaiKhoan where ID_TaiKhoan=@ID_TaiKhoan";
+                using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@ID_TaiKhoan", tk.ID_TaiKhoan);
                     cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi xóa tài khoản và nhân viên: " + ex.Message);
+                throw new Exception("Lỗi khi xóa thông tin tài khoản: " + ex.Message);
             }
+            finally { kn.dongketnoi(); }
         }
         public DataTable TimKiem(string search, DTO_TaiKhoan tk)
         {
