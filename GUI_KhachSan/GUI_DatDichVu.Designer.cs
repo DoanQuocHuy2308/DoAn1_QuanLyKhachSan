@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_DatDichVu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelchinh = new Guna.UI2.WinForms.Guna2Panel();
             this.btntimkiemddv = new Guna.UI2.WinForms.Guna2Button();
             this.txttimkiem = new Guna.UI2.WinForms.Guna2TextBox();
@@ -120,9 +120,10 @@
             this.panelchinh.Controls.Add(this.btnclose);
             this.panelchinh.Controls.Add(this.panelchucnang);
             this.panelchinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelchinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.panelchinh.Location = new System.Drawing.Point(0, 0);
             this.panelchinh.Name = "panelchinh";
-            this.panelchinh.Size = new System.Drawing.Size(1498, 811);
+            this.panelchinh.Size = new System.Drawing.Size(1498, 796);
             this.panelchinh.TabIndex = 1;
             // 
             // btntimkiemddv
@@ -139,7 +140,7 @@
             this.btntimkiemddv.FillColor = System.Drawing.Color.Transparent;
             this.btntimkiemddv.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btntimkiemddv.ForeColor = System.Drawing.Color.White;
-            this.btntimkiemddv.Location = new System.Drawing.Point(1399, 95);
+            this.btntimkiemddv.Location = new System.Drawing.Point(1399, 77);
             this.btntimkiemddv.Name = "btntimkiemddv";
             this.btntimkiemddv.Size = new System.Drawing.Size(87, 38);
             this.btntimkiemddv.TabIndex = 18;
@@ -159,7 +160,7 @@
             this.txttimkiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttimkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttimkiem.Location = new System.Drawing.Point(1012, 95);
+            this.txttimkiem.Location = new System.Drawing.Point(1012, 77);
             this.txttimkiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttimkiem.Name = "txttimkiem";
             this.txttimkiem.PasswordChar = '\0';
@@ -186,7 +187,7 @@
             this.btninddv.ForeColor = System.Drawing.Color.White;
             this.btninddv.Image = ((System.Drawing.Image)(resources.GetObject("btninddv.Image")));
             this.btninddv.ImageSize = new System.Drawing.Size(30, 30);
-            this.btninddv.Location = new System.Drawing.Point(813, 754);
+            this.btninddv.Location = new System.Drawing.Point(813, 736);
             this.btninddv.Name = "btninddv";
             this.btninddv.Size = new System.Drawing.Size(182, 45);
             this.btninddv.TabIndex = 23;
@@ -196,7 +197,7 @@
             // 
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label19.Location = new System.Drawing.Point(923, 100);
+            this.label19.Location = new System.Drawing.Point(923, 82);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(83, 33);
             this.label19.TabIndex = 16;
@@ -218,7 +219,7 @@
             this.btnresetddv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnresetddv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnresetddv.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnresetddv.Location = new System.Drawing.Point(616, 754);
+            this.btnresetddv.Location = new System.Drawing.Point(616, 736);
             this.btnresetddv.Name = "btnresetddv";
             this.btnresetddv.Size = new System.Drawing.Size(182, 45);
             this.btnresetddv.TabIndex = 19;
@@ -231,7 +232,7 @@
             this.paneldulieu.BorderThickness = 2;
             this.paneldulieu.Controls.Add(this.grbdulieudp);
             this.paneldulieu.Controls.Add(this.grbdulieup);
-            this.paneldulieu.Location = new System.Drawing.Point(12, 139);
+            this.paneldulieu.Location = new System.Drawing.Point(12, 121);
             this.paneldulieu.Name = "paneldulieu";
             this.paneldulieu.Size = new System.Drawing.Size(994, 609);
             this.paneldulieu.TabIndex = 15;
@@ -255,14 +256,14 @@
             // 
             this.dtgvdatdichvu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvdatdichvu.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvdatdichvu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvdatdichvu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvdatdichvu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvdatdichvu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_DatDichVu,
@@ -392,14 +393,14 @@
             // 
             this.dtgvdichvu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvdichvu.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvdichvu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvdichvu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvdichvu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvdichvu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_DichVu1,
@@ -466,7 +467,7 @@
             this.btnxoaddv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnxoaddv.Image = ((System.Drawing.Image)(resources.GetObject("btnxoaddv.Image")));
             this.btnxoaddv.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnxoaddv.Location = new System.Drawing.Point(418, 754);
+            this.btnxoaddv.Location = new System.Drawing.Point(418, 736);
             this.btnxoaddv.Name = "btnxoaddv";
             this.btnxoaddv.Size = new System.Drawing.Size(182, 45);
             this.btnxoaddv.TabIndex = 20;
@@ -478,7 +479,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 40.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label1.Location = new System.Drawing.Point(271, 58);
+            this.label1.Location = new System.Drawing.Point(270, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(462, 75);
             this.label1.TabIndex = 14;
@@ -498,7 +499,7 @@
             this.btnsuaddv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnsuaddv.Image = ((System.Drawing.Image)(resources.GetObject("btnsuaddv.Image")));
             this.btnsuaddv.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnsuaddv.Location = new System.Drawing.Point(215, 754);
+            this.btnsuaddv.Location = new System.Drawing.Point(215, 736);
             this.btnsuaddv.Name = "btnsuaddv";
             this.btnsuaddv.Size = new System.Drawing.Size(182, 45);
             this.btnsuaddv.TabIndex = 21;
@@ -539,7 +540,7 @@
             this.btnthemddv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthemddv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnthemddv.Image = ((System.Drawing.Image)(resources.GetObject("btnthemddv.Image")));
-            this.btnthemddv.Location = new System.Drawing.Point(12, 754);
+            this.btnthemddv.Location = new System.Drawing.Point(12, 736);
             this.btnthemddv.Name = "btnthemddv";
             this.btnthemddv.Size = new System.Drawing.Size(182, 45);
             this.btnthemddv.TabIndex = 22;
@@ -613,7 +614,7 @@
             this.panelchucnang.Controls.Add(this.txtidkhachhang);
             this.panelchucnang.Controls.Add(this.txtsoluong);
             this.panelchucnang.Controls.Add(this.txttongtien);
-            this.panelchucnang.Location = new System.Drawing.Point(1012, 139);
+            this.panelchucnang.Location = new System.Drawing.Point(1012, 121);
             this.panelchucnang.Name = "panelchucnang";
             this.panelchucnang.Size = new System.Drawing.Size(474, 660);
             this.panelchucnang.TabIndex = 0;
@@ -1008,7 +1009,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
-            this.ClientSize = new System.Drawing.Size(1498, 811);
+            this.ClientSize = new System.Drawing.Size(1498, 796);
             this.Controls.Add(this.panelchinh);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

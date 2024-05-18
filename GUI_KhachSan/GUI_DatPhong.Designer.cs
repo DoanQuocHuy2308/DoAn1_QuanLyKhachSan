@@ -126,7 +126,7 @@
             this.panelchinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelchinh.Location = new System.Drawing.Point(0, 0);
             this.panelchinh.Name = "panelchinh";
-            this.panelchinh.Size = new System.Drawing.Size(1498, 811);
+            this.panelchinh.Size = new System.Drawing.Size(1498, 796);
             this.panelchinh.TabIndex = 0;
             // 
             // btnindp
@@ -144,7 +144,7 @@
             this.btnindp.ForeColor = System.Drawing.Color.White;
             this.btnindp.Image = ((System.Drawing.Image)(resources.GetObject("btnindp.Image")));
             this.btnindp.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnindp.Location = new System.Drawing.Point(943, 754);
+            this.btnindp.Location = new System.Drawing.Point(949, 734);
             this.btnindp.Name = "btnindp";
             this.btnindp.Size = new System.Drawing.Size(92, 45);
             this.btnindp.TabIndex = 17;
@@ -164,7 +164,7 @@
             this.btntimkiemdp.FillColor = System.Drawing.Color.Transparent;
             this.btntimkiemdp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btntimkiemdp.ForeColor = System.Drawing.Color.White;
-            this.btntimkiemdp.Location = new System.Drawing.Point(1415, 94);
+            this.btntimkiemdp.Location = new System.Drawing.Point(1421, 74);
             this.btntimkiemdp.Name = "btntimkiemdp";
             this.btntimkiemdp.Size = new System.Drawing.Size(65, 42);
             this.btntimkiemdp.TabIndex = 3;
@@ -174,7 +174,7 @@
             // 
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label19.Location = new System.Drawing.Point(1035, 94);
+            this.label19.Location = new System.Drawing.Point(1041, 74);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(80, 42);
             this.label19.TabIndex = 16;
@@ -188,7 +188,7 @@
             this.paneldulieu.BorderThickness = 2;
             this.paneldulieu.Controls.Add(this.grbdulieudp);
             this.paneldulieu.Controls.Add(this.grbdulieup);
-            this.paneldulieu.Location = new System.Drawing.Point(10, 139);
+            this.paneldulieu.Location = new System.Drawing.Point(16, 119);
             this.paneldulieu.Name = "paneldulieu";
             this.paneldulieu.Size = new System.Drawing.Size(1027, 609);
             this.paneldulieu.TabIndex = 15;
@@ -416,7 +416,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 40.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label1.Location = new System.Drawing.Point(269, 61);
+            this.label1.Location = new System.Drawing.Point(275, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(420, 75);
             this.label1.TabIndex = 14;
@@ -436,7 +436,7 @@
             this.txttimkiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttimkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttimkiem.Location = new System.Drawing.Point(1122, 94);
+            this.txttimkiem.Location = new System.Drawing.Point(1128, 74);
             this.txttimkiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttimkiem.Name = "txttimkiem";
             this.txttimkiem.PasswordChar = '\0';
@@ -484,7 +484,7 @@
             this.btnthoat.FillColor = System.Drawing.Color.Transparent;
             this.btnthoat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnthoat.ForeColor = System.Drawing.Color.White;
-            this.btnthoat.Location = new System.Drawing.Point(12, 12);
+            this.btnthoat.Location = new System.Drawing.Point(10, 12);
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(41, 36);
             this.btnthoat.TabIndex = 4;
@@ -505,7 +505,7 @@
             this.btnresetdp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnresetdp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnresetdp.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnresetdp.Location = new System.Drawing.Point(835, 754);
+            this.btnresetdp.Location = new System.Drawing.Point(841, 734);
             this.btnresetdp.Name = "btnresetdp";
             this.btnresetdp.Size = new System.Drawing.Size(102, 45);
             this.btnresetdp.TabIndex = 16;
@@ -560,7 +560,7 @@
             this.panelchucnang.Controls.Add(this.txtidkhachhang);
             this.panelchucnang.Controls.Add(this.txttiencoc);
             this.panelchucnang.Controls.Add(this.txttongtien);
-            this.panelchucnang.Location = new System.Drawing.Point(1039, 139);
+            this.panelchucnang.Location = new System.Drawing.Point(1045, 119);
             this.panelchucnang.Name = "panelchucnang";
             this.panelchucnang.Size = new System.Drawing.Size(441, 660);
             this.panelchucnang.TabIndex = 0;
@@ -997,7 +997,7 @@
             this.btncheckdp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btncheckdp.Image = ((System.Drawing.Image)(resources.GetObject("btncheckdp.Image")));
             this.btncheckdp.ImageSize = new System.Drawing.Size(30, 30);
-            this.btncheckdp.Location = new System.Drawing.Point(8, 754);
+            this.btncheckdp.Location = new System.Drawing.Point(14, 734);
             this.btncheckdp.Name = "btncheckdp";
             this.btncheckdp.Size = new System.Drawing.Size(211, 45);
             this.btncheckdp.TabIndex = 1;
@@ -1018,7 +1018,7 @@
             this.btnxoadp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnxoadp.Image = ((System.Drawing.Image)(resources.GetObject("btnxoadp.Image")));
             this.btnxoadp.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnxoadp.Location = new System.Drawing.Point(630, 754);
+            this.btnxoadp.Location = new System.Drawing.Point(636, 734);
             this.btnxoadp.Name = "btnxoadp";
             this.btnxoadp.Size = new System.Drawing.Size(193, 45);
             this.btnxoadp.TabIndex = 14;
@@ -1039,7 +1039,7 @@
             this.btnsuadp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnsuadp.Image = ((System.Drawing.Image)(resources.GetObject("btnsuadp.Image")));
             this.btnsuadp.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnsuadp.Location = new System.Drawing.Point(424, 754);
+            this.btnsuadp.Location = new System.Drawing.Point(430, 734);
             this.btnsuadp.Name = "btnsuadp";
             this.btnsuadp.Size = new System.Drawing.Size(200, 45);
             this.btnsuadp.TabIndex = 15;
@@ -1060,7 +1060,7 @@
             this.btnthemdp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.btnthemdp.Image = ((System.Drawing.Image)(resources.GetObject("btnthemdp.Image")));
             this.btnthemdp.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnthemdp.Location = new System.Drawing.Point(225, 754);
+            this.btnthemdp.Location = new System.Drawing.Point(231, 734);
             this.btnthemdp.Name = "btnthemdp";
             this.btnthemdp.Size = new System.Drawing.Size(193, 45);
             this.btnthemdp.TabIndex = 13;
@@ -1078,7 +1078,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnthoat;
-            this.ClientSize = new System.Drawing.Size(1498, 811);
+            this.ClientSize = new System.Drawing.Size(1498, 796);
             this.Controls.Add(this.panelchinh);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

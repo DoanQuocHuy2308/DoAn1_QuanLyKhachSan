@@ -95,7 +95,8 @@ CREATE PROCEDURE ThongKeDonDatPhong
 AS
 BEGIN
     SELECT dp.ID_DatPhong, p.Ten_Phong, lp.Ten_LoaiPhong, kh.Ten_KhachHang,
-           kh.SDT_KhachHang, dp.Check_In, dp.Check_Out, dp.TienCoc, km.Ten_KhuyenMai, dp.TongTien
+           kh.SDT_KhachHang, dp.Check_In, dp.Check_Out, dp.TienCoc, km.Ten_KhuyenMai, dp.TongTien,
+           SUM(dp.TongTien) OVER () AS Tong
     FROM DatPhong dp
     JOIN Phong p ON dp.ID_Phong = p.ID_Phong
     JOIN LoaiPhong lp ON p.ID_LoaiPhong = lp.ID_LoaiPhong
@@ -115,7 +116,7 @@ CREATE PROCEDURE ThongKeDonDatDichVu
 AS
 BEGIN
     SELECT ddv.ID_DatDichVu, kh.Ten_KhachHang, kh.SDT_KhachHang, ddv.NgayDat, dv.Ten_DichVu, ldv.Ten_LoaiDichVu,
-           ddv.SoLuong, km.Ten_KhuyenMai, ddv.TongTien
+           ddv.SoLuong, km.Ten_KhuyenMai, ddv.TongTien , SUM(ddv.TongTien) OVER () AS DoanhThu
     FROM DatDichVu ddv
     JOIN DichVu dv ON ddv.ID_DichVu = dv.ID_DichVu
     JOIN LoaiDichVu ldv ON dv.ID_LoaiDichVu = ldv.ID_LoaiDichVu
@@ -126,6 +127,7 @@ BEGIN
       AND (@Ten_DichVu IS NULL OR dv.Ten_DichVu LIKE '%' + @Ten_DichVu + '%')
       AND (@Ten_LoaiDichVu IS NULL OR ldv.Ten_LoaiDichVu LIKE '%' + @Ten_LoaiDichVu + '%');
 END
+
 
 
 

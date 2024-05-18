@@ -24,5 +24,13 @@ namespace BLL_KhachSan
         {
             return dalin.InHoaDonDatDichVu(ddv);
         }
+        public DataTable InThongKeDonDatPhong(DTO_DatPhong dp, DTO_Phong p, DTO_LoaiPhong lp)
+        {
+            return dalin.InThongKeDonDatPhong(dp, p, lp);   
+        }
+        public DataTable InThongKeDonDatDichVu(DTO_DatDichVu ddv, DTO_DichVu dv, DTO_LoaiDichVu ldv, DateTime ngayketthuc)
+        {
+            return dalin.InThongKeDonDatDichVu(ddv,dv,ldv,ngayketthuc);
+        }
     }
 }

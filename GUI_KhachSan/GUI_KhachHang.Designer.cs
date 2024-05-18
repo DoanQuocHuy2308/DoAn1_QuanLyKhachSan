@@ -94,14 +94,14 @@
             this.panelchinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelchinh.Location = new System.Drawing.Point(0, 0);
             this.panelchinh.Name = "panelchinh";
-            this.panelchinh.Size = new System.Drawing.Size(1348, 770);
+            this.panelchinh.Size = new System.Drawing.Size(1348, 747);
             this.panelchinh.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Copperplate Gothic Bold", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label8.Location = new System.Drawing.Point(188, 64);
+            this.label8.Location = new System.Drawing.Point(184, 60);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(502, 67);
             this.label8.TabIndex = 1;
@@ -122,7 +122,7 @@
             this.btntimkiemtk.FillColor = System.Drawing.Color.Transparent;
             this.btntimkiemtk.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btntimkiemtk.ForeColor = System.Drawing.Color.White;
-            this.btntimkiemtk.Location = new System.Drawing.Point(1271, 85);
+            this.btntimkiemtk.Location = new System.Drawing.Point(1270, 62);
             this.btntimkiemtk.Name = "btntimkiemtk";
             this.btntimkiemtk.Size = new System.Drawing.Size(58, 42);
             this.btntimkiemtk.TabIndex = 14;
@@ -144,7 +144,7 @@
             this.txttimkiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttimkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.txttimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttimkiem.Location = new System.Drawing.Point(994, 85);
+            this.txttimkiem.Location = new System.Drawing.Point(993, 62);
             this.txttimkiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttimkiem.Name = "txttimkiem";
             this.txttimkiem.PasswordChar = '\0';
@@ -160,7 +160,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(907, 85);
+            this.label2.Location = new System.Drawing.Point(906, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 42);
             this.label2.TabIndex = 12;
@@ -192,7 +192,7 @@
             this.panelchucnang.Controls.Add(this.label4);
             this.panelchucnang.Controls.Add(this.label3);
             this.panelchucnang.Controls.Add(this.label1);
-            this.panelchucnang.Location = new System.Drawing.Point(907, 134);
+            this.panelchucnang.Location = new System.Drawing.Point(906, 111);
             this.panelchucnang.Name = "panelchucnang";
             this.panelchucnang.Size = new System.Drawing.Size(430, 624);
             this.panelchucnang.TabIndex = 0;
@@ -637,7 +637,7 @@
             this.panelduieu.BorderRadius = 20;
             this.panelduieu.BorderThickness = 2;
             this.panelduieu.Controls.Add(this.dtgvkhachhang);
-            this.panelduieu.Location = new System.Drawing.Point(12, 134);
+            this.panelduieu.Location = new System.Drawing.Point(11, 111);
             this.panelduieu.Name = "panelduieu";
             this.panelduieu.Size = new System.Drawing.Size(889, 624);
             this.panelduieu.TabIndex = 0;
@@ -733,7 +733,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnthoat;
-            this.ClientSize = new System.Drawing.Size(1348, 770);
+            this.ClientSize = new System.Drawing.Size(1348, 747);
             this.Controls.Add(this.panelchinh);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

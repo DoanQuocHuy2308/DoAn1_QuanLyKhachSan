@@ -391,6 +391,7 @@
             this.btnindp.Name = "btnindp";
             this.btnindp.Size = new System.Drawing.Size(180, 45);
             this.btnindp.TabIndex = 3;
+            this.btnindp.Click += new System.EventHandler(this.btnindp_Click);
             // 
             // btnthongkedp
             // 
@@ -771,6 +772,7 @@
             this.btninddv.Name = "btninddv";
             this.btninddv.Size = new System.Drawing.Size(180, 45);
             this.btninddv.TabIndex = 3;
+            this.btninddv.Click += new System.EventHandler(this.btninddv_Click);
             // 
             // btnthongkeddv
             // 

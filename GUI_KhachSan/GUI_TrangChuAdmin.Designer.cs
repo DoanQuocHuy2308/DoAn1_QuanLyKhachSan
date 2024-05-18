@@ -63,6 +63,7 @@
             this.panelchinh.Controls.Add(this.btnclose);
             this.panelchinh.Controls.Add(this.paneldulieu);
             this.panelchinh.Controls.Add(this.panelchucnang);
+            this.panelchinh.Controls.Add(this.btntrangchu);
             this.panelchinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelchinh.Location = new System.Drawing.Point(0, 0);
             this.panelchinh.Name = "panelchinh";
@@ -166,7 +167,6 @@
             this.panelchucnang.Controls.Add(this.btntrogiup);
             this.panelchucnang.Controls.Add(this.btnthoat);
             this.panelchucnang.Controls.Add(this.btnTaiKhoan);
-            this.panelchucnang.Controls.Add(this.btntrangchu);
             this.panelchucnang.Controls.Add(this.btnnhanvien);
             this.panelchucnang.Controls.Add(this.btndichvu);
             this.panelchucnang.Controls.Add(this.btnPhong);
@@ -190,7 +190,7 @@
             this.btnthongke.ForeColor = System.Drawing.Color.Gold;
             this.btnthongke.Image = ((System.Drawing.Image)(resources.GetObject("btnthongke.Image")));
             this.btnthongke.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnthongke.Location = new System.Drawing.Point(812, 12);
+            this.btnthongke.Location = new System.Drawing.Point(745, 12);
             this.btnthongke.Name = "btnthongke";
             this.btnthongke.Size = new System.Drawing.Size(155, 41);
             this.btnthongke.TabIndex = 3;
@@ -211,11 +211,11 @@
             this.btnchuyen.ForeColor = System.Drawing.Color.Gold;
             this.btnchuyen.Image = ((System.Drawing.Image)(resources.GetObject("btnchuyen.Image")));
             this.btnchuyen.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnchuyen.Location = new System.Drawing.Point(1166, 12);
+            this.btnchuyen.Location = new System.Drawing.Point(1102, 12);
             this.btnchuyen.Name = "btnchuyen";
-            this.btnchuyen.Size = new System.Drawing.Size(187, 41);
+            this.btnchuyen.Size = new System.Drawing.Size(257, 41);
             this.btnchuyen.TabIndex = 2;
-            this.btnchuyen.Text = "BOOK NOW";
+            this.btnchuyen.Text = "Chế Độ Nhân Viên";
             this.btnchuyen.Click += new System.EventHandler(this.btnchuyen_Click);
             // 
             // btntrogiup
@@ -233,7 +233,7 @@
             this.btntrogiup.ForeColor = System.Drawing.Color.Gold;
             this.btntrogiup.Image = ((System.Drawing.Image)(resources.GetObject("btntrogiup.Image")));
             this.btntrogiup.ImageSize = new System.Drawing.Size(30, 30);
-            this.btntrogiup.Location = new System.Drawing.Point(988, 11);
+            this.btntrogiup.Location = new System.Drawing.Point(921, 11);
             this.btntrogiup.Name = "btntrogiup";
             this.btntrogiup.Size = new System.Drawing.Size(159, 41);
             this.btntrogiup.TabIndex = 0;
@@ -275,7 +275,7 @@
             this.btnTaiKhoan.ForeColor = System.Drawing.Color.Gold;
             this.btnTaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btnTaiKhoan.Image")));
             this.btnTaiKhoan.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTaiKhoan.Location = new System.Drawing.Point(623, 11);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(556, 11);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Size = new System.Drawing.Size(169, 41);
             this.btnTaiKhoan.TabIndex = 0;
@@ -296,9 +296,9 @@
             this.btntrangchu.FillColor = System.Drawing.Color.Transparent;
             this.btntrangchu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btntrangchu.ForeColor = System.Drawing.Color.White;
-            this.btntrangchu.Location = new System.Drawing.Point(19, 12);
+            this.btntrangchu.Location = new System.Drawing.Point(366, 8);
             this.btntrangchu.Name = "btntrangchu";
-            this.btntrangchu.Size = new System.Drawing.Size(61, 41);
+            this.btntrangchu.Size = new System.Drawing.Size(33, 26);
             this.btntrangchu.TabIndex = 1;
             this.btntrangchu.Click += new System.EventHandler(this.btntrangchu_Click);
             // 
@@ -317,7 +317,7 @@
             this.btnnhanvien.ForeColor = System.Drawing.Color.Gold;
             this.btnnhanvien.Image = ((System.Drawing.Image)(resources.GetObject("btnnhanvien.Image")));
             this.btnnhanvien.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnnhanvien.Location = new System.Drawing.Point(440, 12);
+            this.btnnhanvien.Location = new System.Drawing.Point(373, 12);
             this.btnnhanvien.Name = "btnnhanvien";
             this.btnnhanvien.Size = new System.Drawing.Size(156, 41);
             this.btnnhanvien.TabIndex = 0;
@@ -339,7 +339,7 @@
             this.btndichvu.ForeColor = System.Drawing.Color.Gold;
             this.btndichvu.Image = ((System.Drawing.Image)(resources.GetObject("btndichvu.Image")));
             this.btndichvu.ImageSize = new System.Drawing.Size(30, 30);
-            this.btndichvu.Location = new System.Drawing.Point(260, 11);
+            this.btndichvu.Location = new System.Drawing.Point(193, 11);
             this.btndichvu.Name = "btndichvu";
             this.btndichvu.Size = new System.Drawing.Size(159, 41);
             this.btndichvu.TabIndex = 0;
@@ -361,7 +361,7 @@
             this.btnPhong.ForeColor = System.Drawing.Color.Gold;
             this.btnPhong.Image = ((System.Drawing.Image)(resources.GetObject("btnPhong.Image")));
             this.btnPhong.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPhong.Location = new System.Drawing.Point(86, 12);
+            this.btnPhong.Location = new System.Drawing.Point(19, 12);
             this.btnPhong.Name = "btnPhong";
             this.btnPhong.Size = new System.Drawing.Size(150, 41);
             this.btnPhong.TabIndex = 0;

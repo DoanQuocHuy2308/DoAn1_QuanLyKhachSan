@@ -51,43 +51,42 @@ namespace DAL_KhachSan
         }
         public DataTable ThongKeDonDatPhong(DTO_DatPhong dp, DTO_Phong p, DTO_LoaiPhong lp)
         {
-            DataTable dt = new DataTable();
+            dt = new DataTable();
             kn.moketnoi();
+            string thucthi = "SELECT dp.ID_DatPhong, p.Ten_Phong, lp.Ten_LoaiPhong, kh.Ten_KhachHang, " +
+                             "kh.SDT_KhachHang, dp.Check_In, dp.Check_Out, dp.TienCoc, km.Ten_KhuyenMai, dp.TongTien " +
+                             "FROM DatPhong dp " +
+                             "JOIN Phong p ON dp.ID_Phong = p.ID_Phong " +
+                             "JOIN LoaiPhong lp ON p.ID_LoaiPhong = lp.ID_LoaiPhong " +
+                             "JOIN KhachHang kh ON dp.ID_KhachHang = kh.ID_KhachHang " +
+                             "LEFT JOIN KhuyenMai km ON dp.ID_KhuyenMai = km.ID_KhuyenMai " +
+                             "WHERE 1=1";
 
-            using (cmd = new SqlCommand("ThongKeDonDatPhong", DAL_KetNoi.sqlcon))
+            cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon);
+            if (dp != null)
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                if (dp.Check_In != DateTime.MinValue && dp.Check_Out != DateTime.MinValue)
+                if (dp.Check_In != DateTime.MinValue || dp.Check_Out != DateTime.MinValue || dp.Check_Out > dp.Check_In)
                 {
-                    cmd.Parameters.AddWithValue("@Check_In", dp.Check_In);
-                    cmd.Parameters.AddWithValue("@Check_Out", dp.Check_Out);
+                    thucthi += " AND dp.Check_In <= @CheckOut AND dp.Check_Out >= @CheckIn";
+                    cmd.Parameters.AddWithValue("@CheckIn", dp.Check_In);
+                    cmd.Parameters.AddWithValue("@CheckOut", dp.Check_Out);
                 }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@Check_In", DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Check_Out", DBNull.Value);
-                }
-
-                if (!string.IsNullOrEmpty(p.Ten_Phong))
-                {
-                    cmd.Parameters.AddWithValue("@Ten_Phong", p.Ten_Phong);
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@Ten_Phong", DBNull.Value);
-                }
-
-                if (!string.IsNullOrEmpty(lp.Ten_LoaiPhong))
-                {
-                    cmd.Parameters.AddWithValue("@Ten_LoaiPhong", lp.Ten_LoaiPhong);
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@Ten_LoaiPhong", DBNull.Value);
-                }
-                da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
             }
+
+            if (p != null && !string.IsNullOrEmpty(p.Ten_Phong))
+            {
+                thucthi += " AND p.Ten_Phong LIKE '%' + @Ten_Phong + '%'";
+                cmd.Parameters.AddWithValue("@Ten_Phong", p.Ten_Phong);
+            }
+
+            if (lp != null && !string.IsNullOrEmpty(lp.Ten_LoaiPhong))
+            {
+                thucthi += " AND lp.Ten_LoaiPhong LIKE '%' + @Ten_LoaiPhong + '%'";
+                cmd.Parameters.AddWithValue("@Ten_LoaiPhong", lp.Ten_LoaiPhong);
+            }
+            cmd.CommandText = thucthi;
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
             return dt;
         }
         public DataTable TenDichVu()
@@ -126,44 +125,41 @@ namespace DAL_KhachSan
         }
         public DataTable ThongKeDonDatDichVu(DTO_DatDichVu ddv, DTO_DichVu dv, DTO_LoaiDichVu ldv, DateTime ngayketthuc)
         {
-            DataTable dt = new DataTable();
+            dt = new DataTable();
             kn.moketnoi();
-
-            using (cmd = new SqlCommand("ThongKeDonDatDichVu", DAL_KetNoi.sqlcon))
+            string thucthi = "SELECT ddv.ID_DatDichVu, kh.Ten_KhachHang, kh.SDT_KhachHang, ddv.NgayDat, dv.Ten_DichVu, ldv.Ten_LoaiDichVu, " +
+                             "ddv.SoLuong, km.Ten_KhuyenMai, ddv.TongTien FROM DatDichVu ddv " +
+                             "JOIN DichVu dv ON ddv.ID_DichVu = dv.ID_DichVu " +
+                             "JOIN LoaiDichVu ldv ON dv.ID_LoaiDichVu = ldv.ID_LoaiDichVu " +
+                             "JOIN KhachHang kh ON ddv.ID_KhachHang = kh.ID_KhachHang " +
+                             "LEFT JOIN KhuyenMai km ON ddv.ID_KhuyenMai = km.ID_KhuyenMai " +
+                             "WHERE 1=1";
+            cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon);
+            if (ddv != null)
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                if (ddv.NgayDat != DateTime.MinValue && ngayketthuc != DateTime.MinValue)
+                if (ddv.NgayDat != DateTime.MinValue && ngayketthuc != DateTime.MinValue && ddv.NgayDat < ngayketthuc)
                 {
-                    cmd.Parameters.AddWithValue("@NgayBatDau", ddv.NgayDat);
+                    thucthi += " AND ddv.NgayDat <= @NgayKetThuc AND ddv.NgayDat >= @NgayDat";
+                    cmd.Parameters.AddWithValue("@NgayDat", ddv.NgayDat);
                     cmd.Parameters.AddWithValue("@NgayKetThuc", ngayketthuc);
                 }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@NgayBatDau", DBNull.Value);
-                    cmd.Parameters.AddWithValue("@NgayKetThuc", DBNull.Value);
-                }
-
-                if (!string.IsNullOrEmpty(dv.Ten_DichVu))
-                {
-                    cmd.Parameters.AddWithValue("@Ten_DichVu", dv.Ten_DichVu);
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@Ten_DichVu", DBNull.Value);
-                }
-
-                if (!string.IsNullOrEmpty(ldv.Ten_LoaiDichVu))
-                {
-                    cmd.Parameters.AddWithValue("@Ten_LoaiDichVu", ldv.Ten_LoaiDichVu);
-                }
-                else
-                {
-                    cmd.Parameters.AddWithValue("@Ten_LoaiDichVu", DBNull.Value);
-                }
-                da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
             }
+            if (dv != null && !string.IsNullOrEmpty(dv.Ten_DichVu))
+            {
+                thucthi += " AND dv.Ten_DichVu LIKE '%' + @Ten_DichVu + '%'";
+                cmd.Parameters.AddWithValue("@Ten_DichVu", dv.Ten_DichVu);
+            }
+
+            if (ldv != null && !string.IsNullOrEmpty(ldv.Ten_LoaiDichVu))
+            {
+                thucthi += " AND ldv.Ten_LoaiDichVu LIKE '%' + @Ten_LoaiDichVu + '%'";
+                cmd.Parameters.AddWithValue("@Ten_LoaiDichVu", ldv.Ten_LoaiDichVu);
+            }
+            cmd.CommandText = thucthi;
+            da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
             return dt;
         }
+
     }
 }

@@ -37,6 +37,7 @@ namespace GUI_KhachSan
         private DTO_LoaiDichVu ldv = new DTO_LoaiDichVu();
         private DTO_DichVu dv = new DTO_DichVu();
         private DTO_DatDichVu ddv = new DTO_DatDichVu();
+        private BLL_In bllin = new BLL_In();
         private DateTime ngayketthuc;
         private void btnminimize_Click(object sender, EventArgs e)
         {
@@ -120,6 +121,11 @@ namespace GUI_KhachSan
             dp.Check_Out = dtpkngayketthucdp.Value;
             p.Ten_Phong = cbotenphong.Text;
             lp.Ten_LoaiPhong = cboloaiphong.Text;
+            if (dp.Check_In > dp.Check_Out)
+            {
+                MessageBox.Show("Ngày Check In Không Được Lớn Hơn Ngày Check Out, Vui lòng Nhập Lại", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return;
+            }
             TongTienDP();
         }
         private void btnresetdp_Click(object sender, EventArgs e)
@@ -194,6 +200,11 @@ namespace GUI_KhachSan
             ngayketthuc = dtpkngayketthucddv.Value;
             dv.Ten_DichVu = cbotendichvu.Text;
             ldv.Ten_LoaiDichVu = cboloaidichvu.Text;
+            if(ddv.NgayDat > ngayketthuc)
+            {
+                MessageBox.Show("Ngày kết thúc không được nhỏ hơn ngày bắt đầu , Vui lòng Nhập Lại","Thông Báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+                return;
+            }
             TongTienDDV();
         }
 
@@ -218,6 +229,48 @@ namespace GUI_KhachSan
                 cbotendichvu.Text = row.Cells["Ten_DichVu"].Value.ToString();
                 cboloaidichvu.Text = row.Cells["Ten_LoaiDichVu"].Value.ToString();
             }
+        }
+
+        private void btnindp_Click(object sender, EventArgs e)
+        {
+            dp.Check_In = dtpkngaybatdaudp.Value;
+            dp.Check_Out = dtpkngayketthucdp.Value;
+            p.Ten_Phong = cbotenphong.Text;
+            lp.Ten_LoaiPhong = cboloaiphong.Text;
+            if (dp.Check_In > dp.Check_Out)
+            {
+                MessageBox.Show("Ngày Check In Không Được Lớn Hơn Ngày Check Out, Vui lòng Nhập Lại", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return;
+            }
+            DataTable dt = bllin.InThongKeDonDatPhong(dp ,p ,lp);
+            InThongKeDonDatPhong i = new InThongKeDonDatPhong();
+            i.SetDataSource(dt);
+            GUI_InHoaDon inhd = new GUI_InHoaDon();
+            inhd.frmInHoaDon.ReportSource = i;
+            this.Hide();
+            inhd.ShowDialog();
+            this.Show();
+        }
+
+        private void btninddv_Click(object sender, EventArgs e)
+        {
+            ddv.NgayDat = dtpkngaybatdauddv.Value;
+            ngayketthuc = dtpkngayketthucddv.Value;
+            dv.Ten_DichVu = cbotendichvu.Text;
+            ldv.Ten_LoaiDichVu = cboloaidichvu.Text;
+            if (ddv.NgayDat > ngayketthuc)
+            {
+                MessageBox.Show("Thời Gian Bắt Đầu Không Được Lớn Hơn Thời Gian Kết Thúc , Vui lòng Nhập Lại", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                return;
+            }
+            DataTable dt = bllin.InThongKeDonDatDichVu(ddv, dv, ldv,ngayketthuc);
+            InThongKeDonDatDichVu i = new InThongKeDonDatDichVu();
+            i.SetDataSource(dt);
+            GUI_InHoaDon inhd = new GUI_InHoaDon();
+            inhd.frmInHoaDon.ReportSource = i;
+            this.Hide();
+            inhd.ShowDialog();
+            this.Show();
         }
     }
 }
