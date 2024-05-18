@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Phong));
             this.panelchinh = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnminimize = new Guna.UI2.WinForms.Guna2Button();
             this.btnthoat = new Guna.UI2.WinForms.Guna2Button();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
@@ -92,8 +93,8 @@
             this.SucChua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gia_Phong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelchinh.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabGiaoDienPhong.SuspendLayout();
             this.tabPhong.SuspendLayout();
             this.panelPhong.SuspendLayout();
@@ -105,7 +106,6 @@
             this.panelcnloaiphong.SuspendLayout();
             this.panneldlloaiphong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvloaiphong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelchinh
@@ -124,6 +124,16 @@
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1348, 770);
             this.panelchinh.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(551, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(179, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // btnminimize
             // 
@@ -1113,16 +1123,6 @@
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(551, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // GUI_Phong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1138,6 +1138,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_Phong";
             this.panelchinh.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabGiaoDienPhong.ResumeLayout(false);
             this.tabPhong.ResumeLayout(false);
             this.panelPhong.ResumeLayout(false);
@@ -1153,7 +1154,6 @@
             this.panelcnloaiphong.PerformLayout();
             this.panneldlloaiphong.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvloaiphong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

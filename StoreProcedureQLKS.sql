@@ -1,24 +1,6 @@
 ﻿use QuanLyKhachSan
 go
 
---xóa nhân viên
-CREATE PROCEDURE DeleteNhanVien
-    @ID_NhanVien INT
-AS
-BEGIN
-    DELETE FROM TaiKhoan WHERE Email_TaiKhoan = (SELECT Email_NhanVien FROM NhanVien WHERE ID_NhanVien = @ID_NhanVien);
-    DELETE FROM NhanVien WHERE ID_NhanVien = @ID_NhanVien;
-END
-
---xóa tài khoản
-CREATE PROCEDURE DeleteTaiKhoan
-    @ID_TaiKhoan INT
-AS
-BEGIN
-    DELETE FROM NhanVien WHERE Email_NhanVien = (SELECT Email_TaiKhoan FROM TaiKhoan WHERE ID_TaiKhoan = @ID_TaiKhoan);
-    DELETE FROM TaiKhoan WHERE ID_TaiKhoan = @ID_TaiKhoan;
-END
-
 --xóa khách hàng
 CREATE PROCEDURE DeleteKhachHang
     @ID_KhachHang INT
@@ -102,7 +84,8 @@ BEGIN
     JOIN LoaiPhong lp ON p.ID_LoaiPhong = lp.ID_LoaiPhong
     JOIN KhachHang kh ON dp.ID_KhachHang = kh.ID_KhachHang
     LEFT JOIN KhuyenMai km ON dp.ID_KhuyenMai = km.ID_KhuyenMai
-    WHERE (@Check_In IS NULL OR (dp.Check_In <= @Check_Out AND dp.Check_Out >= @Check_In))
+    WHERE (@Check_In IS NULL OR (dp.Check_In <= @Check_Out))
+	  AND (@Check_Out IS NULL OR (dp.Check_Out >= @Check_In))
       AND (@Ten_Phong IS NULL OR p.Ten_Phong LIKE '%' + @Ten_Phong + '%')
       AND (@Ten_LoaiPhong IS NULL OR lp.Ten_LoaiPhong LIKE '%' + @Ten_LoaiPhong + '%');
 END

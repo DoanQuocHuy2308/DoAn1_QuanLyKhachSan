@@ -106,69 +106,12 @@ CREATE TABLE DatDichVu
     KetQua NVARCHAR(100) NOT NULL
 );
 
--- Chèn dữ liệu vào bảng NhanVien
-INSERT INTO NhanVien (Ten_NhanVien, CMND_NhanVien, SDT_NhanVien, GioiTinh_NhanVien, Email_NhanVien, DiaChi_NhanVien, Role_NhanVien)
-VALUES 
-    (N'Nguyễn Văn A', '123456789', '0987654321', N'Nam', 'nguyenvana@example.com', N'123 Đường ABC, Quận XYZ, TP HCM', N'Quản lý'),
-    (N'Trần Thị B', '987654321', '0123456789', N'Nữ', 'tranthib@example.com', N'456 Đường XYZ, Quận ABC, TP HCM', N'Nhân viên'),
-    (N'Lê Văn C', '456789123', '0912345678', N'Nam', 'levanc@example.com', N'789 Đường XYZ, Quận ABC, TP HCM', N'Nhân viên');
-
 -- Chèn dữ liệu vào bảng TaiKhoan
 INSERT INTO TaiKhoan (Email_TaiKhoan, Pass_TaiKhoan, Role_TaiKhoan, Ban_TaiKhoan)
 VALUES 
     ('doanquochuy23082004@gmail.com', '1', N'Admin', 0),
     ('doanhuypc2308@gmail.com', '1', N'Nhân viên', 1), 
     ('doanhuypc2004@gmail.com', '2', N'Nhân viên', 0);
-
--- Chèn dữ liệu vào bảng KhachHang
-INSERT INTO KhachHang (Ten_KhachHang, Tuoi_KhachHang, CMND_KhachHang, GioiTinh_KhachHang, Email_KhachHang, SDT_KhachHang, DiaChi_KhachHang)
-VALUES 
-    (N'Phạm Thị D', 30, '012345678', N'Nữ', 'doanquochuy23082004@gmail.com', '0987654321', N'321 Đường XYZ, Quận ABC, TP HCM'),
-    (N'Nguyễn Văn E', 25, '987654321', N'Nam', 'doanhuypc2308@gmail.com', '0123456789', N'654 Đường ABC, Quận XYZ, TP HCM'),
-    (N'Trần Văn F', 40, '456789012', N'Nam', 'doanhuypc2004@gmail.com', '0912345678', N'987 Đường XYZ, Quận ABC, TP HCM');
-
--- Chèn dữ liệu vào bảng LoaiPhong
-INSERT INTO LoaiPhong (Ten_LoaiPhong, SucChua, Gia_Phong)
-VALUES 
-    (N'Phòng Đơn', 1, 100000),
-    (N'Phòng Đôi', 2, 150000),
-    (N'Phòng Gia Đình', 4, 250000);
-
--- Chèn dữ liệu vào bảng Phong
-INSERT INTO Phong (Ten_Phong, ID_LoaiPhong)
-VALUES 
-    ('101', 1),
-    ('201', 2),
-    ('301', 3);
-
--- Chèn dữ liệu vào bảng DatPhong
-INSERT INTO DatPhong (ID_NhanVien, ID_KhachHang, ID_Phong, ID_KhuyenMai, Check_In, Check_Out, TienCoc, TongTien, TrangThai, HinhThucThanhToan, KetQua)
-VALUES 
-    (1, 1, 1, NULL, '2024-05-10', '2024-05-12', 50000, 200000, N'Đã Thanh Toán', N'Tiền Mặt', N'Đang Hoạt Động'),
-    (2, 2, 2, 1, '2024-06-15', '2024-06-18', 80000, 300000, N'Đã Thanh Toán', N'Quẹt Thẻ', N'Chưa Hoạt Động'),
-    (3, 3, 3, NULL, '2024-07-20', '2024-07-25', 100000, 500000, N'Chưa Thanh Toán', N'Chuyển Khoản', N'Đang Hoạt Động');
-
--- Chèn dữ liệu vào bảng LoaiDichVu
-INSERT INTO LoaiDichVu (Ten_LoaiDichVu)
-VALUES 
-    (N'Đồ uống'),
-    (N'Đồ ăn'),
-    (N'Dịch vụ giặt là');
-
--- Chèn dữ liệu vào bảng DichVu
-INSERT INTO DichVu (ID_LoaiDichVu, Ten_DichVu, Gia_DichVu)
-VALUES 
-    (1, N'Nước suối', 10000),
-    (2, N'Cơm rang', 50000),
-    (3, N'Giặt áo thường', 20000);
-
--- Chèn dữ liệu vào bảng DatDichVu
-INSERT INTO DatDichVu (ID_NhanVien, ID_KhachHang, ID_DichVu, ID_KhuyenMai, SoLuong, NgayDat, TongTien, TrangThai, HinhThucThanhToan, KetQua)
-VALUES 
-    (1, 1, 1, NULL, 2, '2024-05-11', 20000, N'Đã Thanh Toán', N'Tiền Mặt', N'Thành Công'),
-    (2, 2, 2, 1, 3, '2024-06-16', 135000, N'Đã Thanh Toán', N'Quẹt Thẻ', N'Thành Công'),
-    (3, 3, 3, NULL, 1, '2024-07-21', 20000, N'Chưa Thanh Toán', N'Chuyển Khoản', N'Thành Công');
-
 -- Chèn dữ liệu vào bảng KhuyenMai
 INSERT INTO KhuyenMai (ID_KhuyenMai,Ten_KhuyenMai, GiaTri, MoTa, NgayBatDau, NgayKetThuc)
 VALUES 
