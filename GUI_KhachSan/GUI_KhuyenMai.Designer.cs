@@ -109,7 +109,7 @@
             this.btntimkiemkm.Location = new System.Drawing.Point(1269, 91);
             this.btntimkiemkm.Name = "btntimkiemkm";
             this.btntimkiemkm.Size = new System.Drawing.Size(70, 41);
-            this.btntimkiemkm.TabIndex = 21;
+            this.btntimkiemkm.TabIndex = 4;
             this.btntimkiemkm.Click += new System.EventHandler(this.btntimkiemkm_Click);
             // 
             // txttimkiem
@@ -136,7 +136,7 @@
             this.txttimkiem.PlaceholderText = "";
             this.txttimkiem.SelectedText = "";
             this.txttimkiem.Size = new System.Drawing.Size(326, 45);
-            this.txttimkiem.TabIndex = 20;
+            this.txttimkiem.TabIndex = 3;
             // 
             // label19
             // 
@@ -250,7 +250,7 @@
             this.dtpkngayketthuc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkngayketthuc.Name = "dtpkngayketthuc";
             this.dtpkngayketthuc.Size = new System.Drawing.Size(167, 41);
-            this.dtpkngayketthuc.TabIndex = 17;
+            this.dtpkngayketthuc.TabIndex = 5;
             this.dtpkngayketthuc.Value = new System.DateTime(2024, 4, 24, 22, 41, 9, 249);
             // 
             // label3
@@ -282,7 +282,7 @@
             this.btnresetkm.Location = new System.Drawing.Point(264, 560);
             this.btnresetkm.Name = "btnresetkm";
             this.btnresetkm.Size = new System.Drawing.Size(169, 45);
-            this.btnresetkm.TabIndex = 12;
+            this.btnresetkm.TabIndex = 10;
             this.btnresetkm.Click += new System.EventHandler(this.btnresetkm_Click);
             // 
             // dtpkngaybatdau
@@ -300,7 +300,7 @@
             this.dtpkngaybatdau.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkngaybatdau.Name = "dtpkngaybatdau";
             this.dtpkngaybatdau.Size = new System.Drawing.Size(167, 41);
-            this.dtpkngaybatdau.TabIndex = 2;
+            this.dtpkngaybatdau.TabIndex = 4;
             this.dtpkngaybatdau.Value = new System.DateTime(2024, 4, 24, 22, 41, 9, 249);
             // 
             // txtmota
@@ -325,7 +325,7 @@
             this.txtmota.PlaceholderText = "";
             this.txtmota.SelectedText = "";
             this.txtmota.Size = new System.Drawing.Size(391, 41);
-            this.txtmota.TabIndex = 1;
+            this.txtmota.TabIndex = 6;
             // 
             // btnxoakm
             // 
@@ -344,7 +344,7 @@
             this.btnxoakm.Location = new System.Drawing.Point(264, 483);
             this.btnxoakm.Name = "btnxoakm";
             this.btnxoakm.Size = new System.Drawing.Size(169, 45);
-            this.btnxoakm.TabIndex = 13;
+            this.btnxoakm.TabIndex = 8;
             this.btnxoakm.Text = "&Xóa";
             this.btnxoakm.Click += new System.EventHandler(this.btnxoakm_Click);
             // 
@@ -365,7 +365,7 @@
             this.btnsuakm.Location = new System.Drawing.Point(35, 560);
             this.btnsuakm.Name = "btnsuakm";
             this.btnsuakm.Size = new System.Drawing.Size(169, 45);
-            this.btnsuakm.TabIndex = 14;
+            this.btnsuakm.TabIndex = 9;
             this.btnsuakm.Text = "&Sửa";
             this.btnsuakm.Click += new System.EventHandler(this.btnsuakm_Click);
             // 
@@ -391,7 +391,7 @@
             this.txtgiatri.PlaceholderText = "";
             this.txtgiatri.SelectedText = "";
             this.txtgiatri.Size = new System.Drawing.Size(391, 41);
-            this.txtgiatri.TabIndex = 1;
+            this.txtgiatri.TabIndex = 3;
             this.txtgiatri.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgiatri_KeyPress);
             // 
             // txttenkhuyenmai
@@ -416,7 +416,7 @@
             this.txttenkhuyenmai.PlaceholderText = "";
             this.txttenkhuyenmai.SelectedText = "";
             this.txttenkhuyenmai.Size = new System.Drawing.Size(391, 41);
-            this.txttenkhuyenmai.TabIndex = 1;
+            this.txttenkhuyenmai.TabIndex = 2;
             // 
             // txtidkhuyenmai
             // 
@@ -469,7 +469,7 @@
             this.btnthemkm.Location = new System.Drawing.Point(35, 483);
             this.btnthemkm.Name = "btnthemkm";
             this.btnthemkm.Size = new System.Drawing.Size(169, 45);
-            this.btnthemkm.TabIndex = 15;
+            this.btnthemkm.TabIndex = 7;
             this.btnthemkm.Text = "&Thêm";
             this.btnthemkm.Click += new System.EventHandler(this.btnthemkm_Click);
             // 

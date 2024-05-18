@@ -214,7 +214,7 @@
             this.tabGiaoDienDichVu.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
             this.tabGiaoDienDichVu.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.tabGiaoDienDichVu.TabButtonSize = new System.Drawing.Size(140, 70);
-            this.tabGiaoDienDichVu.TabIndex = 2;
+            this.tabGiaoDienDichVu.TabIndex = 0;
             this.tabGiaoDienDichVu.TabMenuBackColor = System.Drawing.Color.White;
             // 
             // tabDichVu
@@ -290,7 +290,7 @@
             this.txttimkiem.PlaceholderText = "";
             this.txttimkiem.SelectedText = "";
             this.txttimkiem.Size = new System.Drawing.Size(283, 38);
-            this.txttimkiem.TabIndex = 4;
+            this.txttimkiem.TabIndex = 1;
             this.txttimkiem.Enter += new System.EventHandler(this.txttimkiem_Enter);
             this.txttimkiem.Leave += new System.EventHandler(this.txttimkiem_Leave);
             // 
@@ -339,7 +339,7 @@
             this.panelcndichvu.Location = new System.Drawing.Point(786, 69);
             this.panelcndichvu.Name = "panelcndichvu";
             this.panelcndichvu.Size = new System.Drawing.Size(372, 526);
-            this.panelcndichvu.TabIndex = 1;
+            this.panelcndichvu.TabIndex = 0;
             // 
             // btnresetdv
             // 
@@ -359,7 +359,7 @@
             this.btnresetdv.Location = new System.Drawing.Point(206, 456);
             this.btnresetdv.Name = "btnresetdv";
             this.btnresetdv.Size = new System.Drawing.Size(145, 45);
-            this.btnresetdv.TabIndex = 3;
+            this.btnresetdv.TabIndex = 10;
             this.btnresetdv.Click += new System.EventHandler(this.btnresetdv_Click);
             // 
             // btnxoadv
@@ -379,7 +379,7 @@
             this.btnxoadv.Location = new System.Drawing.Point(34, 456);
             this.btnxoadv.Name = "btnxoadv";
             this.btnxoadv.Size = new System.Drawing.Size(145, 45);
-            this.btnxoadv.TabIndex = 3;
+            this.btnxoadv.TabIndex = 8;
             this.btnxoadv.Text = "&Xóa";
             this.btnxoadv.Click += new System.EventHandler(this.btnxoadv_Click);
             // 
@@ -400,7 +400,7 @@
             this.btnsuadv.Location = new System.Drawing.Point(206, 393);
             this.btnsuadv.Name = "btnsuadv";
             this.btnsuadv.Size = new System.Drawing.Size(145, 45);
-            this.btnsuadv.TabIndex = 3;
+            this.btnsuadv.TabIndex = 9;
             this.btnsuadv.Text = "&Sửa";
             this.btnsuadv.Click += new System.EventHandler(this.btnsuadv_Click);
             // 
@@ -420,7 +420,7 @@
             this.btnthemdv.Location = new System.Drawing.Point(34, 393);
             this.btnthemdv.Name = "btnthemdv";
             this.btnthemdv.Size = new System.Drawing.Size(145, 45);
-            this.btnthemdv.TabIndex = 3;
+            this.btnthemdv.TabIndex = 7;
             this.btnthemdv.Text = "&Thêm";
             this.btnthemdv.Click += new System.EventHandler(this.btnthemdv_Click);
             // 
@@ -439,7 +439,7 @@
             this.cboidloaidichvu.Location = new System.Drawing.Point(35, 186);
             this.cboidloaidichvu.Name = "cboidloaidichvu";
             this.cboidloaidichvu.Size = new System.Drawing.Size(152, 36);
-            this.cboidloaidichvu.TabIndex = 2;
+            this.cboidloaidichvu.TabIndex = 4;
             // 
             // label7
             // 
@@ -512,7 +512,7 @@
             this.txtgiadichvu.PlaceholderText = "";
             this.txtgiadichvu.SelectedText = "";
             this.txtgiadichvu.Size = new System.Drawing.Size(294, 38);
-            this.txtgiadichvu.TabIndex = 0;
+            this.txtgiadichvu.TabIndex = 6;
             this.txtgiadichvu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtgiadichvu_KeyPress);
             // 
             // txtloaidichvu
@@ -537,7 +537,7 @@
             this.txtloaidichvu.ReadOnly = true;
             this.txtloaidichvu.SelectedText = "";
             this.txtloaidichvu.Size = new System.Drawing.Size(294, 38);
-            this.txtloaidichvu.TabIndex = 0;
+            this.txtloaidichvu.TabIndex = 5;
             // 
             // txttendichvu
             // 
@@ -560,7 +560,7 @@
             this.txttendichvu.PlaceholderText = "";
             this.txttendichvu.SelectedText = "";
             this.txttendichvu.Size = new System.Drawing.Size(294, 38);
-            this.txttendichvu.TabIndex = 0;
+            this.txttendichvu.TabIndex = 3;
             // 
             // txtiddichvu
             // 
@@ -583,7 +583,7 @@
             this.txtiddichvu.PlaceholderText = "";
             this.txtiddichvu.SelectedText = "";
             this.txtiddichvu.Size = new System.Drawing.Size(153, 38);
-            this.txtiddichvu.TabIndex = 0;
+            this.txtiddichvu.TabIndex = 2;
             this.txtiddichvu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtiddichvu_KeyPress);
             // 
             // paneldlphong
@@ -714,7 +714,7 @@
             this.btntimkiemldv.Location = new System.Drawing.Point(1079, 72);
             this.btntimkiemldv.Name = "btntimkiemldv";
             this.btntimkiemldv.Size = new System.Drawing.Size(77, 39);
-            this.btntimkiemldv.TabIndex = 5;
+            this.btntimkiemldv.TabIndex = 2;
             this.btntimkiemldv.Click += new System.EventHandler(this.btntimkiemldv_Click);
             // 
             // txttimkiemldv
@@ -739,7 +739,7 @@
             this.txttimkiemldv.PlaceholderText = "";
             this.txttimkiemldv.SelectedText = "";
             this.txttimkiemldv.Size = new System.Drawing.Size(287, 39);
-            this.txttimkiemldv.TabIndex = 4;
+            this.txttimkiemldv.TabIndex = 1;
             this.txttimkiemldv.Enter += new System.EventHandler(this.txttimkiemldv_Enter);
             this.txttimkiemldv.Leave += new System.EventHandler(this.txttimkiemldv_Leave);
             // 
@@ -751,7 +751,7 @@
             this.label9.Location = new System.Drawing.Point(791, 44);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 23);
-            this.label9.TabIndex = 3;
+            this.label9.TabIndex = 0;
             this.label9.Text = "Search :";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -783,7 +783,7 @@
             this.panelcnloaidichvu.Location = new System.Drawing.Point(784, 117);
             this.panelcnloaidichvu.Name = "panelcnloaidichvu";
             this.panelcnloaidichvu.Size = new System.Drawing.Size(372, 354);
-            this.panelcnloaidichvu.TabIndex = 1;
+            this.panelcnloaidichvu.TabIndex = 0;
             // 
             // btnresetldv
             // 
@@ -803,7 +803,7 @@
             this.btnresetldv.Location = new System.Drawing.Point(200, 291);
             this.btnresetldv.Name = "btnresetldv";
             this.btnresetldv.Size = new System.Drawing.Size(145, 45);
-            this.btnresetldv.TabIndex = 3;
+            this.btnresetldv.TabIndex = 7;
             this.btnresetldv.Click += new System.EventHandler(this.btnresetldv_Click);
             // 
             // btnxoaldv
@@ -823,7 +823,7 @@
             this.btnxoaldv.Location = new System.Drawing.Point(28, 291);
             this.btnxoaldv.Name = "btnxoaldv";
             this.btnxoaldv.Size = new System.Drawing.Size(145, 45);
-            this.btnxoaldv.TabIndex = 3;
+            this.btnxoaldv.TabIndex = 6;
             this.btnxoaldv.Text = "&Xóa";
             this.btnxoaldv.Click += new System.EventHandler(this.btnxoaldv_Click);
             // 
@@ -844,7 +844,7 @@
             this.btnsualdv.Location = new System.Drawing.Point(200, 229);
             this.btnsualdv.Name = "btnsualdv";
             this.btnsualdv.Size = new System.Drawing.Size(145, 45);
-            this.btnsualdv.TabIndex = 3;
+            this.btnsualdv.TabIndex = 5;
             this.btnsualdv.Text = "&Sửa";
             this.btnsualdv.Click += new System.EventHandler(this.btnsualdv_Click);
             // 
@@ -864,7 +864,7 @@
             this.btnthemldv.Location = new System.Drawing.Point(28, 229);
             this.btnthemldv.Name = "btnthemldv";
             this.btnthemldv.Size = new System.Drawing.Size(145, 45);
-            this.btnthemldv.TabIndex = 3;
+            this.btnthemldv.TabIndex = 4;
             this.btnthemldv.Text = "&Thêm";
             this.btnthemldv.Click += new System.EventHandler(this.btnthemldv_Click);
             // 
@@ -911,7 +911,7 @@
             this.txttenloaidichvu.PlaceholderText = "";
             this.txttenloaidichvu.SelectedText = "";
             this.txttenloaidichvu.Size = new System.Drawing.Size(294, 38);
-            this.txttenloaidichvu.TabIndex = 0;
+            this.txttenloaidichvu.TabIndex = 3;
             // 
             // txtidloaidichvu
             // 
@@ -934,7 +934,7 @@
             this.txtidloaidichvu.PlaceholderText = "";
             this.txtidloaidichvu.SelectedText = "";
             this.txtidloaidichvu.Size = new System.Drawing.Size(179, 38);
-            this.txtidloaidichvu.TabIndex = 0;
+            this.txtidloaidichvu.TabIndex = 2;
             this.txtidloaidichvu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtidloaidichvu_KeyPress);
             // 
             // panneldlloaidichvu

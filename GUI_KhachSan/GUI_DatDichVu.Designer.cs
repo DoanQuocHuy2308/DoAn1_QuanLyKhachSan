@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_DatDichVu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelchinh = new Guna.UI2.WinForms.Guna2Panel();
             this.btntimkiemddv = new Guna.UI2.WinForms.Guna2Button();
             this.txttimkiem = new Guna.UI2.WinForms.Guna2TextBox();
@@ -124,7 +124,7 @@
             this.panelchinh.Location = new System.Drawing.Point(0, 0);
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1498, 796);
-            this.panelchinh.TabIndex = 1;
+            this.panelchinh.TabIndex = 0;
             // 
             // btntimkiemddv
             // 
@@ -168,7 +168,7 @@
             this.txttimkiem.PlaceholderText = "";
             this.txttimkiem.SelectedText = "";
             this.txttimkiem.Size = new System.Drawing.Size(379, 38);
-            this.txttimkiem.TabIndex = 17;
+            this.txttimkiem.TabIndex = 12;
             this.txttimkiem.Enter += new System.EventHandler(this.txttimkiem_Enter);
             this.txttimkiem.Leave += new System.EventHandler(this.txttimkiem_Leave);
             // 
@@ -190,7 +190,7 @@
             this.btninddv.Location = new System.Drawing.Point(813, 736);
             this.btninddv.Name = "btninddv";
             this.btninddv.Size = new System.Drawing.Size(182, 45);
-            this.btninddv.TabIndex = 23;
+            this.btninddv.TabIndex = 5;
             this.btninddv.Click += new System.EventHandler(this.btninddv_Click);
             // 
             // label19
@@ -222,7 +222,7 @@
             this.btnresetddv.Location = new System.Drawing.Point(616, 736);
             this.btnresetddv.Name = "btnresetddv";
             this.btnresetddv.Size = new System.Drawing.Size(182, 45);
-            this.btnresetddv.TabIndex = 19;
+            this.btnresetddv.TabIndex = 4;
             this.btnresetddv.Click += new System.EventHandler(this.btnresetddv_Click);
             // 
             // paneldulieu
@@ -256,14 +256,14 @@
             // 
             this.dtgvdatdichvu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvdatdichvu.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvdatdichvu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvdatdichvu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvdatdichvu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvdatdichvu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_DatDichVu,
@@ -393,14 +393,14 @@
             // 
             this.dtgvdichvu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvdichvu.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvdichvu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvdichvu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvdichvu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvdichvu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_DichVu1,
@@ -470,7 +470,7 @@
             this.btnxoaddv.Location = new System.Drawing.Point(418, 736);
             this.btnxoaddv.Name = "btnxoaddv";
             this.btnxoaddv.Size = new System.Drawing.Size(182, 45);
-            this.btnxoaddv.TabIndex = 20;
+            this.btnxoaddv.TabIndex = 3;
             this.btnxoaddv.Text = "&Xóa";
             this.btnxoaddv.Click += new System.EventHandler(this.btnxoaddv_Click);
             // 
@@ -502,7 +502,7 @@
             this.btnsuaddv.Location = new System.Drawing.Point(215, 736);
             this.btnsuaddv.Name = "btnsuaddv";
             this.btnsuaddv.Size = new System.Drawing.Size(182, 45);
-            this.btnsuaddv.TabIndex = 21;
+            this.btnsuaddv.TabIndex = 2;
             this.btnsuaddv.Text = "&Sửa";
             this.btnsuaddv.Click += new System.EventHandler(this.btnsuaddv_Click);
             // 
@@ -543,7 +543,7 @@
             this.btnthemddv.Location = new System.Drawing.Point(12, 736);
             this.btnthemddv.Name = "btnthemddv";
             this.btnthemddv.Size = new System.Drawing.Size(182, 45);
-            this.btnthemddv.TabIndex = 22;
+            this.btnthemddv.TabIndex = 1;
             this.btnthemddv.Text = "&Thêm";
             this.btnthemddv.Click += new System.EventHandler(this.btnthemddv_Click);
             // 
@@ -637,7 +637,7 @@
             this.cbotrangthai.Location = new System.Drawing.Point(201, 474);
             this.cbotrangthai.Name = "cbotrangthai";
             this.cbotrangthai.Size = new System.Drawing.Size(222, 36);
-            this.cbotrangthai.TabIndex = 26;
+            this.cbotrangthai.TabIndex = 9;
             // 
             // cbohinhthucthanhtoan
             // 
@@ -658,7 +658,7 @@
             this.cbohinhthucthanhtoan.Location = new System.Drawing.Point(201, 527);
             this.cbohinhthucthanhtoan.Name = "cbohinhthucthanhtoan";
             this.cbohinhthucthanhtoan.Size = new System.Drawing.Size(253, 36);
-            this.cbohinhthucthanhtoan.TabIndex = 27;
+            this.cbohinhthucthanhtoan.TabIndex = 10;
             // 
             // label3
             // 
@@ -694,7 +694,7 @@
             this.txtidkhuyenmai.PlaceholderText = "";
             this.txtidkhuyenmai.SelectedText = "";
             this.txtidkhuyenmai.Size = new System.Drawing.Size(180, 38);
-            this.txtidkhuyenmai.TabIndex = 25;
+            this.txtidkhuyenmai.TabIndex = 5;
             // 
             // cboketqua
             // 
@@ -714,7 +714,7 @@
             this.cboketqua.Location = new System.Drawing.Point(203, 580);
             this.cboketqua.Name = "cboketqua";
             this.cboketqua.Size = new System.Drawing.Size(222, 36);
-            this.cboketqua.TabIndex = 17;
+            this.cboketqua.TabIndex = 11;
             // 
             // label11
             // 
@@ -756,7 +756,7 @@
             this.dtpkngaydat.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkngaydat.Name = "dtpkngaydat";
             this.dtpkngaydat.Size = new System.Drawing.Size(174, 36);
-            this.dtpkngaydat.TabIndex = 16;
+            this.dtpkngaydat.TabIndex = 7;
             this.dtpkngaydat.Value = new System.DateTime(2024, 4, 22, 17, 53, 27, 954);
             // 
             // label18
@@ -829,7 +829,7 @@
             this.txtiddatdichvu.PlaceholderText = "";
             this.txtiddatdichvu.SelectedText = "";
             this.txtiddatdichvu.Size = new System.Drawing.Size(178, 38);
-            this.txtiddatdichvu.TabIndex = 15;
+            this.txtiddatdichvu.TabIndex = 1;
             // 
             // label9
             // 
@@ -901,7 +901,7 @@
             this.txtiddichvu.PlaceholderText = "";
             this.txtiddichvu.SelectedText = "";
             this.txtiddichvu.Size = new System.Drawing.Size(180, 38);
-            this.txtiddichvu.TabIndex = 15;
+            this.txtiddichvu.TabIndex = 4;
             // 
             // txtidnhanvien
             // 
@@ -925,7 +925,7 @@
             this.txtidnhanvien.PlaceholderText = "";
             this.txtidnhanvien.SelectedText = "";
             this.txtidnhanvien.Size = new System.Drawing.Size(180, 38);
-            this.txtidnhanvien.TabIndex = 15;
+            this.txtidnhanvien.TabIndex = 2;
             // 
             // txtidkhachhang
             // 
@@ -949,7 +949,7 @@
             this.txtidkhachhang.PlaceholderText = "";
             this.txtidkhachhang.SelectedText = "";
             this.txtidkhachhang.Size = new System.Drawing.Size(180, 38);
-            this.txtidkhachhang.TabIndex = 15;
+            this.txtidkhachhang.TabIndex = 3;
             // 
             // txtsoluong
             // 
@@ -973,7 +973,7 @@
             this.txtsoluong.PlaceholderText = "";
             this.txtsoluong.SelectedText = "";
             this.txtsoluong.Size = new System.Drawing.Size(178, 38);
-            this.txtsoluong.TabIndex = 15;
+            this.txtsoluong.TabIndex = 6;
             // 
             // txttongtien
             // 
@@ -997,7 +997,7 @@
             this.txttongtien.PlaceholderText = "";
             this.txttongtien.SelectedText = "";
             this.txttongtien.Size = new System.Drawing.Size(253, 38);
-            this.txttongtien.TabIndex = 15;
+            this.txttongtien.TabIndex = 8;
             // 
             // guna2Elipse1
             // 

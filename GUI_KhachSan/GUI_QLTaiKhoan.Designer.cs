@@ -117,7 +117,7 @@
             this.btntimkiemtk.Location = new System.Drawing.Point(1269, 125);
             this.btntimkiemtk.Name = "btntimkiemtk";
             this.btntimkiemtk.Size = new System.Drawing.Size(67, 44);
-            this.btntimkiemtk.TabIndex = 14;
+            this.btntimkiemtk.TabIndex = 2;
             this.btntimkiemtk.Click += new System.EventHandler(this.btntimkiemtk_Click);
             // 
             // txttimkiem
@@ -143,7 +143,7 @@
             this.txttimkiem.PlaceholderText = "";
             this.txttimkiem.SelectedText = "";
             this.txttimkiem.Size = new System.Drawing.Size(355, 44);
-            this.txttimkiem.TabIndex = 13;
+            this.txttimkiem.TabIndex = 1;
             this.txttimkiem.Enter += new System.EventHandler(this.txttimkiem_Enter);
             this.txttimkiem.Leave += new System.EventHandler(this.txttimkiem_Leave);
             // 
@@ -181,7 +181,7 @@
             this.panelchucnang.Location = new System.Drawing.Point(907, 176);
             this.panelchucnang.Name = "panelchucnang";
             this.panelchucnang.Size = new System.Drawing.Size(430, 582);
-            this.panelchucnang.TabIndex = 11;
+            this.panelchucnang.TabIndex = 0;
             // 
             // txtemailtaikhoan
             // 
@@ -205,7 +205,7 @@
             this.txtemailtaikhoan.PlaceholderText = "";
             this.txtemailtaikhoan.SelectedText = "";
             this.txtemailtaikhoan.Size = new System.Drawing.Size(347, 38);
-            this.txtemailtaikhoan.TabIndex = 9;
+            this.txtemailtaikhoan.TabIndex = 2;
             // 
             // label3
             // 
@@ -215,7 +215,7 @@
             this.label3.Location = new System.Drawing.Point(46, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 22);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Email Tài Khoản:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -237,7 +237,7 @@
             this.btnresettk.Location = new System.Drawing.Point(229, 527);
             this.btnresettk.Name = "btnresettk";
             this.btnresettk.Size = new System.Drawing.Size(145, 45);
-            this.btnresettk.TabIndex = 4;
+            this.btnresettk.TabIndex = 9;
             this.btnresettk.Click += new System.EventHandler(this.btnresettk_Click);
             // 
             // btnxoatk
@@ -257,7 +257,7 @@
             this.btnxoatk.Location = new System.Drawing.Point(57, 527);
             this.btnxoatk.Name = "btnxoatk";
             this.btnxoatk.Size = new System.Drawing.Size(145, 45);
-            this.btnxoatk.TabIndex = 5;
+            this.btnxoatk.TabIndex = 8;
             this.btnxoatk.Text = "&Xóa";
             this.btnxoatk.Click += new System.EventHandler(this.btnxoatk_Click);
             // 
@@ -278,7 +278,7 @@
             this.btnsuatk.Location = new System.Drawing.Point(229, 464);
             this.btnsuatk.Name = "btnsuatk";
             this.btnsuatk.Size = new System.Drawing.Size(145, 45);
-            this.btnsuatk.TabIndex = 6;
+            this.btnsuatk.TabIndex = 7;
             this.btnsuatk.Text = "&Sửa";
             this.btnsuatk.Click += new System.EventHandler(this.btnsuatk_Click);
             // 
@@ -298,7 +298,7 @@
             this.btnthemtk.Location = new System.Drawing.Point(57, 464);
             this.btnthemtk.Name = "btnthemtk";
             this.btnthemtk.Size = new System.Drawing.Size(145, 45);
-            this.btnthemtk.TabIndex = 7;
+            this.btnthemtk.TabIndex = 6;
             this.btnthemtk.Text = "&Thêm";
             this.btnthemtk.Click += new System.EventHandler(this.btnthemtk_Click);
             // 
@@ -321,7 +321,7 @@
             this.cboban.Location = new System.Drawing.Point(36, 410);
             this.cboban.Name = "cboban";
             this.cboban.Size = new System.Drawing.Size(186, 36);
-            this.cboban.TabIndex = 2;
+            this.cboban.TabIndex = 5;
             // 
             // cborole
             // 
@@ -342,7 +342,7 @@
             this.cborole.Location = new System.Drawing.Point(36, 317);
             this.cborole.Name = "cborole";
             this.cborole.Size = new System.Drawing.Size(258, 36);
-            this.cborole.TabIndex = 2;
+            this.cborole.TabIndex = 4;
             // 
             // txtpass
             // 
@@ -366,7 +366,7 @@
             this.txtpass.PlaceholderText = "";
             this.txtpass.SelectedText = "";
             this.txtpass.Size = new System.Drawing.Size(347, 38);
-            this.txtpass.TabIndex = 1;
+            this.txtpass.TabIndex = 3;
             // 
             // txtidtaikhoan
             // 

@@ -370,7 +370,7 @@
             this.btnresetdp.Location = new System.Drawing.Point(733, 125);
             this.btnresetdp.Name = "btnresetdp";
             this.btnresetdp.Size = new System.Drawing.Size(180, 45);
-            this.btnresetdp.TabIndex = 14;
+            this.btnresetdp.TabIndex = 7;
             this.btnresetdp.Click += new System.EventHandler(this.btnresetdp_Click);
             // 
             // btnindp
@@ -390,7 +390,7 @@
             this.btnindp.Location = new System.Drawing.Point(488, 125);
             this.btnindp.Name = "btnindp";
             this.btnindp.Size = new System.Drawing.Size(180, 45);
-            this.btnindp.TabIndex = 3;
+            this.btnindp.TabIndex = 6;
             this.btnindp.Click += new System.EventHandler(this.btnindp_Click);
             // 
             // btnthongkedp
@@ -410,7 +410,7 @@
             this.btnthongkedp.Location = new System.Drawing.Point(234, 125);
             this.btnthongkedp.Name = "btnthongkedp";
             this.btnthongkedp.Size = new System.Drawing.Size(180, 45);
-            this.btnthongkedp.TabIndex = 3;
+            this.btnthongkedp.TabIndex = 5;
             this.btnthongkedp.Click += new System.EventHandler(this.btnthongkedp_Click);
             // 
             // dtpkngayketthucdp
@@ -448,7 +448,7 @@
             this.dtpkngaybatdaudp.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkngaybatdaudp.Name = "dtpkngaybatdaudp";
             this.dtpkngaybatdaudp.Size = new System.Drawing.Size(171, 36);
-            this.dtpkngaybatdaudp.TabIndex = 2;
+            this.dtpkngaybatdaudp.TabIndex = 1;
             this.dtpkngaybatdaudp.Value = new System.DateTime(2024, 4, 25, 7, 46, 31, 169);
             // 
             // cboloaiphong
@@ -466,7 +466,7 @@
             this.cboloaiphong.Location = new System.Drawing.Point(829, 69);
             this.cboloaiphong.Name = "cboloaiphong";
             this.cboloaiphong.Size = new System.Drawing.Size(271, 36);
-            this.cboloaiphong.TabIndex = 1;
+            this.cboloaiphong.TabIndex = 4;
             // 
             // cbotenphong
             // 
@@ -483,7 +483,7 @@
             this.cbotenphong.Location = new System.Drawing.Point(519, 69);
             this.cbotenphong.Name = "cbotenphong";
             this.cbotenphong.Size = new System.Drawing.Size(271, 36);
-            this.cbotenphong.TabIndex = 1;
+            this.cbotenphong.TabIndex = 3;
             // 
             // label13
             // 
@@ -751,7 +751,7 @@
             this.btnresetddv.Location = new System.Drawing.Point(718, 124);
             this.btnresetddv.Name = "btnresetddv";
             this.btnresetddv.Size = new System.Drawing.Size(180, 45);
-            this.btnresetddv.TabIndex = 14;
+            this.btnresetddv.TabIndex = 7;
             this.btnresetddv.Click += new System.EventHandler(this.btnresetddv_Click);
             // 
             // btninddv
@@ -771,7 +771,7 @@
             this.btninddv.Location = new System.Drawing.Point(466, 124);
             this.btninddv.Name = "btninddv";
             this.btninddv.Size = new System.Drawing.Size(180, 45);
-            this.btninddv.TabIndex = 3;
+            this.btninddv.TabIndex = 6;
             this.btninddv.Click += new System.EventHandler(this.btninddv_Click);
             // 
             // btnthongkeddv
@@ -791,7 +791,7 @@
             this.btnthongkeddv.Location = new System.Drawing.Point(211, 124);
             this.btnthongkeddv.Name = "btnthongkeddv";
             this.btnthongkeddv.Size = new System.Drawing.Size(180, 45);
-            this.btnthongkeddv.TabIndex = 3;
+            this.btnthongkeddv.TabIndex = 5;
             this.btnthongkeddv.Click += new System.EventHandler(this.btnthongkeddv_Click);
             // 
             // dtpkngayketthucddv
@@ -829,7 +829,7 @@
             this.dtpkngaybatdauddv.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkngaybatdauddv.Name = "dtpkngaybatdauddv";
             this.dtpkngaybatdauddv.Size = new System.Drawing.Size(171, 36);
-            this.dtpkngaybatdauddv.TabIndex = 2;
+            this.dtpkngaybatdauddv.TabIndex = 1;
             this.dtpkngaybatdauddv.Value = new System.DateTime(2024, 4, 25, 7, 46, 31, 169);
             // 
             // cboloaidichvu
@@ -847,7 +847,7 @@
             this.cboloaidichvu.Location = new System.Drawing.Point(827, 65);
             this.cboloaidichvu.Name = "cboloaidichvu";
             this.cboloaidichvu.Size = new System.Drawing.Size(271, 36);
-            this.cboloaidichvu.TabIndex = 1;
+            this.cboloaidichvu.TabIndex = 4;
             // 
             // cbotendichvu
             // 
@@ -864,7 +864,7 @@
             this.cbotendichvu.Location = new System.Drawing.Point(506, 65);
             this.cbotendichvu.Name = "cbotendichvu";
             this.cbotendichvu.Size = new System.Drawing.Size(271, 36);
-            this.cbotendichvu.TabIndex = 1;
+            this.cbotendichvu.TabIndex = 3;
             // 
             // label7
             // 

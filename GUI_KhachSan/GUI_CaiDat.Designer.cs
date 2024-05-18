@@ -258,7 +258,7 @@
             this.txtcheckcmnd.PlaceholderText = "";
             this.txtcheckcmnd.SelectedText = "";
             this.txtcheckcmnd.Size = new System.Drawing.Size(362, 32);
-            this.txtcheckcmnd.TabIndex = 3;
+            this.txtcheckcmnd.TabIndex = 2;
             this.txtcheckcmnd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcheckcmnd_KeyPress);
             // 
             // txtcheckemail
@@ -283,7 +283,7 @@
             this.txtcheckemail.PlaceholderText = "";
             this.txtcheckemail.SelectedText = "";
             this.txtcheckemail.Size = new System.Drawing.Size(364, 32);
-            this.txtcheckemail.TabIndex = 3;
+            this.txtcheckemail.TabIndex = 1;
             // 
             // dtgvnhanvien
             // 
@@ -498,7 +498,7 @@
             this.txtchucvu.PlaceholderText = "";
             this.txtchucvu.SelectedText = "";
             this.txtchucvu.Size = new System.Drawing.Size(218, 38);
-            this.txtchucvu.TabIndex = 55;
+            this.txtchucvu.TabIndex = 14;
             // 
             // txtdiachi
             // 
@@ -522,7 +522,7 @@
             this.txtdiachi.PlaceholderText = "";
             this.txtdiachi.SelectedText = "";
             this.txtdiachi.Size = new System.Drawing.Size(213, 38);
-            this.txtdiachi.TabIndex = 56;
+            this.txtdiachi.TabIndex = 13;
             // 
             // txtemail
             // 
@@ -547,7 +547,7 @@
             this.txtemail.ReadOnly = true;
             this.txtemail.SelectedText = "";
             this.txtemail.Size = new System.Drawing.Size(255, 38);
-            this.txtemail.TabIndex = 57;
+            this.txtemail.TabIndex = 12;
             // 
             // label14
             // 
@@ -607,7 +607,7 @@
             this.cbogioitinh.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cbogioitinh.Name = "cbogioitinh";
             this.cbogioitinh.Size = new System.Drawing.Size(169, 36);
-            this.cbogioitinh.TabIndex = 51;
+            this.cbogioitinh.TabIndex = 10;
             // 
             // txtsodienthoai
             // 
@@ -631,7 +631,7 @@
             this.txtsodienthoai.PlaceholderText = "";
             this.txtsodienthoai.SelectedText = "";
             this.txtsodienthoai.Size = new System.Drawing.Size(255, 38);
-            this.txtsodienthoai.TabIndex = 47;
+            this.txtsodienthoai.TabIndex = 11;
             // 
             // txtcmnd
             // 
@@ -655,7 +655,7 @@
             this.txtcmnd.PlaceholderText = "";
             this.txtcmnd.SelectedText = "";
             this.txtcmnd.Size = new System.Drawing.Size(255, 38);
-            this.txtcmnd.TabIndex = 48;
+            this.txtcmnd.TabIndex = 9;
             // 
             // txttennhanvien
             // 
@@ -679,7 +679,7 @@
             this.txttennhanvien.PlaceholderText = "";
             this.txttennhanvien.SelectedText = "";
             this.txttennhanvien.Size = new System.Drawing.Size(255, 38);
-            this.txttennhanvien.TabIndex = 49;
+            this.txttennhanvien.TabIndex = 8;
             // 
             // txtidnhanvien
             // 
@@ -703,7 +703,7 @@
             this.txtidnhanvien.PlaceholderText = "";
             this.txtidnhanvien.SelectedText = "";
             this.txtidnhanvien.Size = new System.Drawing.Size(127, 38);
-            this.txtidnhanvien.TabIndex = 50;
+            this.txtidnhanvien.TabIndex = 7;
             // 
             // label6
             // 
@@ -784,7 +784,7 @@
             this.btnresetnv.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnresetnv.Name = "btnresetnv";
             this.btnresetnv.Size = new System.Drawing.Size(182, 45);
-            this.btnresetnv.TabIndex = 10;
+            this.btnresetnv.TabIndex = 16;
             this.btnresetnv.Click += new System.EventHandler(this.btnresetnv_Click);
             // 
             // btncapnhatnv
@@ -805,7 +805,7 @@
             this.btncapnhatnv.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btncapnhatnv.Name = "btncapnhatnv";
             this.btncapnhatnv.Size = new System.Drawing.Size(182, 45);
-            this.btncapnhatnv.TabIndex = 10;
+            this.btncapnhatnv.TabIndex = 15;
             this.btncapnhatnv.Text = "&Cập Nhật";
             this.btncapnhatnv.Click += new System.EventHandler(this.btncapnhatnv_Click);
             // 
@@ -867,7 +867,7 @@
             this.txtvaitrotk.ReadOnly = true;
             this.txtvaitrotk.SelectedText = "";
             this.txtvaitrotk.Size = new System.Drawing.Size(242, 38);
-            this.txtvaitrotk.TabIndex = 25;
+            this.txtvaitrotk.TabIndex = 6;
             // 
             // txtemailtk
             // 
@@ -891,7 +891,7 @@
             this.txtemailtk.PlaceholderText = "";
             this.txtemailtk.SelectedText = "";
             this.txtemailtk.Size = new System.Drawing.Size(242, 38);
-            this.txtemailtk.TabIndex = 25;
+            this.txtemailtk.TabIndex = 4;
             // 
             // label8
             // 
@@ -939,7 +939,7 @@
             this.txtpass.PlaceholderText = "";
             this.txtpass.SelectedText = "";
             this.txtpass.Size = new System.Drawing.Size(242, 38);
-            this.txtpass.TabIndex = 16;
+            this.txtpass.TabIndex = 5;
             // 
             // txtidtaikhoan
             // 
@@ -963,7 +963,7 @@
             this.txtidtaikhoan.PlaceholderText = "";
             this.txtidtaikhoan.SelectedText = "";
             this.txtidtaikhoan.Size = new System.Drawing.Size(153, 38);
-            this.txtidtaikhoan.TabIndex = 18;
+            this.txtidtaikhoan.TabIndex = 3;
             this.txtidtaikhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtidtaikhoan_KeyPress);
             // 
             // label5
@@ -1009,7 +1009,7 @@
             this.btnresettk.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnresettk.Name = "btnresettk";
             this.btnresettk.Size = new System.Drawing.Size(182, 45);
-            this.btnresettk.TabIndex = 8;
+            this.btnresettk.TabIndex = 0;
             this.btnresettk.Click += new System.EventHandler(this.btnresettk_Click);
             // 
             // btncapnhattk
@@ -1030,7 +1030,7 @@
             this.btncapnhattk.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btncapnhattk.Name = "btncapnhattk";
             this.btncapnhattk.Size = new System.Drawing.Size(182, 45);
-            this.btncapnhattk.TabIndex = 10;
+            this.btncapnhattk.TabIndex = 0;
             this.btncapnhattk.Text = "&Cập Nhật";
             this.btncapnhattk.Click += new System.EventHandler(this.btncapnhattk_Click);
             // 
