@@ -231,5 +231,16 @@ namespace GUI_KhachSan
                 e.Handled = true;
             }
         }
+
+        private void btncheckkhuyenmai_Click(object sender, EventArgs e)
+        {
+            dtgvkhuyenmai.Columns[0].DataPropertyName = "ID_KhuyenMai";
+            dtgvkhuyenmai.Columns[1].DataPropertyName = "Ten_KhuyenMai";
+            dtgvkhuyenmai.Columns[2].DataPropertyName = "GiaTri";
+            dtgvkhuyenmai.Columns[3].DataPropertyName = "MoTa";
+            dtgvkhuyenmai.Columns[4].DataPropertyName = "NgayBatDau";
+            dtgvkhuyenmai.Columns[5].DataPropertyName = "NgayKetThuc";
+            dtgvkhuyenmai.DataSource = bllkm.KiemTraKhuyenMai();
+        }
     }
 }

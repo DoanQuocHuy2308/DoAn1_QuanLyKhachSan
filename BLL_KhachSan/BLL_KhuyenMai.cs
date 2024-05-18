@@ -16,7 +16,10 @@ namespace BLL_KhachSan
         {
             return dalkm.DuLieuKhuyenMai();
         }
-
+        public DataTable KiemTraKhuyenMai()
+        {
+            return dalkm.KiemTraKhuyenMai();
+        }
         public void Add(DTO_KhuyenMai km)
         {
             try

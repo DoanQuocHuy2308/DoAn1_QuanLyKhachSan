@@ -24,6 +24,15 @@ namespace DAL_KhachSan
             da.Fill(dt);
             return dt;
         }
+        public DataTable KiemTraKhuyenMai()
+        {
+            dt = new DataTable();
+            kn.moketnoi();
+            string thucthi = "SELECT * FROM KhuyenMai WHERE GETDATE() BETWEEN NgayBatDau AND NgayKetThuc";
+            da = new SqlDataAdapter(thucthi, DAL_KetNoi.sqlcon);
+            da.Fill(dt);
+            return dt;
+        }
         public void Add(DTO_KhuyenMai km)
         {
             try

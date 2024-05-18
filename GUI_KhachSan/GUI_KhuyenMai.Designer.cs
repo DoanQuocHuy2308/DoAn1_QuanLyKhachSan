@@ -64,6 +64,7 @@
             this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btncheckkhuyenmai = new Guna.UI2.WinForms.Guna2Button();
             this.panelchinh.SuspendLayout();
             this.panelchucnang.SuspendLayout();
             this.paneldulieu.SuspendLayout();
@@ -142,7 +143,7 @@
             // 
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(852, 91);
+            this.label19.Location = new System.Drawing.Point(943, 46);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(83, 41);
             this.label19.TabIndex = 19;
@@ -214,6 +215,7 @@
             this.panelchucnang.BorderColor = System.Drawing.Color.Gold;
             this.panelchucnang.BorderRadius = 25;
             this.panelchucnang.BorderThickness = 2;
+            this.panelchucnang.Controls.Add(this.btncheckkhuyenmai);
             this.panelchucnang.Controls.Add(this.dtpkngayketthuc);
             this.panelchucnang.Controls.Add(this.label3);
             this.panelchucnang.Controls.Add(this.btnresetkm);
@@ -245,7 +247,7 @@
             this.dtpkngayketthuc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpkngayketthuc.ForeColor = System.Drawing.Color.White;
             this.dtpkngayketthuc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpkngayketthuc.Location = new System.Drawing.Point(249, 310);
+            this.dtpkngayketthuc.Location = new System.Drawing.Point(266, 287);
             this.dtpkngayketthuc.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpkngayketthuc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkngayketthuc.Name = "dtpkngayketthuc";
@@ -258,7 +260,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(255, 284);
+            this.label3.Location = new System.Drawing.Point(272, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 23);
             this.label3.TabIndex = 16;
@@ -295,7 +297,7 @@
             this.dtpkngaybatdau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpkngaybatdau.ForeColor = System.Drawing.Color.White;
             this.dtpkngaybatdau.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpkngaybatdau.Location = new System.Drawing.Point(25, 310);
+            this.dtpkngaybatdau.Location = new System.Drawing.Point(42, 287);
             this.dtpkngaybatdau.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpkngaybatdau.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpkngaybatdau.Name = "dtpkngaybatdau";
@@ -318,7 +320,7 @@
             this.txtmota.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmota.ForeColor = System.Drawing.Color.White;
             this.txtmota.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtmota.Location = new System.Drawing.Point(25, 409);
+            this.txtmota.Location = new System.Drawing.Point(42, 377);
             this.txtmota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtmota.Name = "txtmota";
             this.txtmota.PasswordChar = '\0';
@@ -341,7 +343,7 @@
             this.btnxoakm.ForeColor = System.Drawing.Color.White;
             this.btnxoakm.Image = ((System.Drawing.Image)(resources.GetObject("btnxoakm.Image")));
             this.btnxoakm.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnxoakm.Location = new System.Drawing.Point(264, 483);
+            this.btnxoakm.Location = new System.Drawing.Point(264, 508);
             this.btnxoakm.Name = "btnxoakm";
             this.btnxoakm.Size = new System.Drawing.Size(169, 45);
             this.btnxoakm.TabIndex = 8;
@@ -362,7 +364,7 @@
             this.btnsuakm.ForeColor = System.Drawing.Color.White;
             this.btnsuakm.Image = ((System.Drawing.Image)(resources.GetObject("btnsuakm.Image")));
             this.btnsuakm.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnsuakm.Location = new System.Drawing.Point(35, 560);
+            this.btnsuakm.Location = new System.Drawing.Point(42, 560);
             this.btnsuakm.Name = "btnsuakm";
             this.btnsuakm.Size = new System.Drawing.Size(169, 45);
             this.btnsuakm.TabIndex = 9;
@@ -384,7 +386,7 @@
             this.txtgiatri.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtgiatri.ForeColor = System.Drawing.Color.White;
             this.txtgiatri.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtgiatri.Location = new System.Drawing.Point(25, 216);
+            this.txtgiatri.Location = new System.Drawing.Point(42, 205);
             this.txtgiatri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtgiatri.Name = "txtgiatri";
             this.txtgiatri.PasswordChar = '\0';
@@ -409,7 +411,7 @@
             this.txttenkhuyenmai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttenkhuyenmai.ForeColor = System.Drawing.Color.White;
             this.txttenkhuyenmai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttenkhuyenmai.Location = new System.Drawing.Point(25, 128);
+            this.txttenkhuyenmai.Location = new System.Drawing.Point(42, 125);
             this.txttenkhuyenmai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txttenkhuyenmai.Name = "txttenkhuyenmai";
             this.txttenkhuyenmai.PasswordChar = '\0';
@@ -433,7 +435,7 @@
             this.txtidkhuyenmai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtidkhuyenmai.ForeColor = System.Drawing.Color.White;
             this.txtidkhuyenmai.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidkhuyenmai.Location = new System.Drawing.Point(25, 44);
+            this.txtidkhuyenmai.Location = new System.Drawing.Point(42, 47);
             this.txtidkhuyenmai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtidkhuyenmai.Name = "txtidkhuyenmai";
             this.txtidkhuyenmai.PasswordChar = '\0';
@@ -447,7 +449,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(31, 382);
+            this.label8.Location = new System.Drawing.Point(48, 350);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(173, 23);
             this.label8.TabIndex = 0;
@@ -466,7 +468,7 @@
             this.btnthemkm.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthemkm.ForeColor = System.Drawing.Color.White;
             this.btnthemkm.Image = ((System.Drawing.Image)(resources.GetObject("btnthemkm.Image")));
-            this.btnthemkm.Location = new System.Drawing.Point(35, 483);
+            this.btnthemkm.Location = new System.Drawing.Point(42, 508);
             this.btnthemkm.Name = "btnthemkm";
             this.btnthemkm.Size = new System.Drawing.Size(169, 45);
             this.btnthemkm.TabIndex = 7;
@@ -478,7 +480,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(21, 189);
+            this.label6.Location = new System.Drawing.Point(38, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 23);
             this.label6.TabIndex = 0;
@@ -489,7 +491,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(31, 284);
+            this.label5.Location = new System.Drawing.Point(48, 261);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 23);
             this.label5.TabIndex = 0;
@@ -500,7 +502,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(21, 101);
+            this.label4.Location = new System.Drawing.Point(38, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 23);
             this.label4.TabIndex = 0;
@@ -511,7 +513,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(21, 17);
+            this.label2.Location = new System.Drawing.Point(38, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 23);
             this.label2.TabIndex = 0;
@@ -522,7 +524,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 40.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(185, 68);
+            this.label1.Location = new System.Drawing.Point(168, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(479, 81);
             this.label1.TabIndex = 1;
@@ -611,6 +613,27 @@
             this.guna2Elipse1.BorderRadius = 50;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // btncheckkhuyenmai
+            // 
+            this.btncheckkhuyenmai.BorderColor = System.Drawing.Color.White;
+            this.btncheckkhuyenmai.BorderRadius = 15;
+            this.btncheckkhuyenmai.BorderThickness = 2;
+            this.btncheckkhuyenmai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btncheckkhuyenmai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btncheckkhuyenmai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btncheckkhuyenmai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btncheckkhuyenmai.FillColor = System.Drawing.Color.Transparent;
+            this.btncheckkhuyenmai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncheckkhuyenmai.ForeColor = System.Drawing.Color.White;
+            this.btncheckkhuyenmai.Image = ((System.Drawing.Image)(resources.GetObject("btncheckkhuyenmai.Image")));
+            this.btncheckkhuyenmai.ImageSize = new System.Drawing.Size(30, 30);
+            this.btncheckkhuyenmai.Location = new System.Drawing.Point(42, 446);
+            this.btncheckkhuyenmai.Name = "btncheckkhuyenmai";
+            this.btncheckkhuyenmai.Size = new System.Drawing.Size(391, 45);
+            this.btncheckkhuyenmai.TabIndex = 20;
+            this.btncheckkhuyenmai.Text = "&Check Khuyến Mại";
+            this.btncheckkhuyenmai.Click += new System.EventHandler(this.btncheckkhuyenmai_Click);
+            // 
             // GUI_KhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -672,5 +695,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Button btncheckkhuyenmai;
     }
 }
