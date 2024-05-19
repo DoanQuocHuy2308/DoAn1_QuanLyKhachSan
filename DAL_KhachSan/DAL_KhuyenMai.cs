@@ -38,7 +38,7 @@ namespace DAL_KhachSan
             try
             {
                 kn.moketnoi();
-                string thucthi = "INSERT INTO KhuyenMai(ID_KhuyenMai,Ten_KhuyenMai,GiaTri,MoTa,NgayBatDau,NgayKetThuc) Values (@Ten_KhuyenMai,@GiaTri,@MoTa,@NgayBatDau,@NgayKetThuc)";
+                string thucthi = "INSERT INTO KhuyenMai(ID_KhuyenMai,Ten_KhuyenMai,GiaTri,MoTa,NgayBatDau,NgayKetThuc) Values (@ID_KhuyenMai,@Ten_KhuyenMai,@GiaTri,@MoTa,@NgayBatDau,@NgayKetThuc)";
                 using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
                 {
                     cmd.Parameters.AddWithValue("@ID_KhuyenMai", km.ID_KhuyenMai);
