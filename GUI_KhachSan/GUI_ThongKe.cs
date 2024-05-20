@@ -134,10 +134,10 @@ namespace GUI_KhachSan
             dtpkngayketthucdp.Value = DateTime.Now;
             HienTenLoaiPhong();
             HienTenPhong();
+            TongTienDP();
             DuLieuDonDatPhong();
             cboloaiphong.SelectedIndex = -1;
             cbotenphong.SelectedIndex = -1;
-            TongTienDP();
         }
         private void dtgvthongkedp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -216,10 +216,10 @@ namespace GUI_KhachSan
             dtpkngayketthucddv.Value = DateTime.Now;
             HienTenLoaiDichVu();
             HienTenDichVu();
+            TongTienDDV();
             DuLieuDonDatDichVu();
             cboloaidichvu.SelectedIndex = -1;
             cbotendichvu.SelectedIndex = -1;
-            TongTienDDV();
         }
 
         private void dtgvthongkeddv_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -87,6 +87,16 @@ namespace GUI_KhachSan
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (!nv.SDT_NhanVien.StartsWith("0"))
+            {
+                MessageBox.Show("Số điện thoại bắt đầu từ số 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (nv.SDT_NhanVien.Length < 10 || nv.SDT_NhanVien.Length > 10)
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại đúng yêu cầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (dk.KiemTraEmailTonTai(tk))
             {
                 MessageBox.Show("Email đã tồn tại trong hệ thống. Vui lòng sử dụng email khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -130,6 +140,12 @@ namespace GUI_KhachSan
             }
         }
 
+        private void btnthoat_Click(object sender, EventArgs e)
+        {
+            GUI_DangNhap dn = new GUI_DangNhap();
+            this.Hide();
+            dn.ShowDialog();
+        }
     }
 }
 

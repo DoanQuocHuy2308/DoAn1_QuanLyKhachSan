@@ -100,6 +100,11 @@ namespace GUI_KhachSan
             dp.TrangThai = cbotrangthai.Text;
             dp.HinhThucThanhToan = cbohinhthucthanhtoan.Text;
             dp.KetQua = cboketqua.Text;
+            if(dp.Check_In > dp.Check_Out)
+            {
+                MessageBox.Show("Ngày Check In không được lớn hơn ngày Check Out.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             try
             {
@@ -211,7 +216,11 @@ namespace GUI_KhachSan
             dp.TrangThai = cbotrangthai.Text;
             dp.HinhThucThanhToan = cbohinhthucthanhtoan.Text;
             dp.KetQua = cboketqua.Text;
-
+            if (dp.Check_In > dp.Check_Out)
+            {
+                MessageBox.Show("Ngày Check In không được lớn hơn ngày Check Out.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 blldp.UPDATE(dp);

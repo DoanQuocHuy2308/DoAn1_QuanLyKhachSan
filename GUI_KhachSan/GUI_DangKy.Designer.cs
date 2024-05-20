@@ -68,6 +68,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btndong = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnthoat = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelDangKy.SuspendLayout();
@@ -81,6 +82,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(221)))));
             this.panel1.BorderColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.btnthoat);
             this.panel1.Controls.Add(this.btnminimize);
             this.panel1.Controls.Add(this.btnclose);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -110,9 +112,9 @@
             this.btnminimize.FillColor = System.Drawing.Color.Transparent;
             this.btnminimize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnminimize.ForeColor = System.Drawing.Color.White;
-            this.btnminimize.Location = new System.Drawing.Point(1015, 0);
+            this.btnminimize.Location = new System.Drawing.Point(1015, 5);
             this.btnminimize.Name = "btnminimize";
-            this.btnminimize.Size = new System.Drawing.Size(46, 40);
+            this.btnminimize.Size = new System.Drawing.Size(41, 36);
             this.btnminimize.TabIndex = 1;
             this.btnminimize.Click += new System.EventHandler(this.btnminimize_Click);
             // 
@@ -130,9 +132,9 @@
             this.btnclose.FillColor = System.Drawing.Color.Transparent;
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(1067, 0);
+            this.btnclose.Location = new System.Drawing.Point(1062, 5);
             this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(46, 41);
+            this.btnclose.Size = new System.Drawing.Size(41, 36);
             this.btnclose.TabIndex = 2;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
@@ -679,6 +681,27 @@
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // btnthoat
+            // 
+            this.btnthoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
+            this.btnthoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnthoat.BackgroundImage")));
+            this.btnthoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnthoat.BorderColor = System.Drawing.Color.Gold;
+            this.btnthoat.BorderRadius = 10;
+            this.btnthoat.BorderThickness = 2;
+            this.btnthoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnthoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnthoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnthoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnthoat.FillColor = System.Drawing.Color.Transparent;
+            this.btnthoat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnthoat.ForeColor = System.Drawing.Color.White;
+            this.btnthoat.Location = new System.Drawing.Point(12, 5);
+            this.btnthoat.Name = "btnthoat";
+            this.btnthoat.Size = new System.Drawing.Size(41, 36);
+            this.btnthoat.TabIndex = 23;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
+            // 
             // GUI_DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -742,5 +765,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Button btnthoat;
     }
 }

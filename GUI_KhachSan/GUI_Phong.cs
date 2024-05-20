@@ -68,13 +68,13 @@ namespace GUI_KhachSan
         }
         private void btnthemphong_Click(object sender, EventArgs e)
         {
-            DTO_P.Ten_Phong = txttenphong.Text;
-            DTO_P.ID_LoaiPhong = int.Parse(cboidloaiphong.Text);
-            if (string.IsNullOrEmpty(DTO_P.Ten_Phong) || string.IsNullOrEmpty(DTO_P.ID_LoaiPhong.ToString()))
+            if (string.IsNullOrEmpty(txttenphong.Text) || string.IsNullOrEmpty(cboidloaiphong.Text))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            DTO_P.Ten_Phong = txttenphong.Text;
+            DTO_P.ID_LoaiPhong = int.Parse(cboidloaiphong.Text);
             try
             {
                 if (p.KTTrungTen(DTO_P))
@@ -145,14 +145,14 @@ namespace GUI_KhachSan
 
         private void btnsua_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtidphong.Text) || string.IsNullOrEmpty(txttenphong.Text) || string.IsNullOrEmpty(cboidloaiphong.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DTO_P.ID_Phong = int.Parse(txtidphong.Text);
             DTO_P.Ten_Phong = txttenphong.Text;
             DTO_P.ID_LoaiPhong = int.Parse(cboidloaiphong.Text);
-            if (string.IsNullOrEmpty(DTO_P.ID_Phong.ToString()) || string.IsNullOrEmpty(DTO_P.Ten_Phong) || string.IsNullOrEmpty(DTO_P.ID_LoaiPhong.ToString()))
-            {
-                MessageBox.Show("Vui lòng nhập đúng mã Phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             try
             {
                 p.Update(DTO_P);
@@ -167,6 +167,11 @@ namespace GUI_KhachSan
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtidphong.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             int.TryParse(txtidloaiphong.Text, out int idPhong);
             DTO_P.ID_Phong = idPhong;
             if (p.KTIDTonTai(DTO_P))
@@ -312,6 +317,11 @@ namespace GUI_KhachSan
 
         private void btnxoalp_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtidloaiphong.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã loại phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             int.TryParse(txtidloaiphong.Text, out int iDLoaiPhong);
             DTO_LP.ID_LoaiPhong=iDLoaiPhong;
             if (lp.KTIDTonTai(DTO_LP))

@@ -71,14 +71,14 @@ namespace GUI_KhachSan
 
         private void btnthemdv_Click(object sender, EventArgs e)
         {
-            dto_dv.Ten_DichVu = txttendichvu.Text; 
-            dto_dv.ID_LoaiDichVu = int.Parse(cboidloaidichvu.Text);
-            dto_dv.Gia_DichVu= decimal.Parse(txtgiadichvu.Text);
-            if (string.IsNullOrEmpty(dto_dv.Ten_DichVu) || string.IsNullOrEmpty(dto_dv.ID_LoaiDichVu.ToString()) || string.IsNullOrEmpty(dto_dv.Gia_DichVu.ToString()))
+            if (string.IsNullOrEmpty(txttendichvu.Text) || string.IsNullOrEmpty(cboidloaidichvu.Text) || string.IsNullOrEmpty(txtgiadichvu.Text))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            dto_dv.Ten_DichVu = txttendichvu.Text; 
+            dto_dv.ID_LoaiDichVu = int.Parse(cboidloaidichvu.Text);
+            dto_dv.Gia_DichVu= decimal.Parse(txtgiadichvu.Text);
             if (blldv.KTTrungTen(dto_dv))
             {
                 MessageBox.Show("Tên dịch vụ này đã có , vui lòng nhập lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -101,15 +101,15 @@ namespace GUI_KhachSan
 
         private void btnsuadv_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtiddichvu.Text) || string.IsNullOrEmpty(txttendichvu.Text) || string.IsNullOrEmpty(cboidloaidichvu.Text) || string.IsNullOrEmpty(txtgiadichvu.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin dịch vụ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             dto_dv.ID_DichVu = int.Parse(txtiddichvu.Text);
             dto_dv.Ten_DichVu = txttendichvu.Text;
             dto_dv.ID_LoaiDichVu = int.Parse(cboidloaidichvu.Text);
             dto_dv.Gia_DichVu = decimal.Parse(txtgiadichvu.Text);
-            if (string.IsNullOrEmpty(dto_dv.ID_DichVu.ToString()))
-            {
-                MessageBox.Show("Vui lòng nhập mã dịch vụ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             try
             {
                 blldv.UPDATE(dto_dv);
@@ -137,6 +137,11 @@ namespace GUI_KhachSan
 
         private void btnxoadv_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtiddichvu.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã dịch vụ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             int.TryParse(txtiddichvu.Text, out int idDichVu);
             dto_dv.ID_DichVu = idDichVu;
             if (blldv.KTIDTonTai(dto_dv))

@@ -241,7 +241,7 @@
             this.txtcheckcmnd.BorderColor = System.Drawing.Color.White;
             this.txtcheckcmnd.BorderRadius = 10;
             this.txtcheckcmnd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtcheckcmnd.DefaultText = "Nhập Số CMND ";
+            this.txtcheckcmnd.DefaultText = "Nhập Số CMND";
             this.txtcheckcmnd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtcheckcmnd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtcheckcmnd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));

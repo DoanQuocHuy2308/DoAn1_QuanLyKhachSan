@@ -69,6 +69,16 @@ namespace GUI_KhachSan
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if(kh.SDT_KhachHang.Length < 10 || kh.SDT_KhachHang.Length > 10)
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại đúng yêu cầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!kh.SDT_KhachHang.StartsWith("0"))
+            {
+                MessageBox.Show("Số điện thoại bắt đầu từ số 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 if (bllkh.KTCMND(kh))
@@ -118,6 +128,11 @@ namespace GUI_KhachSan
             if (string.IsNullOrEmpty(kh.ID_KhachHang.ToString()) || string.IsNullOrEmpty(kh.Ten_KhachHang) || string.IsNullOrEmpty(kh.Tuoi_KhachHang.ToString()) || string.IsNullOrEmpty(kh.CMND_KhachHang) || string.IsNullOrEmpty(kh.GioiTinh_KhachHang) || string.IsNullOrEmpty(kh.Email_KhachHang) || string.IsNullOrEmpty(kh.SDT_KhachHang) || string.IsNullOrEmpty(kh.DiaChi_KhachHang))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (kh.SDT_KhachHang.Length < 10 || kh.SDT_KhachHang.Length > 10)
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại đúng yêu cầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try

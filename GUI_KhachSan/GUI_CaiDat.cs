@@ -230,6 +230,16 @@ namespace GUI_KhachSan
                 MessageBox.Show("Vui lòng nhập mã nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (nv.SDT_NhanVien.Length < 10 || nv.SDT_NhanVien.Length > 10)
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại đúng yêu cầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!nv.SDT_NhanVien.StartsWith("0"))
+            {
+                MessageBox.Show("Số điện thoại bắt đầu từ số 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 bllcd.CapNhatNhanVien(nv);
@@ -246,13 +256,13 @@ namespace GUI_KhachSan
         {
             if (txtcheckemail.Text == "")
             {
-                txtcheckemail.Text = "Nhập Emaail Tài Khoản";
+                txtcheckemail.Text = "Nhập Email Tài Khoản";
             }
         }
 
         private void txtcheckemail_Enter(object sender, EventArgs e)
         {
-            if (txtcheckemail.Text == "Nhập Emaail Tài Khoản")
+            if (txtcheckemail.Text == "Nhập Email Tài Khoản")
             {
                 txtcheckemail.Text = "";
             }
@@ -260,17 +270,17 @@ namespace GUI_KhachSan
 
         private void txtcheckcmnd_Leave(object sender, EventArgs e)
         {
-            if (txtcheckemail.Text == "")
+            if (txtcheckcmnd.Text =="")
             {
-                txtcheckemail.Text = "Nhập Số CMND";
+                txtcheckcmnd.Text = "Nhập Số CMND";
             }
         }
 
         private void txtcheckcmnd_Enter(object sender, EventArgs e)
         {
-            if (txtcheckemail.Text == "Nhập Số CMND")
+            if (txtcheckcmnd.Text == "Nhập Số CMND")
             {
-                txtcheckemail.Text = "";
+                txtcheckcmnd.Text = "";
             }
         }
     }
