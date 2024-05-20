@@ -186,12 +186,11 @@ namespace GUI_KhachSan
 
         private void btntimkiemkm_Click(object sender, EventArgs e)
         {
-            if(txttimkiem.Text=="Tìm Kiếm Khuyến Mại")
-            {
-                MessageBox.Show("Vui lòng nhập khuyến mại cần tìm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             km.ID_KhuyenMai = txtidkhuyenmai.Text;
+            if(txttimkiem.Text == "Tìm Kiếm Khuyến Mại")
+            {
+                txttimkiem.Text = "";
+            }
             km.Ten_KhuyenMai = txttenkhuyenmai.Text;
             decimal.TryParse(txtgiatri.Text, out decimal giatri);
             km.GiaTri = giatri;

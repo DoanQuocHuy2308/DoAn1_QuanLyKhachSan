@@ -241,7 +241,7 @@
             this.txtcheckcmnd.BorderColor = System.Drawing.Color.White;
             this.txtcheckcmnd.BorderRadius = 10;
             this.txtcheckcmnd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtcheckcmnd.DefaultText = "";
+            this.txtcheckcmnd.DefaultText = "Nhập Số CMND ";
             this.txtcheckcmnd.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtcheckcmnd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtcheckcmnd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -259,14 +259,16 @@
             this.txtcheckcmnd.SelectedText = "";
             this.txtcheckcmnd.Size = new System.Drawing.Size(362, 32);
             this.txtcheckcmnd.TabIndex = 2;
+            this.txtcheckcmnd.Enter += new System.EventHandler(this.txtcheckcmnd_Enter);
             this.txtcheckcmnd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcheckcmnd_KeyPress);
+            this.txtcheckcmnd.Leave += new System.EventHandler(this.txtcheckcmnd_Leave);
             // 
             // txtcheckemail
             // 
             this.txtcheckemail.BorderColor = System.Drawing.Color.White;
             this.txtcheckemail.BorderRadius = 10;
             this.txtcheckemail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtcheckemail.DefaultText = "";
+            this.txtcheckemail.DefaultText = "Nhập Email Tài Khoản";
             this.txtcheckemail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtcheckemail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtcheckemail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -284,6 +286,8 @@
             this.txtcheckemail.SelectedText = "";
             this.txtcheckemail.Size = new System.Drawing.Size(364, 32);
             this.txtcheckemail.TabIndex = 1;
+            this.txtcheckemail.Enter += new System.EventHandler(this.txtcheckemail_Enter);
+            this.txtcheckemail.Leave += new System.EventHandler(this.txtcheckemail_Leave);
             // 
             // dtgvnhanvien
             // 

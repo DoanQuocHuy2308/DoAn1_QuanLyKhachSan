@@ -38,6 +38,7 @@
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.btnthoat = new Guna.UI2.WinForms.Guna2Button();
             this.panelchucnang = new Guna.UI2.WinForms.Guna2Panel();
+            this.btncheckkhuyenmai = new Guna.UI2.WinForms.Guna2Button();
             this.dtpkngayketthuc = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.btnresetkm = new Guna.UI2.WinForms.Guna2Button();
@@ -64,7 +65,6 @@
             this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btncheckkhuyenmai = new Guna.UI2.WinForms.Guna2Button();
             this.panelchinh.SuspendLayout();
             this.panelchucnang.SuspendLayout();
             this.paneldulieu.SuspendLayout();
@@ -138,12 +138,14 @@
             this.txttimkiem.SelectedText = "";
             this.txttimkiem.Size = new System.Drawing.Size(326, 45);
             this.txttimkiem.TabIndex = 3;
+            this.txttimkiem.Enter += new System.EventHandler(this.txttimkiem_Enter);
+            this.txttimkiem.Leave += new System.EventHandler(this.txttimkiem_Leave);
             // 
             // label19
             // 
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(943, 46);
+            this.label19.Location = new System.Drawing.Point(852, 95);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(83, 41);
             this.label19.TabIndex = 19;
@@ -236,6 +238,27 @@
             this.panelchucnang.Name = "panelchucnang";
             this.panelchucnang.Size = new System.Drawing.Size(480, 619);
             this.panelchucnang.TabIndex = 2;
+            // 
+            // btncheckkhuyenmai
+            // 
+            this.btncheckkhuyenmai.BorderColor = System.Drawing.Color.White;
+            this.btncheckkhuyenmai.BorderRadius = 15;
+            this.btncheckkhuyenmai.BorderThickness = 2;
+            this.btncheckkhuyenmai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btncheckkhuyenmai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btncheckkhuyenmai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btncheckkhuyenmai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btncheckkhuyenmai.FillColor = System.Drawing.Color.Transparent;
+            this.btncheckkhuyenmai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncheckkhuyenmai.ForeColor = System.Drawing.Color.White;
+            this.btncheckkhuyenmai.Image = ((System.Drawing.Image)(resources.GetObject("btncheckkhuyenmai.Image")));
+            this.btncheckkhuyenmai.ImageSize = new System.Drawing.Size(30, 30);
+            this.btncheckkhuyenmai.Location = new System.Drawing.Point(42, 446);
+            this.btncheckkhuyenmai.Name = "btncheckkhuyenmai";
+            this.btncheckkhuyenmai.Size = new System.Drawing.Size(391, 45);
+            this.btncheckkhuyenmai.TabIndex = 20;
+            this.btncheckkhuyenmai.Text = "&Check Khuyến Mại";
+            this.btncheckkhuyenmai.Click += new System.EventHandler(this.btncheckkhuyenmai_Click);
             // 
             // dtpkngayketthuc
             // 
@@ -612,27 +635,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 50;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // btncheckkhuyenmai
-            // 
-            this.btncheckkhuyenmai.BorderColor = System.Drawing.Color.White;
-            this.btncheckkhuyenmai.BorderRadius = 15;
-            this.btncheckkhuyenmai.BorderThickness = 2;
-            this.btncheckkhuyenmai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btncheckkhuyenmai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btncheckkhuyenmai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btncheckkhuyenmai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btncheckkhuyenmai.FillColor = System.Drawing.Color.Transparent;
-            this.btncheckkhuyenmai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncheckkhuyenmai.ForeColor = System.Drawing.Color.White;
-            this.btncheckkhuyenmai.Image = ((System.Drawing.Image)(resources.GetObject("btncheckkhuyenmai.Image")));
-            this.btncheckkhuyenmai.ImageSize = new System.Drawing.Size(30, 30);
-            this.btncheckkhuyenmai.Location = new System.Drawing.Point(42, 446);
-            this.btncheckkhuyenmai.Name = "btncheckkhuyenmai";
-            this.btncheckkhuyenmai.Size = new System.Drawing.Size(391, 45);
-            this.btncheckkhuyenmai.TabIndex = 20;
-            this.btncheckkhuyenmai.Text = "&Check Khuyến Mại";
-            this.btncheckkhuyenmai.Click += new System.EventHandler(this.btncheckkhuyenmai_Click);
             // 
             // GUI_KhuyenMai
             // 

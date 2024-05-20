@@ -170,6 +170,10 @@ namespace GUI_KhachSan
 
         private void btntimkiemtk_Click(object sender, EventArgs e)
         {
+            if (txttimkiem.Text == "Tìm Kiếm Tài Khoản")
+            {
+                txttimkiem.Text = "";
+            }
             int.TryParse(txtidtaikhoan.Text, out int ID_TaiKhoan);
             tk.ID_TaiKhoan = ID_TaiKhoan;
             tk.Email_TaiKhoan = txtemailtaikhoan.Text;

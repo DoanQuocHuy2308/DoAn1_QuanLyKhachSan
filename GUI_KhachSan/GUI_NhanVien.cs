@@ -191,6 +191,10 @@ namespace GUI_KhachSan
 
         private void btntimkiemnv_Click(object sender, EventArgs e)
         {
+            if(txttimkiem.Text=="Tìm Kiếm Nhân Viên")
+            {
+                txttimkiem.Text = "";
+            }
             int.TryParse(txtidnhanvien.Text, out int IDNhanVien);
             nv.ID_NhanVien = IDNhanVien;
             nv.Ten_NhanVien = txttennhanvien.Text;

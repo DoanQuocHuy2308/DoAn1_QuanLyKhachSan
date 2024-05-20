@@ -182,6 +182,10 @@ namespace GUI_KhachSan
 
         private void btntimkiemtk_Click(object sender, EventArgs e)
         {
+            if (txttimkiem.Text == "Tìm Kiếm Khách Hàng")
+            {
+                txttimkiem.Text = "";
+            }
             int.TryParse(txtidkhachhang.Text, out int id);
             kh.ID_KhachHang =id;
             kh.Ten_KhachHang = txttenkhachhang.Text;

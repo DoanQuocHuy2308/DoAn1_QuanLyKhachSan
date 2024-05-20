@@ -157,6 +157,10 @@ namespace GUI_KhachSan
 
         private void btntimkiemdichvu_Click(object sender, EventArgs e)
         {
+            if (txttimkiem.Text == "Tìm Kiếm Dịch Vụ")
+            {
+                txttimkiem.Text = "";
+            }
             int.TryParse(txtiddichvu.Text, out int iddichvu);
             dto_dv.ID_DichVu= iddichvu;
             dto_dv.Ten_DichVu = txttendichvu.Text;
@@ -284,6 +288,10 @@ namespace GUI_KhachSan
 
         private void btntimkiemldv_Click(object sender, EventArgs e)
         {
+            if (txttimkiemldv.Text == "Tìm Kiếm Loại Dịch Vụ")
+            {
+                txttimkiemldv.Text = "";
+            }
             int.TryParse(txtidloaidichvu.Text, out int idLoaiDichVu);
             dto_ldv.ID_LoaiDichVu = idLoaiDichVu;
             dto_ldv.Ten_LoaiDichVu = txttenloaidichvu.Text;

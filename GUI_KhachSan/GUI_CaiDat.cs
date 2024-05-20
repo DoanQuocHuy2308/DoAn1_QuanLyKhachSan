@@ -241,5 +241,37 @@ namespace GUI_KhachSan
                 MessageBox.Show($"cập nhật thất bại. Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtcheckemail_Leave(object sender, EventArgs e)
+        {
+            if (txtcheckemail.Text == "")
+            {
+                txtcheckemail.Text = "Nhập Emaail Tài Khoản";
+            }
+        }
+
+        private void txtcheckemail_Enter(object sender, EventArgs e)
+        {
+            if (txtcheckemail.Text == "Nhập Emaail Tài Khoản")
+            {
+                txtcheckemail.Text = "";
+            }
+        }
+
+        private void txtcheckcmnd_Leave(object sender, EventArgs e)
+        {
+            if (txtcheckemail.Text == "")
+            {
+                txtcheckemail.Text = "Nhập Số CMND";
+            }
+        }
+
+        private void txtcheckcmnd_Enter(object sender, EventArgs e)
+        {
+            if (txtcheckemail.Text == "Nhập Số CMND")
+            {
+                txtcheckemail.Text = "";
+            }
+        }
     }
 }

@@ -187,6 +187,10 @@ namespace GUI_KhachSan
 
         private void btntimkiemphong_Click(object sender, EventArgs e)
         {
+            if (txttimkiem.Text == "Tìm Kiếm Phòng")
+            {
+                txttimkiem.Text = "";
+            }
             int.TryParse(txtidphong.Text, out int idPhong);
             DTO_P.ID_Phong=idPhong;
             DTO_P.Ten_Phong=txttenphong.Text;
@@ -323,6 +327,10 @@ namespace GUI_KhachSan
         }
         private void btntimkiemlp_Click(object sender, EventArgs e)
         {
+            if (txttimkiemlp.Text == "Tìm Kiếm Loại Phòng")
+            {
+                txttimkiemlp.Text = "";
+            }
             int.TryParse(txtidloaiphong.Text, out int iDLoaiPhong);
             DTO_LP.ID_LoaiPhong = iDLoaiPhong;
             DTO_LP.Ten_LoaiPhong = txttenloaiphong.Text;

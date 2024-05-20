@@ -258,6 +258,10 @@ namespace GUI_KhachSan
 
         private void btntimkiemdp_Click(object sender, EventArgs e)
         {
+            if (txttimkiem.Text == "Tìm Kiếm Mã Đặt Phòng")
+            {
+                txttimkiem.Text = "";
+            }
             int.TryParse(txtiddatphong.Text, out int iddp);
             dp.ID_DatPhong = iddp;
             int.TryParse(txtidnhanvien.Text, out int idnv);

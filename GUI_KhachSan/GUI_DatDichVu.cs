@@ -214,6 +214,10 @@ namespace GUI_KhachSan
 
         private void btntimkiemddv_Click(object sender, EventArgs e)
         {
+            if(txttimkiem.Text =="Tìm Kiếm Mã Đặt Dịch Vụ")
+            {
+                txttimkiem.Text = "";
+            }
             int.TryParse(txtiddatdichvu.Text, out int idddv);
             ddv.ID_DatDichVu = idddv;
             int.TryParse(txtidnhanvien.Text, out int idnv);
