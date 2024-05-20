@@ -113,7 +113,7 @@ namespace GUI_KhachSan
             {
                 TongTien += Convert.ToDecimal(row["TongTien"]);
             }
-            txtTongTien.Text = $"{TongTien} đ";
+            txtTongTien.Text = $"{TongTien:N0} đ";
         }
         private void btnthongkedp_Click(object sender, EventArgs e)
         {
@@ -137,6 +137,7 @@ namespace GUI_KhachSan
             DuLieuDonDatPhong();
             cboloaiphong.SelectedIndex = -1;
             cbotenphong.SelectedIndex = -1;
+            TongTienDP();
         }
         private void dtgvthongkedp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -147,6 +148,7 @@ namespace GUI_KhachSan
                 dtpkngayketthucdp.Value = Convert.ToDateTime(row.Cells["Check_Out"].Value);
                 cbotenphong.Text = row.Cells["Ten_Phong"].Value.ToString();
                 cboloaiphong.Text = row.Cells["Ten_LoaiPhong"].Value.ToString();
+                txtTongTien.Text = row.Cells["TongTien"].Value.ToString();
             }
         }
         private void HienTenDichVu()
@@ -192,7 +194,7 @@ namespace GUI_KhachSan
             {
                 TongTien += Convert.ToDecimal(row["TongTien"]);
             }
-            txttongtienddv.Text = $"{TongTien} đ";
+            txttongtienddv.Text = $"{TongTien:N0} đ";
         }
         private void btnthongkeddv_Click(object sender, EventArgs e)
         {
@@ -217,6 +219,7 @@ namespace GUI_KhachSan
             DuLieuDonDatDichVu();
             cboloaidichvu.SelectedIndex = -1;
             cbotendichvu.SelectedIndex = -1;
+            TongTienDDV();
         }
 
         private void dtgvthongkeddv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -228,6 +231,7 @@ namespace GUI_KhachSan
                 dtpkngayketthucddv.Value = DateTime.Now;
                 cbotendichvu.Text = row.Cells["Ten_DichVu"].Value.ToString();
                 cboloaidichvu.Text = row.Cells["Ten_LoaiDichVu"].Value.ToString();
+                txttongtienddv.Text = row.Cells["TongTienddv"].Value.ToString();
             }
         }
 

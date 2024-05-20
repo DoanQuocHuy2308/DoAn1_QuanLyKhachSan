@@ -133,7 +133,7 @@ namespace DAL_KhachSan
             if (tk != null)
             {
                 cmd.Parameters.AddWithValue("@ID_TaiKhoan", tk.ID_TaiKhoan);
-                cmd.Parameters.AddWithValue("@Emai_TaiKhoan", tk.Email_TaiKhoan);
+                cmd.Parameters.AddWithValue("@Email_TaiKhoan", tk.Email_TaiKhoan);
                 cmd.Parameters.AddWithValue("@Role_TaiKhoan", tk.Role_TaiKhoan);
                 cmd.Parameters.AddWithValue("@Ban_TaiKhoan", tk.Ban_TaiKhoan);
             }
