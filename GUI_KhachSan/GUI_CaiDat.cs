@@ -183,14 +183,14 @@ namespace GUI_KhachSan
 
         private void btncapnhattk_Click(object sender, EventArgs e)
         {
-            tk.ID_TaiKhoan = int.Parse(txtidtaikhoan.Text);
-            tk.Pass_TaiKhoan = txtpass.Text;
-            tk.Email_TaiKhoan = txtemailtk.Text;
-            if (string.IsNullOrEmpty(tk.ID_TaiKhoan.ToString()) || string.IsNullOrEmpty(tk.Pass_TaiKhoan) || string.IsNullOrEmpty(tk.Email_TaiKhoan))
+            if (string.IsNullOrEmpty(txtidtaikhoan.Text) || string.IsNullOrEmpty(txtpass.Text) || string.IsNullOrEmpty(txtemailtk.Text))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            tk.ID_TaiKhoan = int.Parse(txtidtaikhoan.Text);
+            tk.Pass_TaiKhoan = txtpass.Text;
+            tk.Email_TaiKhoan = txtemailtk.Text;
             try
             {
                 bllcd.CapNhatTaiKhoan(tk);
@@ -217,6 +217,11 @@ namespace GUI_KhachSan
 
         private void btncapnhatnv_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtidnhanvien.Text) || string.IsNullOrEmpty(txttennhanvien.Text) || string.IsNullOrEmpty(txtcmnd.Text) || string.IsNullOrEmpty(cbogioitinh.Text) || string.IsNullOrEmpty(txtsodienthoai.Text) || string.IsNullOrEmpty(txtemail.Text) || string.IsNullOrEmpty(txtdiachi.Text) || string.IsNullOrEmpty(txtchucvu.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             nv.ID_NhanVien = int.Parse(txtidnhanvien.Text);
             nv.Ten_NhanVien = txttennhanvien.Text;
             nv.CMND_NhanVien = txtcmnd.Text;
@@ -225,11 +230,6 @@ namespace GUI_KhachSan
             nv.Email_NhanVien = txtemailtk.Text;
             nv.DiaChi_NhanVien = txtdiachi.Text;
             nv.Role_NhanVien = txtchucvu.Text;
-            if (string.IsNullOrEmpty(nv.ID_NhanVien.ToString()) || string.IsNullOrEmpty(nv.Ten_NhanVien) || string.IsNullOrEmpty(nv.CMND_NhanVien) || string.IsNullOrEmpty(nv.GioiTinh_NhanVien) || string.IsNullOrEmpty(nv.SDT_NhanVien) || string.IsNullOrEmpty(nv.Email_NhanVien) || string.IsNullOrEmpty(nv.DiaChi_NhanVien) || string.IsNullOrEmpty(nv.Role_NhanVien))
-            {
-                MessageBox.Show("Vui lòng nhập mã nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             if (nv.SDT_NhanVien.Length < 10 || nv.SDT_NhanVien.Length > 10)
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại đúng yêu cầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
