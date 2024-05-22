@@ -68,6 +68,7 @@
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1498, 811);
             this.panelchinh.TabIndex = 2;
+            this.panelchinh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelchinh_MouseDown);
             // 
             // txtTenDangNhap
             // 

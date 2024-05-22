@@ -89,6 +89,7 @@
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1348, 770);
             this.panelchinh.TabIndex = 0;
+            this.panelchinh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelchinh_MouseDown);
             // 
             // label8
             // 
@@ -489,6 +490,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // btnclose
             // 

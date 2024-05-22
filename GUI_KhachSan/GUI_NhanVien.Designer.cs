@@ -95,6 +95,7 @@
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1348, 770);
             this.panelchinh.TabIndex = 0;
+            this.panelchinh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelchinh_MouseDown);
             // 
             // btntimkiemnv
             // 

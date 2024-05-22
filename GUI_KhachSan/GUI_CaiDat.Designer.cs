@@ -115,6 +115,7 @@
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1080, 774);
             this.panelchinh.TabIndex = 1;
+            this.panelchinh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelchinh_MouseDown);
             // 
             // btnminimize
             // 
@@ -1049,6 +1050,7 @@
             this.label1.Size = new System.Drawing.Size(279, 68);
             this.label1.TabIndex = 0;
             this.label1.Text = "CÀI ĐẶT";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // guna2Elipse1
             // 

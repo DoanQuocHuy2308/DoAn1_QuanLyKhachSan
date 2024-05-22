@@ -42,10 +42,10 @@
             this.btntrogiup = new Guna.UI2.WinForms.Guna2Button();
             this.btnthoat = new Guna.UI2.WinForms.Guna2Button();
             this.btnTaiKhoan = new Guna.UI2.WinForms.Guna2Button();
-            this.btntrangchu = new Guna.UI2.WinForms.Guna2Button();
             this.btnnhanvien = new Guna.UI2.WinForms.Guna2Button();
             this.btndichvu = new Guna.UI2.WinForms.Guna2Button();
             this.btnPhong = new Guna.UI2.WinForms.Guna2Button();
+            this.btntrangchu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelchinh.SuspendLayout();
             this.paneldulieu.SuspendLayout();
@@ -69,6 +69,7 @@
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1498, 811);
             this.panelchinh.TabIndex = 1;
+            this.panelchinh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelchinh_MouseDown);
             // 
             // txtTenDangNhap
             // 
@@ -282,26 +283,6 @@
             this.btnTaiKhoan.Text = "Tài Khoản";
             this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
-            // btntrangchu
-            // 
-            this.btntrangchu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btntrangchu.BackgroundImage")));
-            this.btntrangchu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btntrangchu.BorderColor = System.Drawing.Color.Gold;
-            this.btntrangchu.BorderRadius = 10;
-            this.btntrangchu.BorderThickness = 2;
-            this.btntrangchu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btntrangchu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btntrangchu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btntrangchu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btntrangchu.FillColor = System.Drawing.Color.Transparent;
-            this.btntrangchu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btntrangchu.ForeColor = System.Drawing.Color.White;
-            this.btntrangchu.Location = new System.Drawing.Point(366, 8);
-            this.btntrangchu.Name = "btntrangchu";
-            this.btntrangchu.Size = new System.Drawing.Size(33, 26);
-            this.btntrangchu.TabIndex = 1;
-            this.btntrangchu.Click += new System.EventHandler(this.btntrangchu_Click);
-            // 
             // btnnhanvien
             // 
             this.btnnhanvien.BackColor = System.Drawing.Color.Transparent;
@@ -367,6 +348,26 @@
             this.btnPhong.TabIndex = 0;
             this.btnPhong.Text = "Phòng";
             this.btnPhong.Click += new System.EventHandler(this.btnPhong_Click);
+            // 
+            // btntrangchu
+            // 
+            this.btntrangchu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btntrangchu.BackgroundImage")));
+            this.btntrangchu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btntrangchu.BorderColor = System.Drawing.Color.Gold;
+            this.btntrangchu.BorderRadius = 10;
+            this.btntrangchu.BorderThickness = 2;
+            this.btntrangchu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btntrangchu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btntrangchu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btntrangchu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btntrangchu.FillColor = System.Drawing.Color.Transparent;
+            this.btntrangchu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btntrangchu.ForeColor = System.Drawing.Color.White;
+            this.btntrangchu.Location = new System.Drawing.Point(366, 8);
+            this.btntrangchu.Name = "btntrangchu";
+            this.btntrangchu.Size = new System.Drawing.Size(33, 26);
+            this.btntrangchu.TabIndex = 1;
+            this.btntrangchu.Click += new System.EventHandler(this.btntrangchu_Click);
             // 
             // guna2Elipse1
             // 

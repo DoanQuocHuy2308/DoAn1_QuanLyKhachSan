@@ -128,6 +128,7 @@
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1498, 796);
             this.panelchinh.TabIndex = 0;
+            this.panelchinh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelchinh_MouseDown);
             // 
             // btnindp
             // 
@@ -421,6 +422,7 @@
             this.label1.Size = new System.Drawing.Size(420, 75);
             this.label1.TabIndex = 14;
             this.label1.Text = "ĐẶT PHÒNG";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // txttimkiem
             // 

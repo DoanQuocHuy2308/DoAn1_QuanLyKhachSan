@@ -72,6 +72,7 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Log In";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
             // 
             // label1
             // 
@@ -363,12 +364,13 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(224, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(226, 29);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(249, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
             // 
             // pictureBox1
             // 
@@ -405,6 +407,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_DangNhap";
             this.Load += new System.EventHandler(this.GUI_DangNhap_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GUI_DangNhap_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anh3)).EndInit();

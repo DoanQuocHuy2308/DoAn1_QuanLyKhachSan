@@ -450,6 +450,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
             // 
             // label5
             // 
@@ -463,6 +464,7 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Quên Mật Khẩu";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
             // 
             // pictureBox1
             // 

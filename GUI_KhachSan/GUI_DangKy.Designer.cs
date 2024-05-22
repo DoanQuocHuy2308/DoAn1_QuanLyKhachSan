@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_DangKy));
             this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnthoat = new Guna.UI2.WinForms.Guna2Button();
             this.btnminimize = new Guna.UI2.WinForms.Guna2Button();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -68,7 +69,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btndong = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnthoat = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelDangKy.SuspendLayout();
@@ -96,6 +96,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1116, 793);
             this.panel1.TabIndex = 2;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btnthoat
+            // 
+            this.btnthoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
+            this.btnthoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnthoat.BackgroundImage")));
+            this.btnthoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnthoat.BorderColor = System.Drawing.Color.Gold;
+            this.btnthoat.BorderRadius = 10;
+            this.btnthoat.BorderThickness = 2;
+            this.btnthoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnthoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnthoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnthoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnthoat.FillColor = System.Drawing.Color.Transparent;
+            this.btnthoat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnthoat.ForeColor = System.Drawing.Color.White;
+            this.btnthoat.Location = new System.Drawing.Point(12, 5);
+            this.btnthoat.Name = "btnthoat";
+            this.btnthoat.Size = new System.Drawing.Size(41, 36);
+            this.btnthoat.TabIndex = 23;
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // btnminimize
             // 
@@ -142,12 +164,13 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(427, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(441, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(248, 126);
+            this.pictureBox2.Size = new System.Drawing.Size(242, 123);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
             // 
             // PanelDangKy
             // 
@@ -643,10 +666,11 @@
             this.label5.ForeColor = System.Drawing.Color.Gold;
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1116, 304);
+            this.label5.Size = new System.Drawing.Size(1116, 320);
             this.label5.TabIndex = 0;
             this.label5.Text = "Register";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
             // 
             // pictureBox1
             // 
@@ -680,27 +704,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // btnthoat
-            // 
-            this.btnthoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.btnthoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnthoat.BackgroundImage")));
-            this.btnthoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnthoat.BorderColor = System.Drawing.Color.Gold;
-            this.btnthoat.BorderRadius = 10;
-            this.btnthoat.BorderThickness = 2;
-            this.btnthoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnthoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnthoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnthoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnthoat.FillColor = System.Drawing.Color.Transparent;
-            this.btnthoat.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnthoat.ForeColor = System.Drawing.Color.White;
-            this.btnthoat.Location = new System.Drawing.Point(12, 5);
-            this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(41, 36);
-            this.btnthoat.TabIndex = 23;
-            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // GUI_DangKy
             // 

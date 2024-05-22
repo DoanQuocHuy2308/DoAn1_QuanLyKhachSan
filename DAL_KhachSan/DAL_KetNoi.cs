@@ -11,7 +11,7 @@ namespace DAL_KhachSan
 {
     public class DAL_KetNoi
     {
-        string chuoikn = "Data Source=DESKTOP-IO5D2MK;Initial Catalog=QuanLyKhachSan;Integrated Security=True;Encrypt=False";
+        string chuoikn = "Data Source=DESKTOP-IO5D2MK\\DOANQUOCHUY;Initial Catalog=QuanLyKhachSan;Integrated Security=True;Encrypt=False";
         public static SqlConnection sqlcon;
         public void moketnoi()
         {

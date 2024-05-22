@@ -134,6 +134,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // btnminimize
             // 
@@ -1137,6 +1138,7 @@
             this.Name = "GUI_Phong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GUI_Phong";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GUI_Phong_MouseDown);
             this.panelchinh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabGiaoDienPhong.ResumeLayout(false);
