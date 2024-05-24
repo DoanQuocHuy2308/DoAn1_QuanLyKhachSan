@@ -68,6 +68,7 @@ namespace GUI_KhachSan
             this.panelchinh.Name = "panelchinh";
             this.panelchinh.Size = new System.Drawing.Size(1472, 693);
             this.panelchinh.TabIndex = 1;
+            this.panelchinh.Leave += new System.EventHandler(this.TrangChu_Leave);
             // 
             // panelanh
             // 

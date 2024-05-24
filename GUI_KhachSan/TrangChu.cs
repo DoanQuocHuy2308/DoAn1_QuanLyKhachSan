@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AxWMPLib;
+using System;
 using System.Windows.Forms;
 
 namespace GUI_KhachSan
@@ -17,7 +18,7 @@ namespace GUI_KhachSan
             if (System.IO.File.Exists(videoPath))
             {
                 videotrangchu.URL = videoPath;
-                videotrangchu.Ctlcontrols.play();
+                videotrangchu.settings.autoStart = true;
             }
             else
             {

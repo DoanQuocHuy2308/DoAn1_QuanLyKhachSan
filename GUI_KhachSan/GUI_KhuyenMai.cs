@@ -71,6 +71,11 @@ namespace GUI_KhachSan
                 MessageBox.Show("Vui lòng nhập lại thời gian khuyến mại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (bllkm.KTTrunMa(km))
+            {
+                MessageBox.Show("Mã này đã tồn tại trong hệ thống.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 bllkm.Add(km);
@@ -130,6 +135,11 @@ namespace GUI_KhachSan
             if (km.NgayBatDau > km.NgayKetThuc)
             {
                 MessageBox.Show("Vui lòng nhập lại thời gian khuyến mại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (bllkm.KTTrunMa(km))
+            {
+                MessageBox.Show("Mã này đã tồn tại trong hệ thống.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else

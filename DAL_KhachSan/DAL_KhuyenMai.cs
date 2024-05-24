@@ -24,6 +24,31 @@ namespace DAL_KhachSan
             da.Fill(dt);
             return dt;
         }
+        public bool KTTrungMa(DTO_KhuyenMai km)
+        {
+            bool kt = false;
+            try
+            {
+                kn.moketnoi();
+                string thucthi = "SELECT COUNT(*) FROM KhuyenMai WHERE ID_KhuyenMai = @ID_KhuyenMai";
+                int count;
+                using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
+                {
+                    cmd.Parameters.AddWithValue("@ID_KhuyenMai", km.ID_KhuyenMai);
+                    count = (int)cmd.ExecuteScalar();
+                }
+                kt = count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi kiểm tra thông tin khuyến mại: " + ex.Message);
+            }
+            finally
+            {
+                kn.dongketnoi();
+            }
+            return kt;
+        }
         public DataTable KiemTraKhuyenMai()
         {
             dt = new DataTable();
