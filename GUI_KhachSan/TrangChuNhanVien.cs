@@ -17,13 +17,13 @@ namespace GUI_KhachSan
             InitializeComponent();
         }
 
-        private void videotrangchu_Enter(object sender, EventArgs e)
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {
             string videoPath = "D:\\VisualStudio\\Project\\DoAn1_QuanLyKhachSan\\IMG\\Trang Chủ\\02.mp4";
             if (System.IO.File.Exists(videoPath))
             {
                 videotrangchu.URL = videoPath;
-                videotrangchu.Ctlcontrols.play();
+                videotrangchu.settings.autoStart = true;
             }
             else
             {
@@ -31,7 +31,7 @@ namespace GUI_KhachSan
             }
         }
 
-        private void TrangChuNhanVien_Leave(object sender, EventArgs e)
+        private void videotrangchu_Leave(object sender, EventArgs e)
         {
             if (videotrangchu.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
