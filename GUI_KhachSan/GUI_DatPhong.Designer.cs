@@ -979,7 +979,6 @@
             this.txttongtien.Name = "txttongtien";
             this.txttongtien.PasswordChar = '\0';
             this.txttongtien.PlaceholderText = "";
-            this.txttongtien.ReadOnly = true;
             this.txttongtien.SelectedText = "";
             this.txttongtien.Size = new System.Drawing.Size(270, 38);
             this.txttongtien.TabIndex = 9;

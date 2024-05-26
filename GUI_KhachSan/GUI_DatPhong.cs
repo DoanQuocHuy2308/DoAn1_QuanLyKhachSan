@@ -24,6 +24,8 @@ namespace GUI_KhachSan
             HienThiDatPhong();
             dtgvdatphong.DefaultCellStyle.ForeColor = Color.Black;
             dtgvphong.DefaultCellStyle.ForeColor = Color.Black;
+            dtpkcheckin.Value = DateTime.Now;
+            dtpkcheckout.Value = DateTime.Now;
         }
         BLL_DatPhong blldp = new BLL_DatPhong();
         BLL_Phong bllp = new BLL_Phong();
