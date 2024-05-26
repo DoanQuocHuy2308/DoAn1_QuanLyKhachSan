@@ -49,33 +49,6 @@ namespace DAL_KhachSan
             }
             return dt;
         }
-        public bool KTTrungMaKH(DTO_DatPhong dp)
-        {
-            bool kt = false;
-            try
-            {
-                kn.moketnoi();
-                string thucthi = "SELECT COUNT(*) FROM DatPhong WHERE ID_KhachHang = @ID_KhachHang And Check_In <= @Check_Out AND Check_Out >= @Check_In";
-                int count;
-                using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
-                {
-                    cmd.Parameters.AddWithValue("@ID_KhachHang", dp.ID_KhachHang);
-                    cmd.Parameters.AddWithValue("@Check_In", dp.Check_In);
-                    cmd.Parameters.AddWithValue("@Check_Out", dp.Check_Out);
-                    count = (int)cmd.ExecuteScalar();
-                }
-                kt = count > 0;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi kiểm tra thông tin đặt phòng: " + ex.Message);
-            }
-            finally
-            {
-                kn.dongketnoi();
-            }
-            return kt;
-        }
         public bool KTTrungMaP(DTO_DatPhong dp)
         {
             bool kt = false;

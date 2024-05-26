@@ -20,10 +20,7 @@ namespace BLL_KhachSan
         {
             return daldp.KTPhongTrong(dp);
         }
-        public bool KTMaKH(DTO_DatPhong dp)
-        {
-            return daldp.KTTrungMaKH(dp);
-        }
+        
         public bool KTMaP(DTO_DatPhong dp)
         {
             return daldp.KTTrungMaP(dp);

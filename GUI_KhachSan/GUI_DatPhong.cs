@@ -111,11 +111,6 @@ namespace GUI_KhachSan
 
             try
             {
-                if (blldp.KTMaKH(dp))
-                {
-                    MessageBox.Show("Khách hàng này đã đặt phòng với thời gian này rồi. Vui lòng chọn phòng hoặc thời giản khác ! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
                 if (blldp.KTMaP(dp))
                 {
                     MessageBox.Show("Phòng này đã được đặt với thời gian này rồi , Vui lòng chọn phòng hoặc thời giản khác !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
