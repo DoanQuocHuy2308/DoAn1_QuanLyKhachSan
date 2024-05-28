@@ -109,7 +109,7 @@ namespace GUI_KhachSan
 
         private void btnclose_Click(object sender, EventArgs e)
         {
-            DialogResult check = MessageBox.Show("Bạn chắc chắn muốn đóng", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult check = MessageBox.Show("Bạn chắc chắn muốn đóng ?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (check == DialogResult.OK)
             {
                 Application.Exit();
