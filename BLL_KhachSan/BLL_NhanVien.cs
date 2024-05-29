@@ -62,6 +62,17 @@ namespace BLL_KhachSan
                 throw new Exception("Lỗi khi kiểm tra ID nhân viên tồn tại: " + ex.Message);
             }
         }
+        public bool KiemTraEmailTonTai(DTO_NhanVien nv)
+        {
+            try
+            {
+                return dal_nv.KTEmailTonTai(nv);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi kiểm tra Email nhân viên tồn tại: " + ex.Message);
+            }
+        }
 
         public void XoaNhanVien(DTO_NhanVien nv)
         {

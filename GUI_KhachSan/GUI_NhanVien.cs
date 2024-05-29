@@ -178,6 +178,12 @@ namespace GUI_KhachSan
             if (bllnv.KiemTraIDTonTai(nv))
             {
                 MessageBox.Show("Vui lòng xóa mã nhân viên ở hóa đơn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (bllnv.KiemTraEmailTonTai(nv))
+            {
+                MessageBox.Show("Vui lòng xóa Tài khoản nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             else
             {

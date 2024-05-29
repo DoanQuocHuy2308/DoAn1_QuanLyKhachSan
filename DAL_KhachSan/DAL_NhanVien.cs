@@ -124,6 +124,31 @@ namespace DAL_KhachSan
             }
             return kt;
         }
+        public bool KTEmailTonTai(DTO_NhanVien nv)
+        {
+            bool kt = false;
+            try
+            {
+                kn.moketnoi();
+                string thucthi = "SELECT COUNT(*) FROM TaiKhoan WHERE Email_TaiKhoan = @Email_TaiKhoan";
+                int count;
+                using (cmd = new SqlCommand(thucthi, DAL_KetNoi.sqlcon))
+                {
+                    cmd.Parameters.AddWithValue("@Email_TaiKhoan", nv.Email_NhanVien);
+                    count = (int)cmd.ExecuteScalar();
+                }
+                kt = count > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi kiểm tra thông tin nhân viên: " + ex.Message);
+            }
+            finally
+            {
+                kn.dongketnoi();
+            }
+            return kt;
+        }
         public void Delete(DTO_NhanVien nv)
         {
             try
@@ -142,6 +167,7 @@ namespace DAL_KhachSan
             }
             finally { kn.dongketnoi(); }
         }
+
         public DataTable TimKiem(string search, DTO_NhanVien nv)
         {
             dt = new DataTable();
