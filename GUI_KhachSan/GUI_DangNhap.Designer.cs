@@ -52,6 +52,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anh3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anh2)).BeginInit();
@@ -387,6 +388,11 @@
             this.guna2Elipse1.BorderRadius = 30;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 30;
+            this.guna2Elipse2.TargetControl = this.panel1;
+            // 
             // GUI_DangNhap
             // 
             this.AcceptButton = this.btndangnhap;
@@ -443,5 +449,6 @@
         private Guna.UI2.WinForms.Guna2Button btnminimize;
         private System.Windows.Forms.LinkLabel linkquenmk;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }
