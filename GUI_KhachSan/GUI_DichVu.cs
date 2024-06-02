@@ -259,10 +259,7 @@ namespace GUI_KhachSan
 
         private void btnxoaldv_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txtidloaidichvu.Text, out int idLoaiDichVu))
-            {
-                dto_ldv.ID_LoaiDichVu = idLoaiDichVu;
-            }
+            dto_ldv.ID_LoaiDichVu = int.Parse(txtidloaidichvu.Text) ;
             if (blldv.KTIDTonTai(dto_dv))
             {
                 MessageBox.Show("Không thể xóa loại dịch vụ vì còn tồn tại khóa ngoại liên quan.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

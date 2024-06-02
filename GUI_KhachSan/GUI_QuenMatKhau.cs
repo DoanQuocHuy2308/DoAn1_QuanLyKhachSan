@@ -136,6 +136,11 @@ namespace GUI_KhachSan
 
         private void btntieptuc_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtmatkhaumoi.Text) || string.IsNullOrEmpty(txtxacthucmatkhaumoi.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu !","Thông Báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 tk.Pass_TaiKhoan = txtxacthucmatkhaumoi.Text;

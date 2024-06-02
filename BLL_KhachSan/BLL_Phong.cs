@@ -49,6 +49,7 @@ namespace BLL_KhachSan
                     throw new Exception("Không thể xóa phòng vì còn tồn tại khóa ngoại liên quan.");
                 }
                 p.DeletePhong(dto_P);
+
             }
             catch (Exception ex)
             {

@@ -205,7 +205,6 @@ namespace GUI_KhachSan
                 {
                     (c as Guna2TextBox).Text = "";
                 }
-                txttimkiem.Text = "Tìm Kiếm Nhân Viên";
                 cbogioitinh.SelectedIndex = -1;
                 HienThiNhanVien();
             }

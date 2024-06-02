@@ -48,8 +48,8 @@ namespace BLL_KhachSan
                     throw new Exception("Không thể xóa loại dịch vụ vì còn tồn tại khóa ngoại liên quan.");
                 }
 
-                ldv.DeleteLoaiDichVu(dto_ldv);
-            }
+             ldv.DeleteLoaiDichVu(dto_ldv);
+        }
             catch (Exception ex)
             {
                 throw new Exception("Lỗi khi xóa thông tin loại dịch vụ: " + ex.Message);

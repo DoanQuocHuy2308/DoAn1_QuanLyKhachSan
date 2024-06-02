@@ -173,11 +173,11 @@ namespace GUI_KhachSan
                 MessageBox.Show("Vui lòng nhập mã phòng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            int.TryParse(txtidloaiphong.Text, out int idPhong);
-            DTO_P.ID_Phong = idPhong;
+            DTO_P.ID_Phong = int.Parse(txtidphong.Text);
             if (p.KTIDTonTai(DTO_P))
             {
                 MessageBox.Show("Không thể xóa phòng vì còn tồn tại khóa ngoại liên quan.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return ;
             }
             else
             {
